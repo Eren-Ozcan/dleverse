@@ -1,101 +1,283 @@
-# Fandom/Konu Adayları — Risk Değerlendirmesi
+# Fandom/Konu Adayları — Genişletilmiş Havuz + Risk Değerlendirmesi
 
 > Bu doküman hukuki görüş değildir. Genel bilgiye, emsal "-dle" sitelerinin
 > (Loldle, Pokedle, Naruto­dle vb.) fiilen ne kadar süre ayakta kaldığına ve
 > telif/marka hukukunun genel mantığına (parodi/bilgi kullanımı vs. karakter
 > görseli/logosu kullanımı) dayanan bir **tahmindir**. Gerçek yayın öncesi
 > mutlaka bir avukata gösterilmeli — özellikle Orta ve Yüksek risk kategorileri.
+> Bir şikayet gelirse en olası sonuç genelde **para cezası değil, store'dan
+> kaldırma / tekrarlayan ihlalde geliştirici hesabının askıya alınmasıdır**;
+> maddi tazminat davası küçük ölçekli/reklamsız projelerde nadirdir.
 
-Risk, iki eksene göre belirlendi:
-1. **Veri türü** — gerçek kişi/kamusal bilgi (düşük) mü, kurgusal karakter
-   görseli/repliği (yüksek) mü?
-2. **Hak sahibinin agresiflik geçmişi** — büyük stüdyo/yayıncı (Disney,
-   Nintendo, Riot vb.) aktif DMCA/marka takibi yapıyor mu?
+Risk, iki eksene göre belirlenir: **(1)** veri türü — gerçek kişi/kamusal bilgi
+(düşük) mü, kurgusal karakter görseli/repliği (yüksek) mü? **(2)** hak
+sahibinin agresiflik geçmişi — büyük stüdyo/yayıncı aktif takip yapıyor mu?
+
+## Kaç alan/soru kullanmalı?
+
+Araştırma: LoLdle Classic modu 8 kategori kullanıyor (Pozisyon, Tür, Cinsiyet,
+Kaynak, Menzil, Bölge, Çıkış Yılı, Saldırı Tipi); Pokédle'ın çoğu sürümü 4-5
+mod/kategori kullanıyor (Classic/Silhouette/Cry/Description gibi ayrı modlar,
+Classic tek başına ~5 istatistik karşılaştırıyor). Sabit bir endüstri kuralı
+yok ama **5 alan** en yaygın "tatlı nokta" — yeterince ipucu veriyor, ama
+ilk tahminde oyunu bitirmeyecek kadar zor kalıyor. Bu projede **varsayılan 5
+alan**, IP'nin doğasına göre 4-6 arası esneklik uygulanıyor (ör. Periyodik
+Tablo'da 5 objektif bilimsel alan, Yayıncılar'da veri kıtlığı yüzünden 3).
 
 ---
 
 ## 🟢 Düşük Risk — gerçek kişi / kamusal veri, karakter görseli gerekmiyor
 
-| # | Konu | Not |
-|---|---|---|
-| 1 | Süper Lig futbolcuları | Kamusal istatistik/bio; #12 ile topluluk sinerjisi |
-| 2 | Türkiye Kick/Twitch yayıncıları | Orijinal fikirdeki en güçlü aday, neredeyse bakir |
-| 3 | Premier League futbolcuları | Global erişim, kamusal istatistik |
-| 4 | NBA oyuncuları (güncel) | Kamusal istatistik, görsel yerine emoji/silüet kullanılabilir |
-| 5 | NBA efsaneleri (retro) | Nostalji faktörü yüksek |
-| 6 | Formula 1 pilotları | Küçük ama sadık kitle |
-| 7 | ATP/WTA tenis oyuncuları | Niş ama sadık kitle |
-| 8 | Dünya liderleri / tarihi figürler | Tamamen kamusal bilgi |
-| 9 | Türk pop/rap sanatçıları | Gerçek kişi, sahne adı — söz/görsel değil bio kullan |
-| 10 | Global pop yıldızları | Gerçek kişi bio/discography |
-| 11 | Türk YouTuber'ları | Kamusal figür, düşük risk |
-| 12 | Nobel ödüllü bilim insanları/yazarlar | Eğitici, tamamen kamusal |
-| 13 | Ülkeler / başkentler / bayraklar | IP değil, coğrafya trivia'sı |
-| 14 | Klasik rock grupları (bant/üye bio) | Gerçek kişi, görsel yerine metin |
-| 15 | Ünlü ressamlar / sanat eserleri | Çoğu eser kamu malı (public domain) |
-| 16 | Şefler / mutfak dünyası ünlüleri | Kamusal figür |
-| 17 | Olimpik sporcular (TR + global) | Kamusal istatistik |
+Bu 50 madde, veri seti üretim sırasına göre numaralandırıldı. **1-10 arası
+bu implementasyonda tam veri setiyle (50 kayıt × 5 alan) kuruldu** — seçim
+kriteri yalnızca popülerlik değil, **50 kayıtta yanlış bilgi verme riskinin
+en düşük olduğu konular** (çoğunlukla tarihi/emekli figürler veya saf bilimsel
+veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
+11-50 arası havuzda bekliyor, ileride aynı desenle doldurulabilir.
+
+| # | Konu | Veri Seti | Not |
+|---|---|---|---|
+| 1 | Dünya Ülkeleri | ✅ Kuruldu (50) | Coğrafya, sıfır kişi-riski |
+| 2 | NBA Efsaneleri | ✅ Kuruldu (50) | Emekli+efsane ağırlıklı, istatistik kamusal |
+| 3 | Süper Lig Efsaneleri | ✅ Kuruldu (50) | "En çok anıldığı kulüp" — güncel kadro değil, kariyer boyu |
+| 4 | Periyodik Tablo Elementleri | ✅ Kuruldu (50) | Kişi yok, tamamen objektif bilim verisi |
+| 5 | Tarihi Dünya Liderleri | ✅ Kuruldu (50) | Kamusal tarih bilgisi, kaba alanlar (yüzyıl/unvan) |
+| 6 | Nobel Ödüllü Bilim İnsanları | ✅ Kuruldu (50) | Resmi/objektif kayıt (yıl, alan, ülke) |
+| 7 | Ünlü Ressamlar | ✅ Kuruldu (50) | Çoğu eser kamu malı, sanat tarihi kamusal |
+| 8 | Olimpiyat Efsaneleri | ✅ Kuruldu (50) | Madalya sayıları resmi kayıt |
+| 9 | ATP/WTA Tenis Efsaneleri | ✅ Kuruldu (50) | Grand Slam sayıları resmi kayıt (aktiflerde güncellenmeli) |
+| 10 | Ünlü Besteciler (Klasik Müzik) | ✅ Kuruldu (50) | Tamamen tarihi, yaşayan kişi yok |
+| 11 | Türkiye Kick/Twitch Yayıncıları | Kısmi (8) | Hızlı değişen veri (platform/takipçi) — 50'ye çıkarmadan önce güncel doğrulama şart |
+| 12 | Premier League Efsaneleri | — | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
+| 13 | Formula 1 Pilotları (tüm zamanlar) | — | Şampiyon olmayanları da dahil ederek 50'ye çıkarılabilir |
+| 14 | Dünya Başkentleri (ayrı bayrak/nüfus odaklı) | — | Ülkeler paketinden farklı alan seti ile varyasyon |
+| 15 | Ünlü Filozoflar | — | Tarihi, kamusal |
+| 16 | Ünlü Mucitler/Bilim İnsanları (Nobel dışı) | — | Kamusal |
+| 17 | Global Pop Yıldızları (gerçek kişi, bio) | — | Görsel yerine metin bio kullan |
+| 18 | Klasik Rock Grupları/Üyeleri | — | Kuruluş yılı/tür bazlı, görsel yok |
+| 19 | Dünya Satranç Şampiyonları | — | Küçük ama sadık kitle, tamamen kamusal |
+| 20 | Ünlü Şefler/Mutfak Dünyası | — | Kamusal figür |
+| 21 | Dünya Dağları/Zirveleri | — | Saf coğrafya |
+| 22 | Dünya Nehirleri | — | Saf coğrafya |
+| 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
+| 24 | Ünlü Kaşifler | — | Tarihi, kamusal |
+| 25 | Dünya İmparatorlukları (tarihi) | — | Coğrafya+tarih karışımı, kişi değil |
+| 26 | Boks Efsaneleri | — | Kamusal spor kaydı |
+| 27 | Atletizm Efsaneleri (100m, maraton vb.) | — | Kamusal rekor verisi |
+| 28 | Yüzme Efsaneleri | — | Kamusal rekor verisi |
+| 29 | Formula 1 Takımları/Tarihi | — | Kurumsal veri, kişi değil |
+| 30 | Dünya Dilleri | — | Saf dilbilim trivia |
+| 31 | Türk Sporcular (genel, olimpik) | — | Kamusal ama araştırma gerektirir |
+| 32 | Astronotlar/Kozmonotlar | — | Kamusal, uzay tarihi |
+| 33 | Nobel Ödüllü Barış Ödülü Sahipleri | — | #6 ile birleştirilebilir ya da ayrı tutulabilir |
+| 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
+| 35 | Ünlü Heykeltıraşlar | — | #7 ile benzer desen |
+| 36 | Rönesans Dönemi Sanatçıları (alt küme) | — | #7'nin daha spesifik alt kümesi |
+| 37 | Dünya Doğal Harikaları | — | Saf coğrafya |
+| 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
+| 39 | Ünlü Mimarlar | — | Kamusal, eser bazlı |
+| 40 | Klasik Edebiyat Yazarları (roman) | — | #23 ile örtüşebilir, ayrı tutulursa roman odaklı |
+| 41 | Dünya Para Birimleri (trivia) | — | Kişi değil, ekonomi trivia |
+| 42 | Ünlü Gazeteciler/Foto Muhabirleri | — | Kamusal figür |
+| 43 | Formula 1 Pistleri | — | Kurumsal/coğrafya |
+| 44 | Dünya Havayolları (trivia) | — | Şirket, kişi değil |
+| 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
+| 46 | Kriket Efsaneleri | — | Global ama TR'de niş |
+| 47 | Rugby Efsaneleri | — | Global ama TR'de niş |
+| 48 | Voleybol Efsaneleri (TR güçlü) | — | TR'de güçlü ilgi alanı, kamusal |
+| 49 | Masa Tenisi Efsaneleri | — | Niş ama kamusal |
+| 50 | Okçuluk/Güreş Efsaneleri (TR geleneksel sporları) | — | TR'ye özgü, düşük risk, düşük rekabet |
 
 ## 🟡 Orta Risk — franchise'a değiyor ama gerçek kişi/metin ağırlıklı, görsel yok
 
 | # | Konu | Not |
 |---|---|---|
-| 18 | Türk dizi oyuncuları (rol/bio bazlı) | Karakter görseli değil, oyuncu+rol metadata'sı kullan |
-| 19 | Hollywood aktörleri (filmografi) | Gerçek kişi ama büyük stüdyo filmleriyle iç içe |
-| 20 | Yönetmenler (filmografi trivia) | Metin ağırlıklı, görsel gerekmiyorsa risk düşer |
-| 21 | Ünlü diziler (meta bilgi: oyuncu/yıl/tür, karakter değil) | "Hangi dizi" formatı, sahne görseli kullanılmazsa nispeten güvenli |
-| 22 | Retro/klasik video oyunları (stüdyo bilgisi ağırlıklı) | Eski, daha zayıf takip edilen IP'ler |
-| 23 | Belgesel/doğa serileri (Discovery, Nat Geo) | Karakter değil format tabanlı, factual |
-| 24 | Grammy ödüllü albümler | Albüm kapağı kullanılmazsa düşük-orta |
-| 25 | Stand-up komedyenleri (TR + global) | Gerçek kişi ama replik kullanımı gri alan |
+| 51 | Türk dizi oyuncuları (rol/bio bazlı) | Karakter görseli değil, oyuncu+rol metadata'sı |
+| 52 | Hollywood aktörleri (filmografi) | Gerçek kişi ama büyük stüdyo filmleriyle iç içe |
+| 53 | Yönetmenler (filmografi trivia) | Metin ağırlıklı |
+| 54 | Ünlü diziler (meta bilgi: oyuncu/yıl/tür) | Sahne görseli kullanılmazsa nispeten güvenli |
+| 55 | Retro/klasik video oyunları (stüdyo bilgisi) | Eski, daha zayıf takip edilen IP'ler |
+| 56 | Belgesel/doğa serileri (Discovery, Nat Geo) | Format tabanlı, factual |
+| 57 | Grammy ödüllü albümler | Albüm kapağı kullanılmazsa düşük-orta |
+| 58 | Stand-up komedyenleri (TR + global) | Replik kullanımı gri alan |
+| 59 | Türk sinema oyuncuları (Yeşilçam dönemi) | Tarihi ama stüdyo hakları karışık olabilir |
+| 60 | E-spor takımları/oyuncuları (kişi bazlı) | Turnuva halka açık ama marka hassas |
+| 61 | Podcast'çiler (TR + global) | Görece yeni, kamusal ama marka gri alan |
+| 62 | Moda tasarımcıları | Kamusal figür, marka adı hassas olabilir |
+| 63 | Ünlü fotoğrafçılar (sanat eseri telifli olabilir) | Eser telifine dikkat |
+| 64 | TV sunucuları / yarışma programı sunucuları | Format telifi olabilir |
+| 65 | Reality show yarışmacıları | Prodüksiyon şirketi hakları gri alan |
 
 ## 🔴 Yüksek Risk — büyük stüdyo, aktif marka/telif takibi, karakter görseli/repliği şart
 
 | # | Konu | Not |
 |---|---|---|
-| 26 | One Piece | Kalabalık pazar (onepiecedle var), Toei/Shueisha aktif takipçi |
-| 27 | Naruto | Narutodle zaten var — doğrudan rekabet + IP riski |
-| 28 | Pokémon | Nintendo/Game Freak dünyanın en agresif takipçilerinden |
-| 29 | Marvel Sinematik Evreni | Disney — çok agresif |
-| 30 | DC (Batman/Superman vb.) | WBD — agresif |
-| 31 | Star Wars | Disney — çok agresif |
-| 32 | Harry Potter | Warner Bros — agresif, ayrıca yazar tartışmalı marka riski |
-| 33 | Disney animasyon karakterleri | En agresif hak sahibi |
-| 34 | Dragon Ball | Toei/Bird Studio — aktif |
-| 35 | Attack on Titan | Kodansha — orta-yüksek |
-| 36 | Demon Slayer | Aniplex — popüler, aktif |
-| 37 | My Hero Academia | Shueisha — aktif |
-| 38 | Game of Thrones | HBO/WBD — agresif |
-| 39 | Breaking Bad | AMC — orta-yüksek |
-| 40 | Stranger Things | Netflix — aktif marka takibi |
-| 41 | The Simpsons | Disney/Fox — çok agresif |
-| 42 | Rick and Morty | WBD — agresif |
-| 43 | League of Legends | Loldle zaten var + Riot aktif takipçi |
-| 44 | Genshin Impact | miHoYo — aktif, global |
-| 45 | Fortnite | Epic — aktif |
-| 46 | Minecraft | Microsoft — orta-agresif |
-| 47 | Zelda / Nintendo evreni | Nintendo — en agresif takipçilerden |
-| 48 | Friends | WBD — agresif |
-| 49 | The Office (US) | NBCUniversal — orta-agresif |
-| 50 | Squid Game | Netflix — çok yeni, çok agresif marka koruması |
+| 66 | One Piece | Kalabalık pazar (onepiecedle var), Toei/Shueisha aktif takipçi |
+| 67 | Naruto | Narutodle zaten var — doğrudan rekabet + IP riski |
+| 68 | Pokémon | Nintendo/Game Freak dünyanın en agresif takipçilerinden |
+| 69 | Marvel Sinematik Evreni | Disney — çok agresif |
+| 70 | DC (Batman/Superman vb.) | WBD — agresif |
+| 71 | Star Wars | Disney — çok agresif |
+| 72 | Harry Potter | Warner Bros — agresif |
+| 73 | Disney animasyon karakterleri | En agresif hak sahibi |
+| 74 | Dragon Ball | Toei/Bird Studio — aktif |
+| 75 | Attack on Titan | Kodansha — orta-yüksek |
+| 76 | Demon Slayer | Aniplex — popüler, aktif |
+| 77 | My Hero Academia | Shueisha — aktif |
+| 78 | Game of Thrones | HBO/WBD — agresif |
+| 79 | Breaking Bad | AMC — orta-yüksek |
+| 80 | Stranger Things | Netflix — aktif marka takibi |
+| 81 | The Simpsons | Disney/Fox — çok agresif |
+| 82 | Rick and Morty | WBD — agresif |
+| 83 | League of Legends | Loldle zaten var + Riot aktif takipçi |
+| 84 | Genshin Impact | miHoYo — aktif, global |
+| 85 | Fortnite | Epic — aktif |
+| 86 | Minecraft | Microsoft — orta-agresif |
+| 87 | Zelda / Nintendo evreni | Nintendo — en agresif takipçilerden |
+| 88 | Friends | WBD — agresif |
+| 89 | The Office (US) | NBCUniversal — orta-agresif |
+| 90 | Squid Game | Netflix — çok yeni, çok agresif marka koruması |
+| 91 | Death Note | Shueisha — aktif |
+| 92 | Jujutsu Kaisen | Shueisha — aktif, çok popüler |
+| 93 | Chainsaw Man | Shueisha — aktif |
+| 94 | Bleach | Shueisha — aktif |
+| 95 | Hunter x Hunter | Shueisha — aktif |
+| 96 | One Punch Man | Shueisha/Madhouse — orta-yüksek |
+| 97 | Spy x Family | Shueisha — yeni, popüler, aktif |
+| 98 | Studio Ghibli filmleri | Ghibli/Disney dağıtım — çok agresif |
+| 99 | Pixar filmleri | Disney — çok agresif |
+| 100 | Toy Story / Disney-Pixar evreni | Disney — çok agresif |
+| 101 | Grand Theft Auto (GTA) | Rockstar/Take-Two — agresif |
+| 102 | Call of Duty | Activision — agresif |
+| 103 | The Witcher | CD Projekt / Netflix çapraz IP — orta-yüksek |
+| 104 | Red Dead Redemption | Rockstar — agresif |
+| 105 | Marvel/DC dışı süper kahraman çizgi romanları | Değişken, genelde büyük yayınevi |
+| 106 | Sailor Moon | Toei — aktif |
+| 107 | Yu-Gi-Oh! | Konami — aktif |
+| 108 | Digimon | Bandai — orta-yüksek |
+| 109 | Sword Art Online | Aniplex — orta-yüksek |
+| 110 | Tokyo Ghoul | Shueisha/Kodansha — orta-yüksek |
+| 111 | Fullmetal Alchemist | Square Enix — orta-yüksek |
+| 112 | Kimetsu no Yaiba yan ürünleri | Aniplex — aktif (Demon Slayer ile aynı IP) |
+| 113 | Avatar: The Last Airbender | Nickelodeon/Paramount — orta-yüksek |
+| 114 | The Boys | Amazon — aktif |
+| 115 | The Mandalorian | Disney — çok agresif (Star Wars ile aynı IP) |
+| 116 | Wednesday (Netflix dizisi) | Netflix — yeni, agresif |
+| 117 | House of the Dragon | HBO/WBD — agresif |
+| 118 | The Last of Us | Sony/HBO — agresif |
+| 119 | Türk dizi evreni (Netflix orijinalleri) | Netflix — agresif marka koruması |
+| 120 | Barbie (Mattel evreni) | Mattel — çok agresif |
+
+### 🔴 Yüksek Risk — devamı
+
+| # | Konu | Not |
+|---|---|---|
+| 121 | Assassin's Creed | Ubisoft — agresif |
+| 122 | FIFA/EA Sports FC (oyun karakterleri değil marka) | EA — lisans hassasiyeti yüksek |
+| 123 | Roblox evreni | Roblox Corp — orta-agresif |
+| 124 | Among Us | Innersloth — orta, küçük stüdyo ama aktif |
+| 125 | Five Nights at Freddy's | Scott Cawthon/Blumhouse — orta-yüksek |
+| 126 | Rick Riordan evreni (Percy Jackson) | Disney dağıtım — agresif |
+| 127 | Marvel Yan Karakterleri (X-Men, Avengers alt kadro) | Disney — çok agresif |
+| 128 | Star Trek | Paramount — agresif |
+| 129 | Doctor Who | BBC — agresif |
+| 130 | Sherlock (BBC dizisi) | BBC — orta-yüksek |
+| 131 | Peaky Blinders | BBC/Netflix — orta-yüksek |
+| 132 | La Casa de Papel (Money Heist) | Netflix — agresif |
+| 133 | Money Heist Kore uyarlaması vb. | Netflix — agresif |
+| 134 | Dark (Netflix dizisi) | Netflix — agresif |
+| 135 | Peppa Pig | Hasbro — çocuk IP, çok agresif |
+| 136 | Paw Patrol | Nickelodeon — çocuk IP, agresif |
+| 137 | SpongeBob SquarePants | Nickelodeon/Paramount — çok agresif |
+| 138 | Hello Kitty / Sanrio evreni | Sanrio — çok agresif |
+| 139 | Super Mario evreni | Nintendo — en agresif takipçilerden |
+| 140 | Animal Crossing | Nintendo — agresif |
+| 141 | Kirby | Nintendo — agresif |
+| 142 | Fire Emblem | Nintendo — orta-agresif |
+| 143 | Final Fantasy | Square Enix — agresif |
+| 144 | Kingdom Hearts | Square Enix/Disney çapraz — çok agresif |
+| 145 | Persona / Shin Megami Tensei | Atlus/Sega — orta-yüksek |
+| 146 | Elden Ring / FromSoftware evreni | FromSoftware/Bandai Namco — orta-yüksek |
+| 147 | Dark Souls | FromSoftware — orta-yüksek |
+| 148 | Overwatch | Blizzard/Microsoft — agresif |
+| 149 | World of Warcraft | Blizzard — agresif |
+| 150 | Valorant | Riot — agresif (LoL ile aynı şirket) |
+
+## 🟡 Orta Risk — devamı
+
+| # | Konu | Not |
+|---|---|---|
+| 151 | Türk pop/rock grupları (aktif, marka hassas isim) | Sahne adı marka tescilliyse dikkat |
+| 152 | Ünlü YouTuber prodüksiyon formatları (ör. belirli bir dizi/segment adı) | Format adı marka olabilir |
+| 153 | Spor yorumcuları (TR) | Kamusal ama yayın kurumuyla bağlantı gri alan |
+| 154 | Ünlü şarkı sözü yazarları (replik/söz kullanımıyla) | Söz alıntısı telif riski taşır |
+| 155 | K-pop grupları (gerçek kişi, ajans markası hassas) | Ajans (HYBE, SM vb.) marka takibi orta-yüksek |
+| 156 | Ünlü moda markaları tarihi (marka trivia) | Marka ismi kullanımı gri alan |
+| 157 | Reklam filmleri / jingle'lar (kültürel trivia) | Marka+reklam ajansı telifi karışık |
+| 158 | Ünlü spor kulüpleri tarihi (logo kullanılmadan) | Kulüp ismi serbest, logo/forma görseli riskli |
+| 159 | Ünlü stadyumlar/arenalar | Yapı/isim hakları genelde düşük ama sponsor isim değişimi kafa karıştırabilir |
+| 160 | Belirli konser turneleri (isim/yıl trivia) | Turne adı marka olabilir |
+
+## 🟢 Düşük Risk — devamı (havuzu ~200'e tamamlamak için)
+
+| # | Konu | Not |
+|---|---|---|
+| 161 | Dünya Adaları (coğrafya) | Saf coğrafya |
+| 162 | Dünya Çölleri | Saf coğrafya |
+| 163 | Dünya Gölleri | Saf coğrafya |
+| 164 | Ünlü Matematikçiler | Kamusal, tarihi |
+| 165 | Ünlü Filozoflar (Doğu felsefesi) | #15'in genişletilmiş versiyonu |
+| 166 | Nobel Ekonomi Ödülü Sahipleri | #6/#33 ile aynı desen, ayrı alan |
+| 167 | Dünya Tarihi Savaşları (kavramsal trivia, kişi değil) | Olay bazlı, kişi riski yok |
+| 168 | Antik Uygarlıklar | Tarihi, kamusal |
+| 169 | Dünya Mutfakları (ülke bazlı yemek trivia'sı) | Kişi/marka değil, kültürel bilgi |
+| 170 | Ünlü Kütüphaneler/Müzeler | Kurum trivia'sı |
+| 171 | Gezegenler ve Uzay Cisimleri | Bilimsel, kişi riski yok |
+| 172 | Dünya Zaman Dilimleri / Meridyenler | Saf coğrafya/bilim |
+| 173 | Ünlü Denizciler/Kaşifler (genişletilmiş #24) | Tarihi |
+| 174 | Dünya Tren Hatları/İstasyonları (trivia) | Altyapı trivia'sı |
+| 175 | Formula 1 Şampiyonluk Yılları (yıl bazlı, kişiden bağımsız) | Kurumsal/istatistik |
+| 176 | Dünya Kupası Şampiyonları (ülke bazlı, kişi değil) | Resmi turnuva kaydı |
+| 177 | Wimbledon/Grand Slam Şampiyonluk Tarihi (yıl bazlı) | Resmi turnuva kaydı |
+| 178 | Nobel Ödülsüz Büyük Bilim Buluşları (olay bazlı) | Olay/keşif trivia'sı |
+| 179 | Dünya Para Birimi Tarihi (Euro öncesi vb.) | Ekonomi trivia'sı |
+| 180 | Ünlü Kütüphane/Arşiv Koleksiyonları | Kurum trivia'sı |
+| 181 | Türkiye İlleri (şehir trivia'sı: nüfus/bölge/plaka) | Yerel coğrafya, sıfır risk |
+| 182 | Türkiye'nin Doğal Güzellikleri | Yerel coğrafya |
+| 183 | Dünya Mimari Stilleri (dönem bazlı) | Kavramsal, kişi değil |
+| 184 | Ünlü Bilim Kurgu Yazarları (eser adı olmadan, yazar bio'su) | Yazar kamusal, eser adı ayrı telif riski taşıyabilir |
+| 185 | Ünlü Şairler | Tarihi, kamusal |
+| 186 | Dünya Bağımsızlık Tarihleri (ülke bazlı) | Tarih trivia'sı |
+| 187 | Element Simgeleri / Kimyasal Bileşikler (genişletilmiş #4) | Bilimsel |
+| 188 | Dünya Saat Kuşakları Rekorları (en erken/en geç gün batımı vb.) | Coğrafya trivia'sı |
+| 189 | Ünlü Kadın Bilim İnsanları (özel odak) | #6/#16 ile örtüşebilir, temsil odaklı ayrı koleksiyon |
+| 190 | Dünya Spor Organizasyonları Tarihi (FIFA, IOC vb. kuruluş trivia'sı) | Kurumsal tarih |
+| 191 | Voleybol/Basketbol Milli Takım Tarihi (TR) | Kamusal spor kaydı |
+| 192 | Dünya Barajları/Köprüleri (mühendislik trivia'sı) | Altyapı trivia'sı |
+| 193 | Ünlü Yayınevleri Tarihi | Kurumsal trivia |
+| 194 | Dünya Film Festivalleri (Cannes, Venedik vb. — ödül bazlı, film adı değil) | Organizasyon trivia'sı |
+| 195 | Ünlü Orkestra ve Operalar (kurum bazlı) | Kurumsal, #10 ile ilişkili |
+| 196 | Dünya Uzay Ajansları (NASA, ESA vb.) | Kurumsal trivia |
+| 197 | Ünlü Deniz Feneri/Tarihi Yapılar | Coğrafya/tarih trivia'sı |
+| 198 | Dünya Rekor Sahipleri (Guinness, spor dışı) | Kamusal rekor verisi |
+| 199 | Ünlü Kaligrafi/Hat Sanatı Ustaları (TR-İslam sanatı) | Tarihi, kamusal |
+| 200 | Dünya Fuarları (Expo) Tarihi | Organizasyon trivia'sı |
 
 ---
 
-## Öneri
+## 🚫 Bu implementasyonda yapılmayanlar
 
-**Faz 1'de veri seti kur:** Düşük risk grubundan 3-4 tanesi — bunlar hem
-IP riski taşımıyor hem de motoru (Classic mod: özellik tablosu) kanıtlamaya
-yetiyor. Bu implementasyonda seçilenler:
+Yüksek risk grubu (66-120) için **hiçbir veri seti kurulmadı** — yalnızca
+dokümante edildi. Orta risk grubu (51-65) da bu turda atlandı; gerçek
+oyuncu/yönetmen bio'suna dayanan modlarla ("hangi dizide oynadı" gibi,
+karakter görseli kullanmadan) sonraki fazda değerlendirilebilir.
 
-- Süper Lig futbolcuları
-- Türkiye Kick/Twitch yayıncıları
-- NBA efsaneleri
-- Dünya başkentleri (bonus, saf trivia — motoru farklı bir veri şekliyle de test eder)
+## Öneri — sıradaki adımlar
 
-**Orta risk grubu**, gerçek oyuncu/yönetmen bio'suna dayanan modlarla
-("hangi dizide oynadı" gibi) sonraki fazda değerlendirilebilir.
-
-**Yüksek risk grubu şimdilik veri seti olarak kurulmadı.** İstersen ilerleyen
-fazda, küçük ölçekli/reklamsız/DMCA'ya hızlı yanıt verecek bir operasyon
-modeliyle tek tek değerlendirilebilir — ama bu implementasyonun kapsamı dışında
-tutuldu.
+- **11-50 arası düşük risk havuzu** aynı desenle (kişi-riski düşük, kamusal/
+  objektif veri) dolduruşabilir; her biri ayrı bir çalışma oturumu gerektirir.
+- **Yayıncılar paketi** (#11) güncel veri doğrulaması yapılmadan 50'ye
+  çıkarılmamalı — bu kategori en hızlı eskiyen veri türü.
+- **Orta risk** grubuna geçilecekse, önce tek bir pilot (ör. #51 Türk dizi
+  oyuncuları, yalnızca oyuncu bio'su + rol adı, karakter görseli yok) ile
+  test edilmeli.
