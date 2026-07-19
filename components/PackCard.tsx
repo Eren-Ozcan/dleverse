@@ -1,6 +1,8 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import type { PackConfig } from "@/engine/types";
+import { localizePackSubtitle, localizePackTitle } from "@/engine/localize";
+import { useSettings } from "@/providers/SettingsProvider";
 
 interface Props {
   pack: PackConfig;
@@ -10,6 +12,7 @@ interface Props {
 }
 
 export function PackCard({ pack, streak, playedToday, onPress }: Props) {
+  const { locale, t } = useSettings();
   return (
     <Pressable onPress={onPress} style={({ pressed }) => [styles.wrapper, pressed && styles.pressed]}>
       <LinearGradient
@@ -22,15 +25,15 @@ export function PackCard({ pack, streak, playedToday, onPress }: Props) {
           <Text style={styles.emoji}>{pack.emoji}</Text>
           {playedToday ? (
             <View style={styles.badge}>
-              <Text style={styles.badgeText}>Bugün oynandı</Text>
+              <Text style={styles.badgeText}>{t.playedToday}</Text>
             </View>
           ) : null}
         </View>
-        <Text style={styles.title}>{pack.title}</Text>
-        <Text style={styles.subtitle}>{pack.subtitle}</Text>
+        <Text style={styles.title}>{localizePackTitle(pack, locale)}</Text>
+        <Text style={styles.subtitle}>{localizePackSubtitle(pack, locale)}</Text>
         <View style={styles.footerRow}>
-          <Text style={styles.streak}>🔥 {streak} gün seri</Text>
-          <Text style={styles.entityCount}>{pack.entities.length} kayıt</Text>
+          <Text style={styles.streak}>{t.streakDays(streak)}</Text>
+          <Text style={styles.entityCount}>{t.entityCount(pack.entities.length)}</Text>
         </View>
       </LinearGradient>
     </Pressable>

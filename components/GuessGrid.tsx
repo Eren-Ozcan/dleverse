@@ -1,5 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
-import type { GuessRow } from "@/engine/types";
+import { useEffect, useRef } from "react";
+import { Animated, StyleSheet, Text, View } from "react-native";
+import type { GuessRow, PackConfig } from "@/engine/types";
+import { CELL_STATUS_SYMBOL } from "@/engine/types";
+import { localizeEntityName, localizeFieldLabel, localizeFieldValue } from "@/engine/localize";
+import { useSettings } from "@/providers/SettingsProvider";
 import { colors } from "@/theme/colors";
 
 const statusColor: Record<string, string> = {
@@ -19,46 +23,98 @@ function formatValue(value: string | number | string[]): string {
   return String(value);
 }
 
-export function GuessGrid({ rows }: { rows: GuessRow[] }) {
+/** Yeni tahmin satırındaki hücreleri soldan sağa sırayla açar (Wordle flip hissi). */
+function RevealCell({ delay, children, style }: { delay: number; children: React.ReactNode; style: object }) {
+  const progress = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(progress, {
+      toValue: 1,
+      duration: 260,
+      delay,
+      useNativeDriver: true,
+    }).start();
+  }, [progress, delay]);
+
+  return (
+    <Animated.View
+      style={[
+        style,
+        {
+          opacity: progress,
+          transform: [
+            { scale: progress.interpolate({ inputRange: [0, 1], outputRange: [0.6, 1] }) },
+            { rotateX: progress.interpolate({ inputRange: [0, 1], outputRange: ["90deg", "0deg"] }) },
+          ],
+        },
+      ]}
+    >
+      {children}
+    </Animated.View>
+  );
+}
+
+export function GuessGrid({ rows, pack }: { rows: GuessRow[]; pack: PackConfig }) {
+  const { locale, colorblind, t } = useSettings();
+
   if (rows.length === 0) {
     return (
       <View style={styles.empty}>
-        <Text style={styles.emptyText}>Henüz tahmin yok. Aşağıdan aramaya başla.</Text>
+        <Text style={styles.emptyText}>{t.emptyGrid}</Text>
       </View>
     );
   }
 
-  const headers = rows[0].cells.map((cell) => cell.label);
+  const headers = rows[0].cells.map((cell) => localizeFieldLabel(pack, cell.key, cell.label, locale));
+  // En yeni tahmin en üstte — kaydırmadan son duruma bakılır (Loldle düzeni).
+  const displayRows = [...rows].reverse();
 
   return (
     <View>
       <View style={styles.headerRow}>
         <Text style={[styles.headerCell, styles.nameCol]}> </Text>
-        {headers.map((label) => (
-          <Text key={label} style={styles.headerCell} numberOfLines={1}>
+        {headers.map((label, i) => (
+          <Text key={`${label}-${i}`} style={styles.headerCell} numberOfLines={1}>
             {label}
           </Text>
         ))}
       </View>
-      {rows.map((row, index) => (
-        <View key={`${row.entity.id}-${index}`} style={styles.row}>
-          <View style={[styles.cell, styles.nameCol, styles.nameCell]}>
-            <Text style={styles.nameText} numberOfLines={2}>
-              {row.entity.name}
-            </Text>
-          </View>
-          {row.cells.map((cell) => (
-            <View key={cell.key} style={[styles.cell, { backgroundColor: statusColor[cell.status] }]}>
-              <Text style={styles.cellText} numberOfLines={2}>
-                {formatValue(cell.value)}
+      {displayRows.map((row, index) => {
+        const isNewest = index === 0;
+        return (
+          <View key={`${row.entity.id}-${rows.length - index}`} style={styles.row}>
+            <View style={[styles.cell, styles.nameCol, styles.nameCell]}>
+              <Text style={styles.nameText} numberOfLines={2}>
+                {localizeEntityName(row.entity, locale)}
               </Text>
-              {cell.hint && cell.hint.direction !== "equal" ? (
-                <Text style={styles.arrow}>{directionArrow[cell.hint.direction]}</Text>
-              ) : null}
             </View>
-          ))}
-        </View>
-      ))}
+            {row.cells.map((cell, cellIndex) => {
+              const localizedValue = localizeFieldValue(pack, cell.key, cell.value, locale);
+              const content = (
+                <>
+                  <Text style={styles.cellText} numberOfLines={2}>
+                    {formatValue(localizedValue)}
+                  </Text>
+                  {cell.hint && cell.hint.direction !== "equal" ? (
+                    <Text style={styles.arrow}>{directionArrow[cell.hint.direction]}</Text>
+                  ) : null}
+                  {colorblind ? <Text style={styles.symbol}>{CELL_STATUS_SYMBOL[cell.status]}</Text> : null}
+                </>
+              );
+              const cellStyle = [styles.cell, { backgroundColor: statusColor[cell.status] }];
+              return isNewest ? (
+                <RevealCell key={cell.key} delay={cellIndex * 150} style={StyleSheet.flatten(cellStyle)}>
+                  {content}
+                </RevealCell>
+              ) : (
+                <View key={cell.key} style={cellStyle}>
+                  {content}
+                </View>
+              );
+            })}
+          </View>
+        );
+      })}
     </View>
   );
 }
@@ -89,4 +145,5 @@ const styles = StyleSheet.create({
   nameText: { color: colors.textPrimary, fontSize: 12, fontWeight: "700", textAlign: "center" },
   cellText: { color: "#fff", fontSize: 11, fontWeight: "600", textAlign: "center" },
   arrow: { color: "#fff", fontSize: 13, fontWeight: "800", marginTop: 2 },
+  symbol: { color: "#fff", fontSize: 11, fontWeight: "900", marginTop: 1 },
 });

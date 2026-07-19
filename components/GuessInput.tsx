@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import type { Entity, PackConfig } from "@/engine/types";
 import { searchEntities } from "@/engine/guessEngine";
+import { localizeEntityName } from "@/engine/localize";
+import { useSettings } from "@/providers/SettingsProvider";
 import { colors } from "@/theme/colors";
 
 interface Props {
@@ -12,6 +14,7 @@ interface Props {
 }
 
 export function GuessInput({ pack, guessedIds, disabled, onGuess }: Props) {
+  const { locale, t } = useSettings();
   const [query, setQuery] = useState("");
 
   const results = useMemo(() => {
@@ -30,7 +33,7 @@ export function GuessInput({ pack, guessedIds, disabled, onGuess }: Props) {
         value={query}
         onChangeText={setQuery}
         editable={!disabled}
-        placeholder={disabled ? "Bugünkü tahmin tamamlandı" : "Bir isim yaz..."}
+        placeholder={disabled ? t.searchPlaceholderDisabled : t.searchPlaceholder}
         placeholderTextColor={colors.textSecondary}
         style={[styles.input, disabled && styles.inputDisabled]}
         autoCorrect={false}
@@ -44,7 +47,7 @@ export function GuessInput({ pack, guessedIds, disabled, onGuess }: Props) {
           keyboardShouldPersistTaps="handled"
           renderItem={({ item }) => (
             <Pressable style={styles.suggestionRow} onPress={() => handlePick(item)}>
-              <Text style={styles.suggestionText}>{item.name}</Text>
+              <Text style={styles.suggestionText}>{localizeEntityName(item, locale)}</Text>
             </Pressable>
           )}
         />
