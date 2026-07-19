@@ -1,4 +1,5 @@
 import type { CellStatus, Entity, FieldDef, FieldValue, GuessCell, GuessRow, NumericHint, PackConfig } from "./types";
+import { EMOJI_MODE_HINT_SCHEDULE } from "./types";
 
 export function normalize(text: string): string {
   return text
@@ -8,25 +9,22 @@ export function normalize(text: string): string {
     .trim();
 }
 
-/** Matches an id/name/alias for search-as-you-type and win detection. */
+/** name + aliases + tüm dillerdeki nameByLocale çevirilerini tek listede toplar. */
+function searchableNames(entity: Entity): string[] {
+  return [entity.name, ...(entity.aliases ?? []), ...Object.values(entity.nameByLocale ?? {})];
+}
+
+/** Matches an id/name/alias (herhangi bir dilde) for search-as-you-type and win detection. */
 export function findEntityByQuery(pack: PackConfig, query: string): Entity | undefined {
   const q = normalize(query);
   if (!q) return undefined;
-  return pack.entities.find((entity) => {
-    if (normalize(entity.name) === q) return true;
-    return (entity.aliases ?? []).some((alias) => normalize(alias) === q);
-  });
+  return pack.entities.find((entity) => searchableNames(entity).some((n) => normalize(n) === q));
 }
 
 export function searchEntities(pack: PackConfig, query: string, limit = 8): Entity[] {
   const q = normalize(query);
   if (!q) return [];
-  return pack.entities
-    .filter((entity) => {
-      if (normalize(entity.name).includes(q)) return true;
-      return (entity.aliases ?? []).some((alias) => normalize(alias).includes(q));
-    })
-    .slice(0, limit);
+  return pack.entities.filter((entity) => searchableNames(entity).some((n) => normalize(n).includes(q))).slice(0, limit);
 }
 
 function compareMulti(guessValue: string[], targetValue: string[]): CellStatus {
@@ -39,6 +37,14 @@ function compareMulti(guessValue: string[], targetValue: string[]): CellStatus {
   return overlap ? "partial" : "wrong";
 }
 
+/** "Almanca / Fransızca" gibi çok değerli metinleri karşılaştırma için parçalara ayırır. */
+function textTokens(value: string): string[] {
+  return value
+    .split(/[/,]/)
+    .map(normalize)
+    .filter(Boolean);
+}
+
 function compareField(field: FieldDef, guessValue: FieldValue, targetValue: FieldValue): { status: CellStatus; hint?: NumericHint } {
   switch (field.type) {
     case "number":
@@ -46,16 +52,32 @@ function compareField(field: FieldDef, guessValue: FieldValue, targetValue: Fiel
       const g = Number(guessValue);
       const t = Number(targetValue);
       if (g === t) return { status: "correct", hint: { direction: "equal" } };
-      return { status: "wrong", hint: { direction: g < t ? "up" : "down" } };
+      const near = field.near ?? (field.type === "year" ? 10 : 0);
+      const status: CellStatus = near > 0 && Math.abs(g - t) <= near ? "partial" : "wrong";
+      return { status, hint: { direction: g < t ? "up" : "down" } };
     }
     case "multi":
       return { status: compareMulti(guessValue as string[], targetValue as string[]) };
     case "text":
     default: {
-      const status: CellStatus = normalize(String(guessValue)) === normalize(String(targetValue)) ? "correct" : "wrong";
-      return { status };
+      const guessText = String(guessValue);
+      const targetText = String(targetValue);
+      if (normalize(guessText) === normalize(targetText)) return { status: "correct" };
+      const guessSet = new Set(textTokens(guessText));
+      const overlap = textTokens(targetText).some((token) => guessSet.has(token));
+      return { status: overlap ? "partial" : "wrong" };
     }
   }
+}
+
+/**
+ * Emoji Modu'nda kaç alanın açığa çıkması gerektiğini tahmin sayısına göre hesaplar.
+ * En az bir alan her zaman gizli kalır ki emoji ipucu tek başına anlamını korusun.
+ */
+export function fieldKeysToReveal(pack: PackConfig, guessCount: number): string[] {
+  const unlocked = EMOJI_MODE_HINT_SCHEDULE.filter((threshold) => guessCount >= threshold).length;
+  const maxReveals = Math.max(0, pack.fields.length - 1);
+  return pack.fields.slice(0, Math.min(unlocked, maxReveals)).map((field) => field.key);
 }
 
 export function buildGuessRow(pack: PackConfig, guessEntity: Entity, targetEntity: Entity): GuessRow {

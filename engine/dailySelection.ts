@@ -1,4 +1,4 @@
-import type { Entity, PackConfig } from "./types";
+import type { Entity, GameMode, PackConfig } from "./types";
 
 /** FNV-1a 32-bit hash — stable across platforms, no external dependency needed. */
 function hashString(input: string): number {
@@ -18,8 +18,41 @@ export function todayKey(date: Date = new Date()): string {
   return `${y}-${m}-${d}`;
 }
 
-export function pickDailyEntity(pack: PackConfig, dateKey: string = todayKey()): Entity {
-  const seed = `${dateKey}:${pack.id}:v${pack.dailySaltVersion}`;
+function parseDateKey(dateKey: string): Date {
+  const [y, m, d] = dateKey.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
+
+export function addDays(dateKey: string, delta: number): string {
+  const date = parseDateKey(dateKey);
+  date.setDate(date.getDate() + delta);
+  return todayKey(date);
+}
+
+export function yesterdayKey(dateKey: string = todayKey()): string {
+  return addDays(dateKey, -1);
+}
+
+/** Dleverse'ün 1. günü — paylaşım metnindeki "#N" numarası buradan sayılır. */
+const EPOCH_KEY = "2026-07-01";
+
+export function dayNumber(dateKey: string = todayKey()): number {
+  const diff = parseDateKey(dateKey).getTime() - parseDateKey(EPOCH_KEY).getTime();
+  return Math.round(diff / 86_400_000) + 1;
+}
+
+/** Yerel gece yarısına (yeni günlük bulmacaya) kalan süre. */
+export function msUntilNextDaily(now: Date = new Date()): number {
+  const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  return next.getTime() - now.getTime();
+}
+
+/**
+ * Mod, tuza dahil edilir: aynı gün Klasik ve Emoji modu genelde farklı
+ * hedefler seçer, böylece bir modu çözmek diğerini ele vermez.
+ */
+export function pickDailyEntity(pack: PackConfig, dateKey: string = todayKey(), mode: GameMode = "classic"): Entity {
+  const seed = `${dateKey}:${pack.id}:v${pack.dailySaltVersion}:${mode}`;
   const index = hashString(seed) % pack.entities.length;
   return pack.entities[index];
 }
