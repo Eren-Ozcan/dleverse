@@ -47,7 +47,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 8 | Olimpiyat Efsaneleri | ✅ Kuruldu (50) | Madalya sayıları resmi kayıt |
 | 9 | ATP/WTA Tenis Efsaneleri | ✅ Kuruldu (50) | Grand Slam sayıları resmi kayıt (aktiflerde güncellenmeli) |
 | 10 | Ünlü Besteciler (Klasik Müzik) | ✅ Kuruldu (50) | Tamamen tarihi, yaşayan kişi yok |
-| 11 | Türkiye Kick/Twitch Yayıncıları | Kısmi (8) | Hızlı değişen veri (platform/takipçi) — 50'ye çıkarmadan önce güncel doğrulama şart |
+| 11 | Türkiye Kick/Twitch Yayıncıları | ✅ Kuruldu (50) | Web aramasıyla gerçek isim/kategori doğrulandı; kıdem aralıkları kaba tahmin — 80'e çıkmadan önce tek tek yeniden doğrulanmalı |
 | 12 | Premier League Efsaneleri | — | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
 | 13 | Formula 1 Pilotları (tüm zamanlar) | — | Şampiyon olmayanları da dahil ederek 50'ye çıkarılabilir |
 | 14 | Dünya Başkentleri (ayrı bayrak/nüfus odaklı) | — | Ülkeler paketinden farklı alan seti ile varyasyon |
@@ -276,8 +276,10 @@ karakter görseli kullanmadan) sonraki fazda değerlendirilebilir.
 
 - **11-50 arası düşük risk havuzu** aynı desenle (kişi-riski düşük, kamusal/
   objektif veri) dolduruşabilir; her biri ayrı bir çalışma oturumu gerektirir.
-- **Yayıncılar paketi** (#11) güncel veri doğrulaması yapılmadan 50'ye
-  çıkarılmamalı — bu kategori en hızlı eskiyen veri türü.
+- **Yayıncılar paketi** (#11) web aramasıyla doğrulanan 50 kayıtla kuruldu
+  (2026-07-20). 80'e çıkarmak isteniyorsa geri kalan adaylar için "kıdem"
+  ve "kategori" alanları tek tek doğrulanmadan eklenmemeli — bu kategori en
+  hızlı eskiyen veri türü.
 - **Orta risk** grubuna geçilecekse, önce tek bir pilot (ör. #51 Türk dizi
   oyuncuları, yalnızca oyuncu bio'su + rol adı, karakter görseli yok) ile
   test edilmeli.
