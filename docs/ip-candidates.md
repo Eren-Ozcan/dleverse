@@ -49,7 +49,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 10 | Ünlü Besteciler (Klasik Müzik) | ✅ Kuruldu (50) | Tamamen tarihi, yaşayan kişi yok |
 | 11 | Türkiye Kick/Twitch Yayıncıları | ✅ Kuruldu (50) | Web aramasıyla gerçek isim/kategori doğrulandı; kıdem aralıkları kaba tahmin — 80'e çıkmadan önce tek tek yeniden doğrulanmalı |
 | 12 | Premier League Efsaneleri | — | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
-| 13 | Formula 1 Pilotları (tüm zamanlar) | — | Şampiyon olmayanları da dahil ederek 50'ye çıkarılabilir |
+| 13 | Formula 1 Pilotları (tüm zamanlar) | ✅ Kuruldu (40) | Wikimedia Commons gerçek fotoğraf+kredi ile; 80'e çıkarılabilir |
 | 14 | Dünya Başkentleri (ayrı bayrak/nüfus odaklı) | — | Ülkeler paketinden farklı alan seti ile varyasyon |
 | 15 | Ünlü Filozoflar | — | Tarihi, kamusal |
 | 16 | Ünlü Mucitler/Bilim İnsanları (Nobel dışı) | — | Kamusal |
@@ -58,18 +58,18 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 19 | Dünya Satranç Şampiyonları | — | Küçük ama sadık kitle, tamamen kamusal |
 | 20 | Ünlü Şefler/Mutfak Dünyası | — | Kamusal figür |
 | 21 | Dünya Dağları/Zirveleri | — | Saf coğrafya |
-| 22 | Dünya Nehirleri | — | Saf coğrafya |
+| 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
 | 24 | Ünlü Kaşifler | — | Tarihi, kamusal |
 | 25 | Dünya İmparatorlukları (tarihi) | — | Coğrafya+tarih karışımı, kişi değil |
 | 26 | Boks Efsaneleri | — | Kamusal spor kaydı |
-| 27 | Atletizm Efsaneleri (100m, maraton vb.) | — | Kamusal rekor verisi |
-| 28 | Yüzme Efsaneleri | — | Kamusal rekor verisi |
+| 27 | Atletizm Efsaneleri (100m, maraton vb.) | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
+| 28 | Yüzme Efsaneleri | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
 | 29 | Formula 1 Takımları/Tarihi | — | Kurumsal veri, kişi değil |
 | 30 | Dünya Dilleri | — | Saf dilbilim trivia |
 | 31 | Türk Sporcular (genel, olimpik) | — | Kamusal ama araştırma gerektirir |
 | 32 | Astronotlar/Kozmonotlar | — | Kamusal, uzay tarihi |
-| 33 | Nobel Ödüllü Barış Ödülü Sahipleri | — | #6 ile birleştirilebilir ya da ayrı tutulabilir |
+| 33 | Nobel Ödüllü Barış Ödülü Sahipleri | ✅ Kuruldu (58) | Ayrı paket olarak kuruldu, gerçek Commons fotoğrafı |
 | 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
 | 35 | Ünlü Heykeltıraşlar | — | #7 ile benzer desen |
 | 36 | Rönesans Dönemi Sanatçıları (alt küme) | — | #7'nin daha spesifik alt kümesi |
@@ -92,8 +92,8 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 
 | # | Konu | Not |
 |---|---|---|
-| 51 | Türk dizi oyuncuları (rol/bio bazlı) | Karakter görseli değil, oyuncu+rol metadata'sı |
-| 52 | Hollywood aktörleri (filmografi) | Gerçek kişi ama büyük stüdyo filmleriyle iç içe |
+| 51 | Türk dizi oyuncuları (rol/bio bazlı) | ✅ Kuruldu (40) — Karakter/sahne görseli değil, sadece oyuncunun kendi Commons portresi + rol metadata'sı |
+| 52 | Hollywood aktörleri (filmografi) | ✅ Kuruldu (40) — Aynı ilke: sadece oyuncu portresi, sahne/kostüm görseli yok |
 | 53 | Yönetmenler (filmografi trivia) | Metin ağırlıklı |
 | 54 | Ünlü diziler (meta bilgi: oyuncu/yıl/tür) | Sahne görseli kullanılmazsa nispeten güvenli |
 | 55 | Retro/klasik video oyunları (stüdyo bilgisi) | Eski, daha zayıf takip edilen IP'ler |
@@ -268,18 +268,35 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 ## 🚫 Bu implementasyonda yapılmayanlar
 
 Yüksek risk grubu (66-120) için **hiçbir veri seti kurulmadı** — yalnızca
-dokümante edildi. Orta risk grubu (51-65) da bu turda atlandı; gerçek
-oyuncu/yönetmen bio'suna dayanan modlarla ("hangi dizide oynadı" gibi,
-karakter görseli kullanmadan) sonraki fazda değerlendirilebilir.
+dokümante edildi.
+
+## 2026-07-24 güncellemesi — gerçek görsel + genişletme
+
+Kullanıcı kararıyla strateji değişti: artık paketlerde emoji-clue yerine
+**gerçek Wikimedia Commons fotoğrafı + yazar/lisans kredisi** kullanılıyor
+(bkz. `engine/types.ts` → `Entity.image`/`imageCredit`, `scripts/fetch-wiki-image.js`).
+Bu, dokümanın başındaki "karakter görseli kullanma" ilkesini değiştirmez
+(hâlâ hiçbir kurgusal karakter/logo görseli yok) ama gerçek kişi
+fotoğraflarının getirdiği ek riski (özellikle "personality rights") bilerek
+kabul ediyor. Ayrıca yeni bir **Ses Modu** eklendi (`expo-audio`), paket
+bazında opsiyonel.
+
+Bu turda 8 yeni paket kuruldu: Formula 1 Pilotları (#13), Dünya Nehirleri
+(#22), Atletizm Efsaneleri (#27), Yüzme Efsaneleri (#28), Nobel Ödüllü Barış
+Ödülü Sahipleri (#33), Türk dizi oyuncuları (#51), Hollywood aktörleri (#52)
+ve listede olmayan bir ek paket: **Dünya Dağları** (`daglar`, 39 kayıt, saf
+coğrafya — kişi içermiyor, düşük risk). Orta risk grubuna (#51-52) bilinçli
+olarak geçildi: her iki paket de SADECE oyuncunun kendi Commons portresini
+kullanıyor, sahne/kostüm/prodüksiyon görseli yok.
 
 ## Öneri — sıradaki adımlar
 
-- **11-50 arası düşük risk havuzu** aynı desenle (kişi-riski düşük, kamusal/
-  objektif veri) dolduruşabilir; her biri ayrı bir çalışma oturumu gerektirir.
+- **11-50 arası düşük risk havuzu**nun geri kalanı (#12, #14-21, #23-26,
+  #29-32, #34-50) aynı desenle (gerçek Commons fotoğrafı + doğrulanmış veri)
+  doldurulabilir.
 - **Yayıncılar paketi** (#11) web aramasıyla doğrulanan 50 kayıtla kuruldu
   (2026-07-20). 80'e çıkarmak isteniyorsa geri kalan adaylar için "kıdem"
   ve "kategori" alanları tek tek doğrulanmadan eklenmemeli — bu kategori en
   hızlı eskiyen veri türü.
-- **Orta risk** grubuna geçilecekse, önce tek bir pilot (ör. #51 Türk dizi
-  oyuncuları, yalnızca oyuncu bio'su + rol adı, karakter görseli yok) ile
-  test edilmeli.
+- **Orta risk** grubunun geri kalanı (#53-65) aynı ilkeyle (sadece kişi
+  portresi, prodüksiyon/sahne görseli yok) genişletilebilir.
