@@ -10,6 +10,14 @@ import olimpiyatEfsaneleri from "./olimpiyat-efsaneleri";
 import tenisEfsaneleri from "./tenis-efsaneleri";
 import besteciler from "./besteciler";
 import yayincilar from "./yayincilar";
+import f1Pilotlari from "./f1-pilotlari";
+import nehirler from "./nehirler";
+import nobelBaris from "./nobel-baris";
+import daglar from "./daglar";
+import atletizmEfsaneleri from "./atletizm-efsaneleri";
+import yuzmeEfsaneleri from "./yuzme-efsaneleri";
+import hollywoodAktorleri from "./hollywood-aktorleri";
+import turkDiziOyunculari from "./turk-dizi-oyunculari";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -23,6 +31,14 @@ export const packs: PackConfig[] = [
   tenisEfsaneleri,
   besteciler,
   yayincilar,
+  f1Pilotlari,
+  nehirler,
+  nobelBaris,
+  daglar,
+  atletizmEfsaneleri,
+  yuzmeEfsaneleri,
+  hollywoodAktorleri,
+  turkDiziOyunculari,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
