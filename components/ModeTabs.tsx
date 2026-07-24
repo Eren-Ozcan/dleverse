@@ -6,13 +6,15 @@ import { colors } from "@/theme/colors";
 interface Props {
   mode: GameMode;
   onChange: (mode: GameMode) => void;
+  soundAvailable?: boolean;
 }
 
-export function ModeTabs({ mode, onChange }: Props) {
+export function ModeTabs({ mode, onChange, soundAvailable }: Props) {
   const { t } = useSettings();
   const tabs: { key: GameMode; label: string }[] = [
     { key: "classic", label: t.modeClassic },
     { key: "emoji", label: `${t.modeEmoji} 🧩` },
+    ...(soundAvailable ? [{ key: "sound" as GameMode, label: `${t.modeSound} 🔊` }] : []),
   ];
 
   return (

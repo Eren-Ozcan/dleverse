@@ -33,16 +33,22 @@ export const LOCALE_FLAGS: Record<Locale, string> = {
   pt: "🇵🇹",
 };
 
-export type GameMode = "classic" | "emoji";
+export type GameMode = "classic" | "emoji" | "sound";
 
 export interface Entity {
   id: string;
   name: string;
   aliases?: string[];
   image?: string;
+  /** image doluysa zorunlu: "Yazar, Lisans, Kaynak" formatında kısa kredi metni (ör. "Jane Doe, CC BY-SA 4.0, Wikimedia Commons"). */
+  imageCredit?: string;
   fields: Record<string, FieldValue>;
   /** Emoji Modu'nda gösterilen, cevabı ima eden kısa emoji dizisi (ör. "🐍🍎🍊"). */
   emojiClue?: string;
+  /** Ses Modu'nda çalınan kısa ipucu klibinin URL'i (ör. bir enstrüman/parça kesiti, konuşma örneği). */
+  audioClue?: string;
+  /** audioClue doluysa zorunlu: kaynak+lisans kredisi. */
+  audioCredit?: string;
   /** Sadece isim diller arası anlamlı şekilde değiştiğinde dolu olur (ör. "Büyük İskender" → "Alexander the Great"). */
   nameByLocale?: Partial<Record<Locale, string>>;
 }
@@ -124,5 +130,5 @@ export interface PackDailyState {
 
 export const MAX_GUESSES = 8;
 
-/** Emoji Modu'nda tahmin sayısı bu eşiklere ulaştığında bir alan daha açığa çıkar. */
-export const EMOJI_MODE_HINT_SCHEDULE = [2, 4, 6] as const;
+/** Emoji/Ses Modu'nda tahmin sayısı bu eşiklere ulaştığında bir alan daha açığa çıkar. */
+export const CLUE_MODE_HINT_SCHEDULE = [2, 4, 6] as const;

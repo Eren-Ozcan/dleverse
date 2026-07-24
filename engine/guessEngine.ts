@@ -1,5 +1,5 @@
 import type { CellStatus, Entity, FieldDef, FieldValue, GuessCell, GuessRow, NumericHint, PackConfig } from "./types";
-import { EMOJI_MODE_HINT_SCHEDULE } from "./types";
+import { CLUE_MODE_HINT_SCHEDULE } from "./types";
 
 export function normalize(text: string): string {
   return text
@@ -71,13 +71,18 @@ function compareField(field: FieldDef, guessValue: FieldValue, targetValue: Fiel
 }
 
 /**
- * Emoji Modu'nda kaç alanın açığa çıkması gerektiğini tahmin sayısına göre hesaplar.
- * En az bir alan her zaman gizli kalır ki emoji ipucu tek başına anlamını korusun.
+ * Emoji/Ses Modu'nda kaç alanın açığa çıkması gerektiğini tahmin sayısına göre hesaplar.
+ * En az bir alan her zaman gizli kalır ki asıl ipucu (emoji/ses) tek başına anlamını korusun.
  */
 export function fieldKeysToReveal(pack: PackConfig, guessCount: number): string[] {
-  const unlocked = EMOJI_MODE_HINT_SCHEDULE.filter((threshold) => guessCount >= threshold).length;
+  const unlocked = CLUE_MODE_HINT_SCHEDULE.filter((threshold) => guessCount >= threshold).length;
   const maxReveals = Math.max(0, pack.fields.length - 1);
   return pack.fields.slice(0, Math.min(unlocked, maxReveals)).map((field) => field.key);
+}
+
+/** Ses Modu sekmesi yalnızca paketteki her entity'nin bir ses ipucu varsa gösterilir. */
+export function packSupportsSoundMode(pack: PackConfig): boolean {
+  return pack.entities.length > 0 && pack.entities.every((entity) => Boolean(entity.audioClue));
 }
 
 export function buildGuessRow(pack: PackConfig, guessEntity: Entity, targetEntity: Entity): GuessRow {

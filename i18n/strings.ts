@@ -43,7 +43,9 @@ export interface Strings {
   colorblindHint: string;
   modeClassic: string;
   modeEmoji: string;
+  modeSound: string;
   emojiCluePrompt: string;
+  soundCluePrompt: string;
   emojiHintRevealed: string;
   todaySolvedCount: (n: number) => string;
   todaySolvedUnavailable: string;
@@ -97,7 +99,9 @@ export const STRINGS: Record<Locale, Strings> = {
     colorblindHint: "Renklere ek olarak sembol gösterir",
     modeClassic: "Klasik",
     modeEmoji: "Emoji",
+    modeSound: "Ses",
     emojiCluePrompt: "Bu emojiler kimi/neyi anlatıyor?",
+    soundCluePrompt: "Bu ses kimi/neyi anlatıyor?",
     emojiHintRevealed: "İpucu açıldı",
     todaySolvedCount: (n) => `Bugün ${n} kişi bildi`,
     todaySolvedUnavailable: "",
@@ -149,7 +153,9 @@ export const STRINGS: Record<Locale, Strings> = {
     colorblindHint: "Adds symbols on top of colors",
     modeClassic: "Classic",
     modeEmoji: "Emoji",
+    modeSound: "Sound",
     emojiCluePrompt: "Who or what do these emoji describe?",
+    soundCluePrompt: "Who or what does this sound describe?",
     emojiHintRevealed: "Hint revealed",
     todaySolvedCount: (n) => `${n} people solved it today`,
     todaySolvedUnavailable: "",
@@ -201,7 +207,9 @@ export const STRINGS: Record<Locale, Strings> = {
     colorblindHint: "Zeigt zusätzlich Symbole zu den Farben",
     modeClassic: "Klassisch",
     modeEmoji: "Emoji",
+    modeSound: "Ton",
     emojiCluePrompt: "Wen oder was beschreiben diese Emojis?",
+    soundCluePrompt: "Wen oder was beschreibt dieser Ton?",
     emojiHintRevealed: "Hinweis aufgedeckt",
     todaySolvedCount: (n) => `${n} Personen haben es heute gelöst`,
     todaySolvedUnavailable: "",
@@ -253,7 +261,9 @@ export const STRINGS: Record<Locale, Strings> = {
     colorblindHint: "Ajoute des symboles en plus des couleurs",
     modeClassic: "Classique",
     modeEmoji: "Emoji",
+    modeSound: "Son",
     emojiCluePrompt: "Qui ou quoi ces emojis décrivent-ils ?",
+    soundCluePrompt: "Qui ou quoi ce son décrit-il ?",
     emojiHintRevealed: "Indice révélé",
     todaySolvedCount: (n) => `${n} personnes ont trouvé aujourd'hui`,
     todaySolvedUnavailable: "",
@@ -305,7 +315,9 @@ export const STRINGS: Record<Locale, Strings> = {
     colorblindHint: "Añade símbolos además de los colores",
     modeClassic: "Clásico",
     modeEmoji: "Emoji",
+    modeSound: "Sonido",
     emojiCluePrompt: "¿A quién o qué describen estos emojis?",
+    soundCluePrompt: "¿A quién o qué describe este sonido?",
     emojiHintRevealed: "Pista revelada",
     todaySolvedCount: (n) => `${n} personas lo resolvieron hoy`,
     todaySolvedUnavailable: "",
@@ -357,7 +369,9 @@ export const STRINGS: Record<Locale, Strings> = {
     colorblindHint: "Adiciona símbolos além das cores",
     modeClassic: "Clássico",
     modeEmoji: "Emoji",
+    modeSound: "Som",
     emojiCluePrompt: "Quem ou o que esses emojis descrevem?",
+    soundCluePrompt: "Quem ou o que esse som descreve?",
     emojiHintRevealed: "Dica revelada",
     todaySolvedCount: (n) => `${n} pessoas acertaram hoje`,
     todaySolvedUnavailable: "",

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Pressable, Share, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, Share, StyleSheet, Text, View } from "react-native";
 import type { Entity, PackConfig, PackDailyState } from "@/engine/types";
 import { MAX_GUESSES } from "@/engine/types";
 import { buildShareText } from "@/engine/share";
@@ -34,6 +34,12 @@ export function ResultPanel({ pack, state, target, streak, yesterdayAnswer, toda
       <Text style={styles.title}>{state.won ? t.wonTitle(state.guesses.length, MAX_GUESSES) : t.lostTitle}</Text>
 
       <View style={styles.answerBox}>
+        {target.image ? (
+          <>
+            <Image source={{ uri: target.image }} style={styles.answerImage} resizeMode="cover" />
+            {target.imageCredit ? <Text style={styles.imageCredit}>{target.imageCredit}</Text> : null}
+          </>
+        ) : null}
         <Text style={styles.answerLabel}>{state.won ? t.answerLabelWon : t.answerLabelLost}</Text>
         <Text style={styles.answerName}>{localizeEntityName(target, locale)}</Text>
       </View>
@@ -81,6 +87,8 @@ const styles = StyleSheet.create({
   },
   title: { color: colors.textPrimary, fontSize: 18, fontWeight: "800" },
   answerBox: { alignItems: "center", marginTop: 12 },
+  answerImage: { width: 96, height: 96, borderRadius: 14, backgroundColor: colors.surfaceRaised },
+  imageCredit: { color: colors.textSecondary, fontSize: 9, marginTop: 4, opacity: 0.7 },
   answerLabel: { color: colors.textSecondary, fontSize: 12, textTransform: "uppercase", letterSpacing: 1 },
   answerName: { color: colors.accent, fontSize: 22, fontWeight: "800", marginTop: 2, textAlign: "center" },
   streak: { color: colors.partial, fontSize: 14, fontWeight: "700", marginTop: 10 },

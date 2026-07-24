@@ -12,10 +12,11 @@ import { HowToPlayModal } from "@/components/HowToPlayModal";
 import { SettingsModal } from "@/components/SettingsModal";
 import { ModeTabs } from "@/components/ModeTabs";
 import { EmojiClueCard } from "@/components/EmojiClueCard";
+import { SoundClueCard } from "@/components/SoundClueCard";
 import type { Entity, GameMode, GuessRow, PackDailyState } from "@/engine/types";
 import { MAX_GUESSES } from "@/engine/types";
 import { pickDailyEntity, todayKey, yesterdayKey } from "@/engine/dailySelection";
-import { buildGuessRow, fieldKeysToReveal } from "@/engine/guessEngine";
+import { buildGuessRow, fieldKeysToReveal, packSupportsSoundMode } from "@/engine/guessEngine";
 import { localizePackSubtitle, localizePackTitle } from "@/engine/localize";
 import type { PackProgress } from "@/engine/storage";
 import {
@@ -80,7 +81,8 @@ export default function PackScreen() {
     const row: GuessRow = buildGuessRow(pack, entity, target);
     const guesses = [...state.guesses, row];
     const finished = row.isWin || guesses.length >= MAX_GUESSES;
-    const revealedFieldKeys = mode === "emoji" ? fieldKeysToReveal(pack, guesses.length) : state.revealedFieldKeys;
+    const revealedFieldKeys =
+      mode === "emoji" || mode === "sound" ? fieldKeysToReveal(pack, guesses.length) : state.revealedFieldKeys;
     const next: PackDailyState = { ...state, guesses, won: row.isWin, finished, revealedFieldKeys };
     setState(next);
     await saveDailyState(pack.id, next);
@@ -138,7 +140,7 @@ export default function PackScreen() {
         <Text style={styles.title}>{localizePackTitle(pack, locale)}</Text>
         <Text style={styles.subtitle}>{localizePackSubtitle(pack, locale)}</Text>
 
-        <ModeTabs mode={mode} onChange={setMode} />
+        <ModeTabs mode={mode} onChange={setMode} soundAvailable={packSupportsSoundMode(pack)} />
 
         {!loading && state && target ? (
           <>
@@ -155,6 +157,7 @@ export default function PackScreen() {
             ) : (
               <>
                 {mode === "emoji" ? <EmojiClueCard pack={pack} target={target} state={state} /> : null}
+                {mode === "sound" ? <SoundClueCard pack={pack} target={target} state={state} /> : null}
                 <GuessInput pack={pack} guessedIds={guessedIds} disabled={state.finished} onGuess={handleGuess} />
                 <Text style={styles.counter}>
                   {state.guesses.length === 0 ? t.guessesLeftFirst(MAX_GUESSES) : t.guessesLeft(remaining, MAX_GUESSES)}
