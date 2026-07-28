@@ -18,6 +18,10 @@ import atletizmEfsaneleri from "./atletizm-efsaneleri";
 import yuzmeEfsaneleri from "./yuzme-efsaneleri";
 import hollywoodAktorleri from "./hollywood-aktorleri";
 import turkDiziOyunculari from "./turk-dizi-oyunculari";
+import premierLig from "./premier-lig";
+import f1Takimlari from "./f1-takimlari";
+import dogalHarikalar from "./dogal-harikalar";
+import rockGruplari from "./rock-gruplari";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -39,6 +43,10 @@ export const packs: PackConfig[] = [
   yuzmeEfsaneleri,
   hollywoodAktorleri,
   turkDiziOyunculari,
+  premierLig,
+  f1Takimlari,
+  dogalHarikalar,
+  rockGruplari,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
