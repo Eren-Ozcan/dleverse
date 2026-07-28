@@ -48,13 +48,13 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 9 | ATP/WTA Tenis Efsaneleri | ✅ Kuruldu (50) | Grand Slam sayıları resmi kayıt (aktiflerde güncellenmeli) |
 | 10 | Ünlü Besteciler (Klasik Müzik) | ✅ Kuruldu (50) | Tamamen tarihi, yaşayan kişi yok |
 | 11 | Türkiye Kick/Twitch Yayıncıları | ✅ Kuruldu (50) | Web aramasıyla gerçek isim/kategori doğrulandı; kıdem aralıkları kaba tahmin — 80'e çıkmadan önce tek tek yeniden doğrulanmalı |
-| 12 | Premier League Efsaneleri | — | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
+| 12 | Premier League Efsaneleri | ✅ Kuruldu (50) | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
 | 13 | Formula 1 Pilotları (tüm zamanlar) | ✅ Kuruldu (40) | Wikimedia Commons gerçek fotoğraf+kredi ile; 80'e çıkarılabilir |
 | 14 | Dünya Başkentleri (ayrı bayrak/nüfus odaklı) | — | Ülkeler paketinden farklı alan seti ile varyasyon |
 | 15 | Ünlü Filozoflar | — | Tarihi, kamusal |
 | 16 | Ünlü Mucitler/Bilim İnsanları (Nobel dışı) | — | Kamusal |
 | 17 | Global Pop Yıldızları (gerçek kişi, bio) | — | Görsel yerine metin bio kullan |
-| 18 | Klasik Rock Grupları/Üyeleri | — | Kuruluş yılı/tür bazlı, görsel yok |
+| 18 | Klasik Rock Grupları/Üyeleri | ✅ Kuruldu (50) | Kuruluş yılı/tür bazlı, gerçek Commons fotoğrafı |
 | 19 | Dünya Satranç Şampiyonları | — | Küçük ama sadık kitle, tamamen kamusal |
 | 20 | Ünlü Şefler/Mutfak Dünyası | — | Kamusal figür |
 | 21 | Dünya Dağları/Zirveleri | — | Saf coğrafya |
@@ -65,7 +65,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 26 | Boks Efsaneleri | — | Kamusal spor kaydı |
 | 27 | Atletizm Efsaneleri (100m, maraton vb.) | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
 | 28 | Yüzme Efsaneleri | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
-| 29 | Formula 1 Takımları/Tarihi | — | Kurumsal veri, kişi değil |
+| 29 | Formula 1 Takımları/Tarihi | ✅ Kuruldu (45) | Kurumsal veri, kişi değil; çoğu logo hariç tutuldu |
 | 30 | Dünya Dilleri | — | Saf dilbilim trivia |
 | 31 | Türk Sporcular (genel, olimpik) | — | Kamusal ama araştırma gerektirir |
 | 32 | Astronotlar/Kozmonotlar | — | Kamusal, uzay tarihi |
@@ -73,7 +73,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
 | 35 | Ünlü Heykeltıraşlar | — | #7 ile benzer desen |
 | 36 | Rönesans Dönemi Sanatçıları (alt küme) | — | #7'nin daha spesifik alt kümesi |
-| 37 | Dünya Doğal Harikaları | — | Saf coğrafya |
+| 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
 | 39 | Ünlü Mimarlar | — | Kamusal, eser bazlı |
 | 40 | Klasik Edebiyat Yazarları (roman) | — | #23 ile örtüşebilir, ayrı tutulursa roman odaklı |
@@ -289,10 +289,22 @@ coğrafya — kişi içermiyor, düşük risk). Orta risk grubuna (#51-52) bilin
 olarak geçildi: her iki paket de SADECE oyuncunun kendi Commons portresini
 kullanıyor, sahne/kostüm/prodüksiyon görseli yok.
 
+## 2026-07-29 güncellemesi — 4 yeni paket
+
+Bu turda 4 yeni paket kuruldu: Premier Lig Efsaneleri (#12, 50 kayıt, Süper
+Lig ile aynı "en çok anıldığı kulüp" deseni), Klasik Rock Grupları/Üyeleri
+(#18, 50 kayıt, gerçek Commons grup fotoğrafı), Formula 1 Takımları/Tarihi
+(#29, 45 kayıt, kurumsal/takım verisi — logo taşıyan takımların çoğunda
+`image` alanı bilinçli olarak boş bırakıldı, sadece birkaçında logosuz
+araç/pist fotoğrafı var) ve Dünya Doğal Harikaları (#37, 44 kayıt, saf
+coğrafya). Her 4 paket için de `data/packs/i18n/` altında tam 5 dilli
+(en/de/fr/es/pt) çeviri dosyası eklendi ve `data/packs/index.ts`'e
+kaydedildi.
+
 ## Öneri — sıradaki adımlar
 
-- **11-50 arası düşük risk havuzu**nun geri kalanı (#12, #14-21, #23-26,
-  #29-32, #34-50) aynı desenle (gerçek Commons fotoğrafı + doğrulanmış veri)
+- **11-50 arası düşük risk havuzu**nun geri kalanı (#14-17, #19-21, #23-26,
+  #30-32, #34-36, #38-50) aynı desenle (gerçek Commons fotoğrafı + doğrulanmış veri)
   doldurulabilir.
 - **Yayıncılar paketi** (#11) web aramasıyla doğrulanan 50 kayıtla kuruldu
   (2026-07-20). 80'e çıkarmak isteniyorsa geri kalan adaylar için "kıdem"
