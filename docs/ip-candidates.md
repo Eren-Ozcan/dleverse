@@ -74,7 +74,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 35 | Ünlü Heykeltıraşlar | ✅ Kuruldu (40) | #7 ile benzer desen; antik dönem için heykel/büst görseli kullanıldı |
 | 36 | Rönesans Dönemi Sanatçıları (alt küme) | ✅ Kuruldu (40) | #7'nin daha spesifik alt kümesi; #7 ile isim örtüşmesi minimize edildi |
 | 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
-| 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
+| 38 | UNESCO Dünya Mirası Alanları | ✅ Kuruldu (40) | Saf coğrafya/kültür; sadece kültürel/mimari alanlar, #37 ile örtüşme yok |
 | 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
 | 40 | Klasik Edebiyat Yazarları (roman) | ✅ Kuruldu (40) | Roman odaklı; kitap kapağı değil sadece yazar portresi kullanıldı |
 | 41 | Dünya Para Birimleri (trivia) | — | Kişi değil, ekonomi trivia |
@@ -416,6 +416,15 @@ Eyck, Dürer, Bosch) kadar. #7 (Ünlü Ressamlar) paketinde zaten yer alan
 Heykeltıraşlar paketindeki Donatello/Verrocchio bilinçli olarak dışarıda
 bırakıldı — sıfıra yakın örtüşme. Çoğu görsel sanatçının kendi
 özportresi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #15 — UNESCO Dünya Mirası Alanları (#38)
+
+40 kayıt: Petra'dan Göbeklitepe'ye, Machu Picchu'dan Vatikan'a kadar
+kültürel/mimari UNESCO alanları. #37 (Dünya Doğal Harikaları) ile
+kasıtlı olarak sıfır örtüşme — doğal alanlar bu pakete dahil edilmedi.
+Siyasi olarak tartışmalı statüdeki alanlar (ör. Kudüs) bilinçli olarak
+dışarıda bırakıldı. Persepolis için görsel bulunamadı, boş bırakıldı.
+Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
