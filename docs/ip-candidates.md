@@ -262,6 +262,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 198 | Dünya Rekor Sahipleri (Guinness, spor dışı) | Kamusal rekor verisi |
 | 199 | Ünlü Kaligrafi/Hat Sanatı Ustaları (TR-İslam sanatı) | Tarihi, kamusal |
 | 200 | Dünya Fuarları (Expo) Tarihi | Organizasyon trivia'sı |
+| 201 | CS2 Efsaneleri (e-spor oyuncuları) | ✅ Kuruldu (40) — Gerçek kişi, kamusal e-spor kaydı; Valve karakter/silah görseli KULLANILMADI |
 
 ---
 
@@ -563,6 +564,19 @@ paketinde (#25) zaten bulunan Asur, Babil, Akamenid Pers, Makedon, Aztek,
 örtüşme. Kişi içermediği için İmparatorluklar ile aynı desen kullanıldı —
 görsel yok, sadece emoji-clue. Tam 5 dilli çeviri eklendi, index.ts'e
 kaydedildi.
+
+## 2026-07-29 güncellemesi #27 — CS2 Efsaneleri (#201, havuza yeni eklendi)
+
+40 kayıt: gerçek, kamusal Counter-Strike (CS:GO/CS2) profesyonel oyuncusu —
+s1mple, ZywOo, NiKo, device, GeT_RiGhT/f0rest gibi efsanelerden donk/m0NESY
+gibi güncel yıldızlara kadar 14 ülkeden. Bilinçli tasarım kararı: Valve'ın
+oyun içi karakter/silah kaplama görselleri KULLANILMADI — bunun yerine
+turnuva organizatörlerinin (ESL/DreamHack/BLAST/PGL/VaKarM) serbest
+lisansla yayımladığı gerçek oyuncu fotoğrafları, Wikimedia Commons üzerinden
+kullanıldı (Yayıncılar paketiyle aynı ilke). electronic, sh1ro ve KSCERATO
+için uygun görsel bulunamadı, o 3 kayıt görselsiz bırakıldı. Tam 5 dilli
+çeviri eklendi, index.ts'e kaydedildi, #201 olarak listeye eklendi (havuz
+200'den 201'e çıktı).
 
 ## Öneri — sıradaki adımlar
 
