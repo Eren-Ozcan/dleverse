@@ -57,12 +57,12 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 18 | Klasik Rock Grupları/Üyeleri | ✅ Kuruldu (50) | Kuruluş yılı/tür bazlı, gerçek Commons fotoğrafı |
 | 19 | Dünya Satranç Şampiyonları | — | Küçük ama sadık kitle, tamamen kamusal |
 | 20 | Ünlü Şefler/Mutfak Dünyası | — | Kamusal figür |
-| 21 | Dünya Dağları/Zirveleri | — | Saf coğrafya |
+| 21 | Dünya Dağları/Zirveleri | ✅ Kuruldu (39) | Saf coğrafya, gerçek Commons fotoğrafı (bkz. 2026-07-24 güncellemesi notu) |
 | 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
 | 24 | Ünlü Kaşifler | — | Tarihi, kamusal |
 | 25 | Dünya İmparatorlukları (tarihi) | — | Coğrafya+tarih karışımı, kişi değil |
-| 26 | Boks Efsaneleri | — | Kamusal spor kaydı |
+| 26 | Boks Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı |
 | 27 | Atletizm Efsaneleri (100m, maraton vb.) | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
 | 28 | Yüzme Efsaneleri | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
 | 29 | Formula 1 Takımları/Tarihi | ✅ Kuruldu (45) | Kurumsal veri, kişi değil; çoğu logo hariç tutuldu |
@@ -299,7 +299,16 @@ Lig ile aynı "en çok anıldığı kulüp" deseni), Klasik Rock Grupları/Üyel
 araç/pist fotoğrafı var) ve Dünya Doğal Harikaları (#37, 44 kayıt, saf
 coğrafya). Her 4 paket için de `data/packs/i18n/` altında tam 5 dilli
 (en/de/fr/es/pt) çeviri dosyası eklendi ve `data/packs/index.ts`'e
-kaydedildi.
+kaydedildi. Ayrıca #21 (Dünya Dağları) daha önce kurulmuş ama bu tabloda
+işaretlenmemiş bir oversight'tı — düzeltildi.
+
+## 2026-07-29 güncellemesi #2 — Boks Efsaneleri (#26)
+
+`scripts/fetch-wiki-image.js` ile gerçek Wikimedia API çağrıları üzerinden
+40 boksör için görsel+kredi bilgisi toplu çekildi (halüsinasyon riski yok).
+2 boksör (Pernell Whitaker, Ricardo López) için kullanılabilir kapak görseli
+bulunamadı, image/imageCredit boş bırakıldı. Tam 5 dilli çeviri dosyası
+eklendi, `data/packs/index.ts`'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
