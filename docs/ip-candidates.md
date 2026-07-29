@@ -55,7 +55,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 16 | Ünlü Mucitler/Bilim İnsanları (Nobel dışı) | — | Kamusal |
 | 17 | Global Pop Yıldızları (gerçek kişi, bio) | — | Görsel yerine metin bio kullan |
 | 18 | Klasik Rock Grupları/Üyeleri | ✅ Kuruldu (50) | Kuruluş yılı/tür bazlı, gerçek Commons fotoğrafı |
-| 19 | Dünya Satranç Şampiyonları | — | Küçük ama sadık kitle, tamamen kamusal |
+| 19 | Dünya Satranç Şampiyonları | ✅ Kuruldu (39) | Küçük ama sadık kitle, tamamen kamusal; Klasik+FIDE+Kadınlar unvanları birlikte |
 | 20 | Ünlü Şefler/Mutfak Dünyası | — | Kamusal figür |
 | 21 | Dünya Dağları/Zirveleri | ✅ Kuruldu (39) | Saf coğrafya, gerçek Commons fotoğrafı (bkz. 2026-07-24 güncellemesi notu) |
 | 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
@@ -309,6 +309,16 @@ işaretlenmemiş bir oversight'tı — düzeltildi.
 2 boksör (Pernell Whitaker, Ricardo López) için kullanılabilir kapak görseli
 bulunamadı, image/imageCredit boş bırakıldı. Tam 5 dilli çeviri dosyası
 eklendi, `data/packs/index.ts`'e kaydedildi.
+
+## 2026-07-29 güncellemesi #3 — Dünya Satranç Şampiyonları (#19)
+
+39 kayıt: 18 Klasik dünya şampiyonu (Steinitz'den Gukesh'e), 4 FIDE-bölünme
+dönemi şampiyonu (Karpov/Anand hariç, onlar zaten Klasik listede) ve 17
+Kadınlar Dünya Şampiyonu — hepsi `titleType` alanıyla ayırt ediliyor.
+Görseller yine `fetch-wiki-image.js` ile toplu çekildi; Susan Polgar için
+API'nin döndürdüğü kapak görseli başka bir oyuncuya (Anna Muzychuk) aitti,
+bu yanlış eşleşme fark edilip image/imageCredit boş bırakıldı. Tam 5 dilli
+çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
