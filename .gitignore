@@ -46,3 +46,15 @@ yarn-error.*
 
 # Private/local-only store & marketing assets (mirrored to private Eren-Ozcan/pictures repo)
 docs/store-assets-originals/
+
+# Fan içeriği — kişisel kullanım, store'a çıkmayacak (kullanıcı onayıyla, telifli görsel içerir)
+data/packs/naruto.ts
+data/packs/i18n/naruto.ts
+data/packs/bleach.ts
+data/packs/i18n/bleach.ts
+data/packs/one-piece.ts
+data/packs/i18n/one-piece.ts
+data/packs/league-of-legends.ts
+data/packs/i18n/league-of-legends.ts
+data/packs/yuzuklerin-efendisi.ts
+data/packs/i18n/yuzuklerin-efendisi.ts
