@@ -59,7 +59,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 20 | Ünlü Şefler/Mutfak Dünyası | ✅ Kuruldu (40) | Kamusal figür; 2 Türk şef dahil (Fatih Tutak, Mehmet Gürs) |
 | 21 | Dünya Dağları/Zirveleri | ✅ Kuruldu (39) | Saf coğrafya, gerçek Commons fotoğrafı (bkz. 2026-07-24 güncellemesi notu) |
 | 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
-| 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
+| 23 | Nobel Ödüllü Yazarlar (Edebiyat) | ✅ Kuruldu (40) | #6/#40'tan ayrı, minimum örtüşme; Orhan Pamuk ve Bob Dylan dahil |
 | 24 | Ünlü Kaşifler | ✅ Kuruldu (40) | Tarihi, kamusal; gerçek Commons portresi/gravürü/heykeli |
 | 25 | Dünya İmparatorlukları (tarihi) | ✅ Kuruldu (40) | Coğrafya+tarih karışımı, kişi değil; görsel yok (emoji-clue) |
 | 26 | Boks Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı |
@@ -398,6 +398,15 @@ bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 Kişi içermediği için görsel gerekmiyor — Dünya Ülkeleri paketiyle aynı
 desen (sadece emoji-clue). Tam 5 dilli çeviri eklendi, index.ts'e
 kaydedildi.
+
+## 2026-07-29 güncellemesi #13 — Nobel Ödüllü Yazarlar (#23)
+
+40 kayıt: Tagore'dan (1913) Ishiguro'ya (2017) Nobel Edebiyat Ödülü
+sahipleri. #40 (Klasik Edebiyat Yazarları) ile örtüşen isimler (Faulkner,
+Hemingway, Camus, Marquez, Morrison, Vargas Llosa) bilinçli olarak
+dışarıda bırakıldı — sadece Sartre (ödülü reddetmesiyle ünlü) ortak.
+Orhan Pamuk (2006) ve Bob Dylan (2016, şarkı sözü yazarlığıyla) dahil
+edildi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
