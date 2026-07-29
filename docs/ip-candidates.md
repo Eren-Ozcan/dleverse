@@ -229,7 +229,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 165 | Ünlü Filozoflar (Doğu felsefesi) | #15'in genişletilmiş versiyonu |
 | 166 | Nobel Ekonomi Ödülü Sahipleri | #6/#33 ile aynı desen, ayrı alan |
 | 167 | Dünya Tarihi Savaşları (kavramsal trivia, kişi değil) | Olay bazlı, kişi riski yok |
-| 168 | Antik Uygarlıklar | Tarihi, kamusal |
+| 168 | Antik Uygarlıklar | ✅ Kuruldu (44) — İmparatorluklar (#25) ile örtüşme yok, görsel yok (emoji-clue) |
 | 169 | Dünya Mutfakları (ülke bazlı yemek trivia'sı) | Kişi/marka değil, kültürel bilgi |
 | 170 | Ünlü Kütüphaneler/Müzeler | Kurum trivia'sı |
 | 171 | Gezegenler ve Uzay Cisimleri | ✅ Kuruldu (42) — Bilimsel, kişi riski yok, gerçek NASA/ESA fotoğrafı |
@@ -553,6 +553,16 @@ Büyük Tuz Gölü küçülüyor; Eyre ve Tonle Sap mevsimlik değişiyor) günc
 ortalama değerler kullanıldı. Görseller `fetch-wiki-image.js` ile toplu
 çekildi (çoğu NASA/ESA uydu görüntüsü, Public domain). Tam 5 dilli
 çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #26 — Antik Uygarlıklar (#168)
+
+44 kayıt: Sümer'den (MÖ 3. binyıl, yazının icadı) Nazca Kültürü'ne (MS
+1-7. yüzyıl) kadar altı kıtadan pre-klasik/antik uygarlıklar. İmparatorluklar
+paketinde (#25) zaten bulunan Asur, Babil, Akamenid Pers, Makedon, Aztek,
+İnka ve Han/Tang/Çing bilinçli olarak dışarıda bırakıldı; sıfıra yakın
+örtüşme. Kişi içermediği için İmparatorluklar ile aynı desen kullanıldı —
+görsel yok, sadece emoji-clue. Tam 5 dilli çeviri eklendi, index.ts'e
+kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
