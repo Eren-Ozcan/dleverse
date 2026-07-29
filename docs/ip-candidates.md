@@ -77,7 +77,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 38 | UNESCO Dünya Mirası Alanları | ✅ Kuruldu (40) | Saf coğrafya/kültür; sadece kültürel/mimari alanlar, #37 ile örtüşme yok |
 | 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
 | 40 | Klasik Edebiyat Yazarları (roman) | ✅ Kuruldu (40) | Roman odaklı; kitap kapağı değil sadece yazar portresi kullanıldı |
-| 41 | Dünya Para Birimleri (trivia) | — | Kişi değil, ekonomi trivia |
+| 41 | Dünya Para Birimleri (trivia) | ✅ Kuruldu (40) | Kişi değil, ekonomi trivia; görsel yok (emoji-clue) |
 | 42 | Ünlü Gazeteciler/Foto Muhabirleri | ✅ Kuruldu (40) | Kamusal figür; tarihi olay bazlı, tarafsız biyografik bilgi |
 | 43 | Formula 1 Pistleri | — | Kurumsal/coğrafya |
 | 44 | Dünya Havayolları (trivia) | — | Şirket, kişi değil |
@@ -425,6 +425,13 @@ kasıtlı olarak sıfır örtüşme — doğal alanlar bu pakete dahil edilmedi.
 Siyasi olarak tartışmalı statüdeki alanlar (ör. Kudüs) bilinçli olarak
 dışarıda bırakıldı. Persepolis için görsel bulunamadı, boş bırakıldı.
 Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #16 — Dünya Para Birimleri (#41)
+
+40 kayıt: dünyanın büyük para birimleri, 6 kıtadan. Kişi içermediği için
+görsel gerekmiyor — Dünya Ülkeleri/İmparatorluklar paketleriyle aynı
+desen (sadece emoji-clue). Tam 5 dilli çeviri eklendi, index.ts'e
+kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
