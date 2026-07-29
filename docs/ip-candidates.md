@@ -80,7 +80,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 41 | Dünya Para Birimleri (trivia) | ✅ Kuruldu (40) | Kişi değil, ekonomi trivia; görsel yok (emoji-clue) |
 | 42 | Ünlü Gazeteciler/Foto Muhabirleri | ✅ Kuruldu (40) | Kamusal figür; tarihi olay bazlı, tarafsız biyografik bilgi |
 | 43 | Formula 1 Pistleri | ✅ Kuruldu (39) | Kurumsal/coğrafya, kişi değil; görsel yok (emoji-clue) |
-| 44 | Dünya Havayolları (trivia) | — | Şirket, kişi değil |
+| 44 | Dünya Havayolları (trivia) | ✅ Kuruldu (39) | Şirket, kişi değil; görsel yok (emoji-clue) |
 | 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
 | 46 | Kriket Efsaneleri | — | Global ama TR'de niş |
 | 47 | Rugby Efsaneleri | — | Global ama TR'de niş |
@@ -441,6 +441,13 @@ sadece DÜNYA ŞAMPİYONASI'na sayılan ilk Grand Prix'yi baz alıyor
 (şampiyonluk dışı yarışlar hariç). Kurumsal/coğrafya verisi olduğu için
 kişi görseli gerekmiyor — emoji-clue deseni. Tam 5 dilli çeviri eklendi,
 index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #18 — Dünya Havayolları (#44)
+
+39 kayıt, 6 kıtadan tarifeli/düşük maliyetli taşıyıcı karışımı.
+"foundedYear" şirketin GÜNCEL tüzel kişiliğinin kuruluş tarihi (selef
+şirketler hariç). Kurumsal veri olduğu için kişi görseli gerekmiyor —
+emoji-clue deseni. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
