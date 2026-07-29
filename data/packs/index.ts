@@ -44,6 +44,7 @@ import voleybolEfsaneleri from "./voleybol-efsaneleri";
 import rugbyEfsaneleri from "./rugby-efsaneleri";
 import gezegenler from "./gezegenler";
 import dunyaAdalari from "./dunya-adalari";
+import dunyaColleri from "./dunya-colleri";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -91,6 +92,7 @@ export const packs: PackConfig[] = [
   rugbyEfsaneleri,
   gezegenler,
   dunyaAdalari,
+  dunyaColleri,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
