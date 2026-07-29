@@ -79,7 +79,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 40 | Klasik Edebiyat Yazarları (roman) | ✅ Kuruldu (40) | Roman odaklı; kitap kapağı değil sadece yazar portresi kullanıldı |
 | 41 | Dünya Para Birimleri (trivia) | ✅ Kuruldu (40) | Kişi değil, ekonomi trivia; görsel yok (emoji-clue) |
 | 42 | Ünlü Gazeteciler/Foto Muhabirleri | ✅ Kuruldu (40) | Kamusal figür; tarihi olay bazlı, tarafsız biyografik bilgi |
-| 43 | Formula 1 Pistleri | — | Kurumsal/coğrafya |
+| 43 | Formula 1 Pistleri | ✅ Kuruldu (39) | Kurumsal/coğrafya, kişi değil; görsel yok (emoji-clue) |
 | 44 | Dünya Havayolları (trivia) | — | Şirket, kişi değil |
 | 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
 | 46 | Kriket Efsaneleri | — | Global ama TR'de niş |
@@ -432,6 +432,15 @@ Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 görsel gerekmiyor — Dünya Ülkeleri/İmparatorluklar paketleriyle aynı
 desen (sadece emoji-clue). Tam 5 dilli çeviri eklendi, index.ts'e
 kaydedildi.
+
+## 2026-07-29 güncellemesi #17 — Formula 1 Pistleri (#43)
+
+39 kayıt: Monza/Silverstone gibi 1950 kuruluş şampiyonasından Las Vegas
+(2023) ve Lusail (2021) gibi en yeni pistlere kadar. "firstGrandPrixYear"
+sadece DÜNYA ŞAMPİYONASI'na sayılan ilk Grand Prix'yi baz alıyor
+(şampiyonluk dışı yarışlar hariç). Kurumsal/coğrafya verisi olduğu için
+kişi görseli gerekmiyor — emoji-clue deseni. Tam 5 dilli çeviri eklendi,
+index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
