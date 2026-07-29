@@ -56,7 +56,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 17 | Global Pop Yıldızları (gerçek kişi, bio) | — | Görsel yerine metin bio kullan |
 | 18 | Klasik Rock Grupları/Üyeleri | ✅ Kuruldu (50) | Kuruluş yılı/tür bazlı, gerçek Commons fotoğrafı |
 | 19 | Dünya Satranç Şampiyonları | ✅ Kuruldu (39) | Küçük ama sadık kitle, tamamen kamusal; Klasik+FIDE+Kadınlar unvanları birlikte |
-| 20 | Ünlü Şefler/Mutfak Dünyası | — | Kamusal figür |
+| 20 | Ünlü Şefler/Mutfak Dünyası | ✅ Kuruldu (40) | Kamusal figür; 2 Türk şef dahil (Fatih Tutak, Mehmet Gürs) |
 | 21 | Dünya Dağları/Zirveleri | ✅ Kuruldu (39) | Saf coğrafya, gerçek Commons fotoğrafı (bkz. 2026-07-24 güncellemesi notu) |
 | 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
@@ -372,6 +372,15 @@ odaklı klasik yazarlar; Rus, Fransız, İngiliz, Amerikan ve Latin Amerika
 edebiyatından geniş temsil. "famousWork" alanı sadece eser ADI (metin)
 içeriyor, kapak görseli/eser metni kullanılmadı. Tam 5 dilli çeviri
 eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #10 — Ünlü Şefler (#20)
+
+40 kayıt: Fransız Grande Cuisine kurucularından (Carême, Escoffier,
+17. yy'dan Vatel) günümüz TV şeflerine (Gordon Ramsay, Jamie Oliver)
+kadar; 2 Türk şef dahil (Fatih Tutak, Mehmet Gürs). "role" alanı
+Restoran Şefi/TV Şefi/Tarihi Şef olarak ayırıyor. Nigel Slater için
+görsel bulunamadı, boş bırakıldı. Tam 5 dilli çeviri eklendi,
+index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
