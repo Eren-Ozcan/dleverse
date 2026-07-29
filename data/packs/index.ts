@@ -35,6 +35,7 @@ import gazeteciler from "./gazeteciler";
 import imparatorluklar from "./imparatorluklar";
 import nobelEdebiyat from "./nobel-edebiyat";
 import ronesansSanatcilari from "./ronesans-sanatcilari";
+import unescoMirasi from "./unesco-mirasi";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -73,6 +74,7 @@ export const packs: PackConfig[] = [
   imparatorluklar,
   nobelEdebiyat,
   ronesansSanatcilari,
+  unescoMirasi,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
