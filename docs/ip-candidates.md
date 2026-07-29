@@ -61,7 +61,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
 | 24 | Ünlü Kaşifler | ✅ Kuruldu (40) | Tarihi, kamusal; gerçek Commons portresi/gravürü/heykeli |
-| 25 | Dünya İmparatorlukları (tarihi) | — | Coğrafya+tarih karışımı, kişi değil |
+| 25 | Dünya İmparatorlukları (tarihi) | ✅ Kuruldu (40) | Coğrafya+tarih karışımı, kişi değil; görsel yok (emoji-clue) |
 | 26 | Boks Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı |
 | 27 | Atletizm Efsaneleri (100m, maraton vb.) | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
 | 28 | Yüzme Efsaneleri | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
@@ -390,6 +390,14 @@ sunucularına (Walter Cronkite, Anderson Cooper) ve foto muhabirlerine
 görev başında hayatını kaybeden isimler sırf tarafsız biyografik/tarihi
 kayıt amacıyla dahil edildi. Marie Colvin için görsel bulunamadı, boş
 bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #12 — Dünya İmparatorlukları (#25)
+
+40 kayıt: Roma'dan Osmanlı'ya, Aztek/İnka'dan Mali/Songay'a, Han/Tang/
+Çing'den Khmer/Majapahit'e kadar altı kıtadan imparatorluk/hanedanlık.
+Kişi içermediği için görsel gerekmiyor — Dünya Ülkeleri paketiyle aynı
+desen (sadece emoji-clue). Tam 5 dilli çeviri eklendi, index.ts'e
+kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
