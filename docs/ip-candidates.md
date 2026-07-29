@@ -60,7 +60,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 21 | Dünya Dağları/Zirveleri | ✅ Kuruldu (39) | Saf coğrafya, gerçek Commons fotoğrafı (bkz. 2026-07-24 güncellemesi notu) |
 | 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 23 | Nobel Ödüllü Yazarlar (Edebiyat) | — | #6'dan ayrı, edebiyat odaklı |
-| 24 | Ünlü Kaşifler | — | Tarihi, kamusal |
+| 24 | Ünlü Kaşifler | ✅ Kuruldu (40) | Tarihi, kamusal; gerçek Commons portresi/gravürü/heykeli |
 | 25 | Dünya İmparatorlukları (tarihi) | — | Coğrafya+tarih karışımı, kişi değil |
 | 26 | Boks Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı |
 | 27 | Atletizm Efsaneleri (100m, maraton vb.) | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
@@ -319,6 +319,14 @@ Görseller yine `fetch-wiki-image.js` ile toplu çekildi; Susan Polgar için
 API'nin döndürdüğü kapak görseli başka bir oyuncuya (Anna Muzychuk) aitti,
 bu yanlış eşleşme fark edilip image/imageCredit boş bırakıldı. Tam 5 dilli
 çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #4 — Ünlü Kaşifler (#24)
+
+40 kayıt: 15-20. yüzyıl arası deniz/kara/kutup kaşifleri (Kolomb'dan
+Thor Heyerdahl'a). Görseller yine `fetch-wiki-image.js` ile toplu çekildi
+— erken dönem kaşiflerde dönem tablosu/gravürü, birkaçında (Zheng He,
+Leif Erikson) anıt/heykel fotoğrafı kullanıldı (fotoğraf öncesi dönem).
+Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
