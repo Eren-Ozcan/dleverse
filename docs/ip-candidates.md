@@ -76,7 +76,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
 | 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
-| 40 | Klasik Edebiyat Yazarları (roman) | — | #23 ile örtüşebilir, ayrı tutulursa roman odaklı |
+| 40 | Klasik Edebiyat Yazarları (roman) | ✅ Kuruldu (40) | Roman odaklı; kitap kapağı değil sadece yazar portresi kullanıldı |
 | 41 | Dünya Para Birimleri (trivia) | — | Kişi değil, ekonomi trivia |
 | 42 | Ünlü Gazeteciler/Foto Muhabirleri | — | Kamusal figür |
 | 43 | Formula 1 Pistleri | — | Kurumsal/coğrafya |
@@ -364,6 +364,14 @@ Sina/İbn Rüşd (İslam Altın Çağı) ile Batı-dışı çeşitlilik de eklen
 Antik dönem için fotoğraf yerine büst/heykel görseli kullanıldı, Laozi
 için tarihsel portre bulunamadığından ismi Çince karakterlerle temsil
 edildi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #9 — Klasik Edebiyat Yazarları (#40)
+
+40 kayıt: Cervantes'ten (16. yy) Toni Morrison'a (20./21. yy) roman
+odaklı klasik yazarlar; Rus, Fransız, İngiliz, Amerikan ve Latin Amerika
+edebiyatından geniş temsil. "famousWork" alanı sadece eser ADI (metin)
+içeriyor, kapak görseli/eser metni kullanılmadı. Tam 5 dilli çeviri
+eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
