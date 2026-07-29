@@ -68,7 +68,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 29 | Formula 1 Takımları/Tarihi | ✅ Kuruldu (45) | Kurumsal veri, kişi değil; çoğu logo hariç tutuldu |
 | 30 | Dünya Dilleri | — | Saf dilbilim trivia |
 | 31 | Türk Sporcular (genel, olimpik) | — | Kamusal ama araştırma gerektirir |
-| 32 | Astronotlar/Kozmonotlar | — | Kamusal, uzay tarihi |
+| 32 | Astronotlar/Kozmonotlar | ✅ Kuruldu (40) | Kamusal, uzay tarihi; her ülkenin "ilk astronotu" temalı geniş çeşitlilik |
 | 33 | Nobel Ödüllü Barış Ödülü Sahipleri | ✅ Kuruldu (58) | Ayrı paket olarak kuruldu, gerçek Commons fotoğrafı |
 | 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
 | 35 | Ünlü Heykeltıraşlar | — | #7 ile benzer desen |
@@ -327,6 +327,14 @@ Thor Heyerdahl'a). Görseller yine `fetch-wiki-image.js` ile toplu çekildi
 — erken dönem kaşiflerde dönem tablosu/gravürü, birkaçında (Zheng He,
 Leif Erikson) anıt/heykel fotoğrafı kullanıldı (fotoğraf öncesi dönem).
 Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #5 — Astronotlar/Kozmonotlar (#32)
+
+40 kayıt: Gagarin'den 2021 Blue Origin uçuşuna kadar, çoğu ülkenin "ilk
+astronotu" temasıyla geniş uyruk çeşitliliği (16 farklı ülke). Görseller
+`fetch-wiki-image.js` ile toplu çekildi (çoğu NASA kaynaklı, Public
+domain). Abdul Ahad Mohmand için kullanılabilir görsel bulunamadı, boş
+bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
