@@ -222,7 +222,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 
 | # | Konu | Not |
 |---|---|---|
-| 161 | Dünya Adaları (coğrafya) | Saf coğrafya |
+| 161 | Dünya Adaları (coğrafya) | ✅ Kuruldu (44) — Saf coğrafya, gerçek Commons fotoğrafı |
 | 162 | Dünya Çölleri | Saf coğrafya |
 | 163 | Dünya Gölleri | Saf coğrafya |
 | 164 | Ünlü Matematikçiler | Kamusal, tarihi |
@@ -525,6 +525,15 @@ olarak işaretlendi. Çap aralığı 0,49 km'den (Bennu) 139.820 km'ye (Jüpiter
 uzandığı için `near` toleransı 1000 km seçildi. Tam 5 dilli çeviri eklendi
 (gezegen/uydu adlarında anlamlı fark olan yerlerde `nameByLocale` dolduruldu),
 index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #23 — Dünya Adaları (#161)
+
+44 kayıt: Grönland'dan (dünyanın en büyük adası) Capri gibi küçük ama
+ünlü adalara kadar altı kıtadan gerçek adalar. Birden fazla ülkeye
+bölünmüş adalarda (Borneo, Yeni Gine, İrlanda, Hispaniola, Ateş
+Toprakları) egemenlik kısaca birlikte verildi. Görseller
+`fetch-wiki-image.js` ile toplu çekildi (çoğu NASA/ESA uydu görüntüsü,
+Public domain). Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
