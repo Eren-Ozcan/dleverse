@@ -22,6 +22,7 @@ import premierLig from "./premier-lig";
 import f1Takimlari from "./f1-takimlari";
 import dogalHarikalar from "./dogal-harikalar";
 import rockGruplari from "./rock-gruplari";
+import boksEfsaneleri from "./boks-efsaneleri";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -47,6 +48,7 @@ export const packs: PackConfig[] = [
   f1Takimlari,
   dogalHarikalar,
   rockGruplari,
+  boksEfsaneleri,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
