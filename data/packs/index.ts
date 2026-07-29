@@ -41,6 +41,7 @@ import f1Pistleri from "./f1-pistleri";
 import dunyaHavayollari from "./dunya-havayollari";
 import kriketEfsaneleri from "./kriket-efsaneleri";
 import voleybolEfsaneleri from "./voleybol-efsaneleri";
+import rugbyEfsaneleri from "./rugby-efsaneleri";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -85,6 +86,7 @@ export const packs: PackConfig[] = [
   dunyaHavayollari,
   kriketEfsaneleri,
   voleybolEfsaneleri,
+  rugbyEfsaneleri,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
