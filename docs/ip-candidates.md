@@ -78,7 +78,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
 | 40 | Klasik Edebiyat Yazarları (roman) | ✅ Kuruldu (40) | Roman odaklı; kitap kapağı değil sadece yazar portresi kullanıldı |
 | 41 | Dünya Para Birimleri (trivia) | — | Kişi değil, ekonomi trivia |
-| 42 | Ünlü Gazeteciler/Foto Muhabirleri | — | Kamusal figür |
+| 42 | Ünlü Gazeteciler/Foto Muhabirleri | ✅ Kuruldu (40) | Kamusal figür; tarihi olay bazlı, tarafsız biyografik bilgi |
 | 43 | Formula 1 Pistleri | — | Kurumsal/coğrafya |
 | 44 | Dünya Havayolları (trivia) | — | Şirket, kişi değil |
 | 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
@@ -381,6 +381,15 @@ kadar; 2 Türk şef dahil (Fatih Tutak, Mehmet Gürs). "role" alanı
 Restoran Şefi/TV Şefi/Tarihi Şef olarak ayırıyor. Nigel Slater için
 görsel bulunamadı, boş bırakıldı. Tam 5 dilli çeviri eklendi,
 index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #11 — Ünlü Gazeteciler (#42)
+
+40 kayıt: savaş muhabirlerinden (Robert Capa, Martha Gellhorn) TV
+sunucularına (Walter Cronkite, Anderson Cooper) ve foto muhabirlerine
+(Nick Ut, Steve McCurry) kadar. Jamal Khashoggi ve Marie Colvin gibi
+görev başında hayatını kaybeden isimler sırf tarafsız biyografik/tarihi
+kayıt amacıyla dahil edildi. Marie Colvin için görsel bulunamadı, boş
+bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
