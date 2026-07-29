@@ -72,7 +72,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 33 | Nobel Ödüllü Barış Ödülü Sahipleri | ✅ Kuruldu (58) | Ayrı paket olarak kuruldu, gerçek Commons fotoğrafı |
 | 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
 | 35 | Ünlü Heykeltıraşlar | ✅ Kuruldu (40) | #7 ile benzer desen; antik dönem için heykel/büst görseli kullanıldı |
-| 36 | Rönesans Dönemi Sanatçıları (alt küme) | — | #7'nin daha spesifik alt kümesi |
+| 36 | Rönesans Dönemi Sanatçıları (alt küme) | ✅ Kuruldu (40) | #7'nin daha spesifik alt kümesi; #7 ile isim örtüşmesi minimize edildi |
 | 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
 | 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
@@ -407,6 +407,15 @@ Hemingway, Camus, Marquez, Morrison, Vargas Llosa) bilinçli olarak
 dışarıda bırakıldı — sadece Sartre (ödülü reddetmesiyle ünlü) ortak.
 Orhan Pamuk (2006) ve Bob Dylan (2016, şarkı sözü yazarlığıyla) dahil
 edildi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #14 — Rönesans Dönemi Sanatçıları (#36)
+
+40 kayıt: Proto-Rönesans'tan (Giotto, Cimabue) Kuzey Rönesansı'na (Van
+Eyck, Dürer, Bosch) kadar. #7 (Ünlü Ressamlar) paketinde zaten yer alan
+5 isim (Leonardo da Vinci, Michelangelo, Rafael, Botticelli, Tiziano) ve
+Heykeltıraşlar paketindeki Donatello/Verrocchio bilinçli olarak dışarıda
+bırakıldı — sıfıra yakın örtüşme. Çoğu görsel sanatçının kendi
+özportresi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
