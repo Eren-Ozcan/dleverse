@@ -223,7 +223,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | # | Konu | Not |
 |---|---|---|
 | 161 | Dünya Adaları (coğrafya) | ✅ Kuruldu (44) — Saf coğrafya, gerçek Commons fotoğrafı |
-| 162 | Dünya Çölleri | Saf coğrafya |
+| 162 | Dünya Çölleri | ✅ Kuruldu (43) — Saf coğrafya, gerçek Commons fotoğrafı |
 | 163 | Dünya Gölleri | Saf coğrafya |
 | 164 | Ünlü Matematikçiler | Kamusal, tarihi |
 | 165 | Ünlü Filozoflar (Doğu felsefesi) | #15'in genişletilmiş versiyonu |
@@ -534,6 +534,15 @@ bölünmüş adalarda (Borneo, Yeni Gine, İrlanda, Hispaniola, Ateş
 Toprakları) egemenlik kısaca birlikte verildi. Görseller
 `fetch-wiki-image.js` ile toplu çekildi (çoğu NASA/ESA uydu görüntüsü,
 Public domain). Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #24 — Dünya Çölleri (#162)
+
+43 kayıt: Sahra'dan (dünyanın en büyük sıcak çölü) kutup çöllerine
+(Antarktika, Arktik) kadar sıcak/soğuk çöl karışımı, altı kıtadan.
+Wahiba Kumları için Commons'ta uygun görsel bulunamadı, o kayıt
+görselsiz bırakıldı. Görseller `fetch-wiki-image.js` ile toplu çekildi
+(çoğu NASA uydu görüntüsü, Public domain). Tam 5 dilli çeviri eklendi,
+index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
