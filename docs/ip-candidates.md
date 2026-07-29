@@ -224,7 +224,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 |---|---|---|
 | 161 | Dünya Adaları (coğrafya) | ✅ Kuruldu (44) — Saf coğrafya, gerçek Commons fotoğrafı |
 | 162 | Dünya Çölleri | ✅ Kuruldu (43) — Saf coğrafya, gerçek Commons fotoğrafı |
-| 163 | Dünya Gölleri | Saf coğrafya |
+| 163 | Dünya Gölleri | ✅ Kuruldu (46) — Saf coğrafya, gerçek Commons fotoğrafı |
 | 164 | Ünlü Matematikçiler | Kamusal, tarihi |
 | 165 | Ünlü Filozoflar (Doğu felsefesi) | #15'in genişletilmiş versiyonu |
 | 166 | Nobel Ekonomi Ödülü Sahipleri | #6/#33 ile aynı desen, ayrı alan |
@@ -543,6 +543,16 @@ Wahiba Kumları için Commons'ta uygun görsel bulunamadı, o kayıt
 görselsiz bırakıldı. Görseller `fetch-wiki-image.js` ile toplu çekildi
 (çoğu NASA uydu görüntüsü, Public domain). Tam 5 dilli çeviri eklendi,
 index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #25 — Dünya Gölleri (#163)
+
+46 kayıt: Hazar Denizi'nden (dünyanın en büyük gölü) Van Gölü'ne kadar
+tatlı su/tuzlu göl karışımı, altı kıtadan. Bazı göllerin yüzölçümü
+mevsimlik/uzun vadeli değişkenlik gösterdiği için (Çad, Aral, Urmiye,
+Büyük Tuz Gölü küçülüyor; Eyre ve Tonle Sap mevsimlik değişiyor) güncel
+ortalama değerler kullanıldı. Görseller `fetch-wiki-image.js` ile toplu
+çekildi (çoğu NASA/ESA uydu görüntüsü, Public domain). Tam 5 dilli
+çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
