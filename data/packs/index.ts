@@ -47,6 +47,7 @@ import dunyaAdalari from "./dunya-adalari";
 import dunyaColleri from "./dunya-colleri";
 import dunyaGolleri from "./dunya-golleri";
 import antikUygarliklar from "./antik-uygarliklar";
+import cs2Efsaneleri from "./cs2-efsaneleri";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -97,6 +98,7 @@ export const packs: PackConfig[] = [
   dunyaColleri,
   dunyaGolleri,
   antikUygarliklar,
+  cs2Efsaneleri,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
