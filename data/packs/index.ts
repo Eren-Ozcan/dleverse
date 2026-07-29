@@ -31,6 +31,7 @@ import heykeltiraslar from "./heykeltiraslar";
 import filozoflar from "./filozoflar";
 import klasikEdebiyatYazarlari from "./klasik-edebiyat-yazarlari";
 import sefler from "./sefler";
+import gazeteciler from "./gazeteciler";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -65,6 +66,7 @@ export const packs: PackConfig[] = [
   filozoflar,
   klasikEdebiyatYazarlari,
   sefler,
+  gazeteciler,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
