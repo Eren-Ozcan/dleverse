@@ -232,7 +232,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 168 | Antik Uygarlıklar | Tarihi, kamusal |
 | 169 | Dünya Mutfakları (ülke bazlı yemek trivia'sı) | Kişi/marka değil, kültürel bilgi |
 | 170 | Ünlü Kütüphaneler/Müzeler | Kurum trivia'sı |
-| 171 | Gezegenler ve Uzay Cisimleri | Bilimsel, kişi riski yok |
+| 171 | Gezegenler ve Uzay Cisimleri | ✅ Kuruldu (42) — Bilimsel, kişi riski yok, gerçek NASA/ESA fotoğrafı |
 | 172 | Dünya Zaman Dilimleri / Meridyenler | Saf coğrafya/bilim |
 | 173 | Ünlü Denizciler/Kaşifler (genişletilmiş #24) | Tarihi |
 | 174 | Dünya Tren Hatları/İstasyonları (trivia) | Altyapı trivia'sı |
@@ -497,6 +497,34 @@ Türkçe rugby mevki terminolojisi standartlaşmamış (spor TR'de niş) —
 etiketler tutarlı kullanıldı ama yayın öncesi bir rugby bilenine
 doğrulatılmalı; "Hooker", "Flanker", "Numara 8" İngilizce/uluslararası
 biçimde bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #22 — Gezegenler ve Uzay Cisimleri (#171)
+
+42 kayıt: 8 gezegen (Merkür–Neptün), 17 uydu (Ay, Phobos, Deimos, dört
+Galileo uydusu, Titan/Enceladus/Mimas/Rhea/Iapetus, Titania/Oberon/Miranda,
+Triton, Charon), 5 cüce gezegen (Plüton, Ceres, Eris, Haumea, Makemake),
+7 asteroit (Vesta, Pallas, Hygiea, Eros, Bennu, Ryugu, Psyche), 2
+trans-Neptün cismi (Sedna, Quaoar) ve 3 kuyruklu yıldız (Halley, Hale-Bopp,
+67P/Churyumov-Gerasimenko). Kişi içermeyen saf astronomi paketi — hem IP
+hem kişilik hakkı riski sıfır. Görseller `fetch-wiki-image.js` ile toplu
+çekildi; 42 kaydın tamamında görsel var, hiçbiri kısıtlı lisanslı değil ve
+büyük çoğunluğu NASA/ESA kaynaklı Public domain. Mimas, Sedna ve Quaoar
+için İngilizce Wikipedia sayfalarında kapak görseli yoktu, İspanyolca
+sayfalardan alındı.
+
+Veri notları: Uydular için "Güneşe Uzaklık (AU)" alanı bağlı oldukları
+gezegenin Güneş'e ortalama uzaklığıdır — oyun içi karşılaştırmayı anlamlı
+tutan bilinçli bir basitleştirme. Kuyruklu yıldızlarda aynı alan günberi
+(perihel) uzaklığını gösterir; yörünge yarı-büyük ekseni kullanılsaydı
+Hale-Bopp (~186 AU) ölçeği bozacaktı. Kuyruklu yıldızların "Atmosferi Var
+mı" değeri, koma geçici bir atmosfer sayıldığı için "Evet". Çap değerleri
+ortalama/yaklaşık — Haumea gibi belirgin düzensiz cisimlerde ortalama çap
+alındı. Io ve Triton'un ince ama gerçek atmosferleri "Evet", Europa/
+Ganymede/Enceladus gibi yalnızca çok seyrek ekzosferi olan cisimler "Hayır"
+olarak işaretlendi. Çap aralığı 0,49 km'den (Bennu) 139.820 km'ye (Jüpiter)
+uzandığı için `near` toleransı 1000 km seçildi. Tam 5 dilli çeviri eklendi
+(gezegen/uydu adlarında anlamlı fark olan yerlerde `nameByLocale` dolduruldu),
+index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
