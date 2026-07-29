@@ -83,7 +83,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 44 | Dünya Havayolları (trivia) | ✅ Kuruldu (39) | Şirket, kişi değil; görsel yok (emoji-clue) |
 | 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
 | 46 | Kriket Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı; global ama TR'de niş |
-| 47 | Rugby Efsaneleri | — | Global ama TR'de niş |
+| 47 | Rugby Efsaneleri | ✅ Kuruldu (40) | 13 ülke, emekli efsaneler; Commons foto + kredi deseni; TR'de niş |
 | 48 | Voleybol Efsaneleri (TR güçlü) | ✅ Kuruldu (40) | 12 ülke, salon + plaj; Commons foto + kredi deseni |
 | 49 | Masa Tenisi Efsaneleri | — | Niş ama kamusal |
 | 50 | Okçuluk/Güreş Efsaneleri (TR geleneksel sporları) | — | TR'ye özgü, düşük risk, düşük rekabet |
@@ -476,6 +476,27 @@ Portekizce, alternatif İngilizce başlık, Rusça ve Fransızca sayfalardan
 alındı. "hittingHand" voleybolda seyrek belgelenen bir veri — sadece
 doğrulanabilen solaklar sol olarak işaretlendi. Tam 5 dilli çeviri
 eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #21 — Rugby Efsaneleri (#47)
+
+40 kayıt: 1930'ların kuşağından (Colin Meads, Willie John McBride) 2010'larda
+emekli olan isimlere (Richie McCaw, Sergio Parisse, Ayumu Goromaru) kadar 13
+ülkeden rugby union efsaneleri — Yeni Zelanda 6, Güney Afrika 6, İngiltere 5,
+Galler 4, İrlanda 4, Avustralya 4, Fransa 3, İskoçya 2, Arjantin 2, Fiji,
+Samoa, İtalya, Japonya birer. Aktif oyuncu yok, tamamı emekli (kariyer
+istatistikleri kapanmış veri). On mevkinin hepsi temsil ediliyor. Görseller
+`fetch-wiki-image.js` ile toplu çekildi; Gareth Edwards için İngilizce
+Wikipedia'da kapak görseli yoktu, Fransızca sayfadan alındı. Veri notları:
+6 oyuncu için kullanılabilir tekil portre bulunamadı, image/imageCredit boş
+bırakıldı (Willie John McBride, John Jeffrey, John Eales, Michael Lynagh,
+Brian Lima ve Os du Randt — sonuncusunda API bir Springbok forvet grup
+fotoğrafı döndürdüğü için bilinçli olarak kullanılmadı). "caps" değerleri
+sadece milli takım maçlarını sayar, British & Irish Lions maçları hariç.
+Türkçe rugby mevki terminolojisi standartlaşmamış (spor TR'de niş) —
+"Açık Ayak", "Skrum Yarısı", "Aç", "Kilit", "Santra", "Tam Bek" gibi
+etiketler tutarlı kullanıldı ama yayın öncesi bir rugby bilenine
+doğrulatılmalı; "Hooker", "Flanker", "Numara 8" İngilizce/uluslararası
+biçimde bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
