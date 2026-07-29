@@ -51,7 +51,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 12 | Premier League Efsaneleri | ✅ Kuruldu (50) | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
 | 13 | Formula 1 Pilotları (tüm zamanlar) | ✅ Kuruldu (40) | Wikimedia Commons gerçek fotoğraf+kredi ile; 80'e çıkarılabilir |
 | 14 | Dünya Başkentleri (ayrı bayrak/nüfus odaklı) | — | Ülkeler paketinden farklı alan seti ile varyasyon |
-| 15 | Ünlü Filozoflar | — | Tarihi, kamusal |
+| 15 | Ünlü Filozoflar | ✅ Kuruldu (40) | Tarihi, kamusal; antik dönem için büst/heykel görseli kullanıldı |
 | 16 | Ünlü Mucitler/Bilim İnsanları (Nobel dışı) | — | Kamusal |
 | 17 | Global Pop Yıldızları (gerçek kişi, bio) | — | Görsel yerine metin bio kullan |
 | 18 | Klasik Rock Grupları/Üyeleri | ✅ Kuruldu (50) | Kuruluş yılı/tür bazlı, gerçek Commons fotoğrafı |
@@ -355,6 +355,15 @@ kullanıldı. Michelangelo ve Bernini gibi bazı isimler Ressamlar/Mimarlar
 paketleriyle kasıtlı olarak örtüşüyor (bu kişiler her iki disiplinde de
 tarihe geçmiştir). Duane Hanson için görsel bulunamadı, boş bırakıldı.
 Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #8 — Ünlü Filozoflar (#15)
+
+40 kayıt: antik Yunan/Roma'dan (Sokrates, Marcus Aurelius) 20. yüzyıl
+düşünürlerine (Foucault, Arendt) kadar; Konfüçyüs/Laozi (Çin) ve İbn
+Sina/İbn Rüşd (İslam Altın Çağı) ile Batı-dışı çeşitlilik de eklendi.
+Antik dönem için fotoğraf yerine büst/heykel görseli kullanıldı, Laozi
+için tarihsel portre bulunamadığından ismi Çince karakterlerle temsil
+edildi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
