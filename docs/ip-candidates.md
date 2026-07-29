@@ -75,7 +75,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 36 | Rönesans Dönemi Sanatçıları (alt küme) | — | #7'nin daha spesifik alt kümesi |
 | 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
-| 39 | Ünlü Mimarlar | — | Kamusal, eser bazlı |
+| 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
 | 40 | Klasik Edebiyat Yazarları (roman) | — | #23 ile örtüşebilir, ayrı tutulursa roman odaklı |
 | 41 | Dünya Para Birimleri (trivia) | — | Kişi değil, ekonomi trivia |
 | 42 | Ünlü Gazeteciler/Foto Muhabirleri | — | Kamusal figür |
@@ -335,6 +335,16 @@ astronotu" temasıyla geniş uyruk çeşitliliği (16 farklı ülke). Görseller
 `fetch-wiki-image.js` ile toplu çekildi (çoğu NASA kaynaklı, Public
 domain). Abdul Ahad Mohmand için kullanılabilir görsel bulunamadı, boş
 bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #6 — Ünlü Mimarlar (#39)
+
+40 kayıt: Rönesans'tan (Brunelleschi, Bramante) günümüz yıldız mimarlarına
+(Zaha Hadid, Bjarke Ingels) kadar. Bilinçli olarak SADECE mimarın kendi
+portresi kullanıldı — bina/eser fotoğrafı yok, çünkü "freedom of panorama"
+(kamusal alandaki eserlerin fotoğraflanma telifi) ülkeye göre değişir ve
+bu ek riskten kaçınıldı. Mimar Sinan için portre bulunamadığından imzası
+kullanıldı. 2 mimar için görsel bulunamadı, boş bırakıldı. Tam 5 dilli
+çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
