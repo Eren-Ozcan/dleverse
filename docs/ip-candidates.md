@@ -84,7 +84,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
 | 46 | Kriket Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı; global ama TR'de niş |
 | 47 | Rugby Efsaneleri | — | Global ama TR'de niş |
-| 48 | Voleybol Efsaneleri (TR güçlü) | — | TR'de güçlü ilgi alanı, kamusal |
+| 48 | Voleybol Efsaneleri (TR güçlü) | ✅ Kuruldu (40) | 12 ülke, salon + plaj; Commons foto + kredi deseni |
 | 49 | Masa Tenisi Efsaneleri | — | Niş ama kamusal |
 | 50 | Okçuluk/Güreş Efsaneleri (TR geleneksel sporları) | — | TR'ye özgü, düşük risk, düşük rekabet |
 
@@ -459,6 +459,23 @@ Yeni Zelanda, Bangladeş) temsil. Görseller `fetch-wiki-image.js` ile toplu
 kapak görseli bulunamadı, image/imageCredit boş bırakıldı; Shakib Al Hasan'ın
 görseli İngilizce Wikipedia'da kapak görseli olmadığı için Bengalce Wikipedia
 sayfasından alındı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #20 — Voleybol Efsaneleri (#48)
+
+40 kayıt: Mireya Luis ve Karch Kiraly'den Tijana Bošković ve Zhu Ting'e
+kadar 12 ülkeden (Türkiye 7, Brezilya 7, ABD 6, İtalya 5, Rusya 3,
+Sırbistan 3, Polonya 2, Küba 2, Çin 2, Güney Kore, Fransa, Hollanda)
+salon ve plaj voleybolu efsaneleri. TR ilgisi gereği milli takım
+kuşağı (Neslihan Demir, Gözde Kırdar, Eda Erdem, Naz Aydemir vb.) geniş
+tutuldu. Görseller `fetch-wiki-image.js` ile toplu çekildi. Veri notları:
+Steve Timmons için hiçbir dilde kullanılabilir kapak görseli bulunamadı,
+image/imageCredit boş bırakıldı; Giba, Gözde Kırdar, Fofão, Ivan Zaytsev,
+Ekaterina Gamova ve Earvin Ngapeth görselleri İngilizce Wikipedia'da
+bulunamadığı için sırasıyla Portekizce, tekrar denenen İngilizce,
+Portekizce, alternatif İngilizce başlık, Rusça ve Fransızca sayfalardan
+alındı. "hittingHand" voleybolda seyrek belgelenen bir veri — sadece
+doğrulanabilen solaklar sol olarak işaretlendi. Tam 5 dilli çeviri
+eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
