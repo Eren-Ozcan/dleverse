@@ -24,6 +24,7 @@ import dogalHarikalar from "./dogal-harikalar";
 import rockGruplari from "./rock-gruplari";
 import boksEfsaneleri from "./boks-efsaneleri";
 import satrancSampiyonlari from "./satranc-sampiyonlari";
+import kasifler from "./kasifler";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -51,6 +52,7 @@ export const packs: PackConfig[] = [
   rockGruplari,
   boksEfsaneleri,
   satrancSampiyonlari,
+  kasifler,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
