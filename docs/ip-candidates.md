@@ -82,7 +82,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 43 | Formula 1 Pistleri | ✅ Kuruldu (39) | Kurumsal/coğrafya, kişi değil; görsel yok (emoji-clue) |
 | 44 | Dünya Havayolları (trivia) | ✅ Kuruldu (39) | Şirket, kişi değil; görsel yok (emoji-clue) |
 | 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
-| 46 | Kriket Efsaneleri | — | Global ama TR'de niş |
+| 46 | Kriket Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı; global ama TR'de niş |
 | 47 | Rugby Efsaneleri | — | Global ama TR'de niş |
 | 48 | Voleybol Efsaneleri (TR güçlü) | — | TR'de güçlü ilgi alanı, kamusal |
 | 49 | Masa Tenisi Efsaneleri | — | Niş ama kamusal |
@@ -448,6 +448,17 @@ index.ts'e kaydedildi.
 "foundedYear" şirketin GÜNCEL tüzel kişiliğinin kuruluş tarihi (selef
 şirketler hariç). Kurumsal veri olduğu için kişi görseli gerekmiyor —
 emoji-clue deseni. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #19 — Kriket Efsaneleri (#46)
+
+40 kayıt: W. G. Grace (1848) ve Jack Hobbs'tan (1882) Virat Kohli ve Kane
+Williamson'a kadar ~140 yıllık kriket tarihi; 9 kriket ulusundan (Hindistan,
+Pakistan, Avustralya, İngiltere, Batı Hint Adaları, Güney Afrika, Sri Lanka,
+Yeni Zelanda, Bangladeş) temsil. Görseller `fetch-wiki-image.js` ile toplu
+çekildi. İki veri notu: Malcolm Marshall için Wikimedia'da kullanılabilir
+kapak görseli bulunamadı, image/imageCredit boş bırakıldı; Shakib Al Hasan'ın
+görseli İngilizce Wikipedia'da kapak görseli olmadığı için Bengalce Wikipedia
+sayfasından alındı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
