@@ -27,6 +27,7 @@ import satrancSampiyonlari from "./satranc-sampiyonlari";
 import kasifler from "./kasifler";
 import astronotlar from "./astronotlar";
 import mimarlar from "./mimarlar";
+import heykeltiraslar from "./heykeltiraslar";
 
 export const packs: PackConfig[] = [
   baskentler,
@@ -57,6 +58,7 @@ export const packs: PackConfig[] = [
   kasifler,
   astronotlar,
   mimarlar,
+  heykeltiraslar,
 ];
 
 export function getPackById(id: string): PackConfig | undefined {
