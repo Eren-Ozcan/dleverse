@@ -71,7 +71,7 @@ veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
 | 32 | Astronotlar/Kozmonotlar | ✅ Kuruldu (40) | Kamusal, uzay tarihi; her ülkenin "ilk astronotu" temalı geniş çeşitlilik |
 | 33 | Nobel Ödüllü Barış Ödülü Sahipleri | ✅ Kuruldu (58) | Ayrı paket olarak kuruldu, gerçek Commons fotoğrafı |
 | 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
-| 35 | Ünlü Heykeltıraşlar | — | #7 ile benzer desen |
+| 35 | Ünlü Heykeltıraşlar | ✅ Kuruldu (40) | #7 ile benzer desen; antik dönem için heykel/büst görseli kullanıldı |
 | 36 | Rönesans Dönemi Sanatçıları (alt küme) | — | #7'nin daha spesifik alt kümesi |
 | 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
 | 38 | UNESCO Dünya Mirası Alanları | — | Saf coğrafya/kültür |
@@ -345,6 +345,16 @@ portresi kullanıldı — bina/eser fotoğrafı yok, çünkü "freedom of panora
 bu ek riskten kaçınıldı. Mimar Sinan için portre bulunamadığından imzası
 kullanıldı. 2 mimar için görsel bulunamadı, boş bırakıldı. Tam 5 dilli
 çeviri eklendi, index.ts'e kaydedildi.
+
+## 2026-07-29 güncellemesi #7 — Ünlü Heykeltıraşlar (#35)
+
+40 kayıt: antik Yunan'dan (Phidias, Praxiteles) günümüz kavramsal
+sanatçılarına (Damien Hirst, Antony Gormley) kadar. Antik dönem için
+fotoğraf yerine dönemin/sonraki dönemin betimlediği heykel/büst
+kullanıldı. Michelangelo ve Bernini gibi bazı isimler Ressamlar/Mimarlar
+paketleriyle kasıtlı olarak örtüşüyor (bu kişiler her iki disiplinde de
+tarihe geçmiştir). Duane Hanson için görsel bulunamadı, boş bırakıldı.
+Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
 
 ## Öneri — sıradaki adımlar
 
