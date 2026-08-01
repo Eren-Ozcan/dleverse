@@ -1,0 +1,102 @@
+import type { PackI18n } from "../../../engine/types";
+
+export const journalistsI18n: PackI18n = {
+  title: {
+    en: "Famous Journalists",
+    de: "Berühmte Journalisten",
+    fr: "Journalistes célèbres",
+    es: "Periodistas famosos",
+    pt: "Jornalistas famosos",
+  },
+  subtitle: {
+    en: "Guess today's journalist",
+    de: "Errate den Journalisten des Tages",
+    fr: "Devine le journaliste du jour",
+    es: "Adivina al periodista de hoy",
+    pt: "Adivinhe o jornalista de hoje",
+  },
+  fieldLabels: {
+    nationality: {
+      en: "Nationality",
+      de: "Nationalität",
+      fr: "Nationalité",
+      es: "Nacionalidad",
+      pt: "Nacionalidade",
+    },
+    specialty: {
+      en: "Specialty",
+      de: "Spezialgebiet",
+      fr: "Spécialité",
+      es: "Especialidad",
+      pt: "Especialidade",
+    },
+    birthDecade: {
+      en: "Birth Decade",
+      de: "Geburtsjahrzehnt",
+      fr: "Décennie de naissance",
+      es: "Década de nacimiento",
+      pt: "Década de nascimento",
+    },
+    continent: {
+      en: "Continent",
+      de: "Kontinent",
+      fr: "Continent",
+      es: "Continente",
+      pt: "Continente",
+    },
+    famousWork: {
+      en: "Famous Work",
+      de: "Bekanntes Werk",
+      fr: "Œuvre célèbre",
+      es: "Obra famosa",
+      pt: "Obra famosa",
+    },
+  },
+  valueTranslations: {
+    nationality: {
+      "Macaristan": { en: "Hungary", de: "Ungarn", fr: "Hongrie", es: "Hungría", pt: "Hungria" },
+      "ABD": { en: "USA", de: "USA", fr: "États-Unis", es: "EE. UU.", pt: "EUA" },
+      "İngiltere": { en: "England", de: "England", fr: "Angleterre", es: "Inglaterra", pt: "Inglaterra" },
+      "Fransa": { en: "France", de: "Frankreich", fr: "France", es: "Francia", pt: "França" },
+      "Yeni Zelanda": { en: "New Zealand", de: "Neuseeland", fr: "Nouvelle-Zélande", es: "Nueva Zelanda", pt: "Nova Zelândia" },
+      "İtalya": { en: "Italy", de: "Italien", fr: "Italie", es: "Italia", pt: "Itália" },
+      "Polonya": { en: "Poland", de: "Polen", fr: "Pologne", es: "Polonia", pt: "Polônia" },
+      "Avustralya": { en: "Australia", de: "Australien", fr: "Australie", es: "Australia", pt: "Austrália" },
+      "Hindistan": { en: "India", de: "Indien", fr: "Inde", es: "India", pt: "Índia" },
+      "Suudi Arabistan": { en: "Saudi Arabia", de: "Saudi-Arabien", fr: "Arabie saoudite", es: "Arabia Saudita", pt: "Arábia Saudita" },
+      "Vietnam": { en: "Vietnam", de: "Vietnam", fr: "Vietnam", es: "Vietnam", pt: "Vietnã" },
+    },
+    specialty: {
+      "Foto Muhabirliği": { en: "Photojournalism", de: "Fotojournalismus", fr: "Photojournalisme", es: "Fotoperiodismo", pt: "Fotojornalismo" },
+      "Araştırmacı Gazetecilik": { en: "Investigative Journalism", de: "Investigativer Journalismus", fr: "Journalisme d'investigation", es: "Periodismo de investigación", pt: "Jornalismo investigativo" },
+      "TV/Radyo Sunuculuğu": { en: "TV/Radio Anchoring", de: "TV-/Radiomoderation", fr: "Présentation TV/radio", es: "Presentación de TV/radio", pt: "Apresentação de TV/rádio" },
+      "TV Sunuculuğu": { en: "TV Anchoring", de: "TV-Moderation", fr: "Présentation télévisée", es: "Presentación televisiva", pt: "Apresentação de TV" },
+      "Savaş Muhabirliği": { en: "War Correspondence", de: "Kriegsberichterstattung", fr: "Correspondance de guerre", es: "Corresponsalía de guerra", pt: "Correspondência de guerra" },
+      "Röportaj Gazeteciliği": { en: "Interview Journalism", de: "Interviewjournalismus", fr: "Journalisme d'interview", es: "Periodismo de entrevista", pt: "Jornalismo de entrevista" },
+      "Yorum/Analiz Gazeteciliği": { en: "Commentary/Analysis Journalism", de: "Kommentar-/Analysejournalismus", fr: "Journalisme de commentaire/analyse", es: "Periodismo de opinión/análisis", pt: "Jornalismo de opinião/análise" },
+      "Yayıncılık": { en: "Publishing", de: "Verlagswesen", fr: "Édition", es: "Edición", pt: "Editoração" },
+    },
+    birthDecade: {
+      "1840'lar": { en: "1840s", de: "1840er", fr: "Années 1840", es: "Años 1840", pt: "Anos 1840" },
+      "1860'lar": { en: "1860s", de: "1860er", fr: "Années 1860", es: "Años 1860", pt: "Anos 1860" },
+      "1880'ler": { en: "1880s", de: "1880er", fr: "Années 1880", es: "Años 1880", pt: "Anos 1880" },
+      "1890'lar": { en: "1890s", de: "1890er", fr: "Années 1890", es: "Años 1890", pt: "Anos 1890" },
+      "1900'ler": { en: "1900s", de: "1900er", fr: "Années 1900", es: "Años 1900", pt: "Anos 1900" },
+      "1910'lar": { en: "1910s", de: "1910er", fr: "Années 1910", es: "Años 1910", pt: "Anos 1910" },
+      "1920'ler": { en: "1920s", de: "1920er", fr: "Années 1920", es: "Años 1920", pt: "Anos 1920" },
+      "1930'lar": { en: "1930s", de: "1930er", fr: "Années 1930", es: "Años 1930", pt: "Anos 1930" },
+      "1940'lar": { en: "1940s", de: "1940er", fr: "Années 1940", es: "Años 1940", pt: "Anos 1940" },
+      "1950'ler": { en: "1950s", de: "1950er", fr: "Années 1950", es: "Años 1950", pt: "Anos 1950" },
+      "1960'lar": { en: "1960s", de: "1960er", fr: "Années 1960", es: "Años 1960", pt: "Anos 1960" },
+      "1970'ler": { en: "1970s", de: "1970er", fr: "Années 1970", es: "Años 1970", pt: "Anos 1970" },
+    },
+    continent: {
+      "Avrupa": { en: "Europe", de: "Europa", fr: "Europe", es: "Europa", pt: "Europa" },
+      "Kuzey Amerika": { en: "North America", de: "Nordamerika", fr: "Amérique du Nord", es: "América del Norte", pt: "América do Norte" },
+      "Okyanusya": { en: "Oceania", de: "Ozeanien", fr: "Océanie", es: "Oceanía", pt: "Oceania" },
+      "Asya": { en: "Asia", de: "Asien", fr: "Asie", es: "Asia", pt: "Ásia" },
+    },
+  },
+};
+
+export default journalistsI18n;

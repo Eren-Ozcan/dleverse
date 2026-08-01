@@ -1,0 +1,108 @@
+import type { PackI18n } from "../../../engine/types";
+
+export const explorersI18n: PackI18n = {
+  title: {
+    en: "Famous Explorers",
+    de: "Berühmte Entdecker",
+    fr: "Explorateurs célèbres",
+    es: "Exploradores famosos",
+    pt: "Exploradores famosos",
+  },
+  subtitle: {
+    en: "Guess today's explorer",
+    de: "Errate den Entdecker des Tages",
+    fr: "Devine l'explorateur du jour",
+    es: "Adivina al explorador de hoy",
+    pt: "Adivinhe o explorador de hoje",
+  },
+  fieldLabels: {
+    nationality: {
+      en: "Nationality",
+      de: "Nationalität",
+      fr: "Nationalité",
+      es: "Nacionalidad",
+      pt: "Nacionalidade",
+    },
+    century: {
+      en: "Century",
+      de: "Jahrhundert",
+      fr: "Siècle",
+      es: "Siglo",
+      pt: "Século",
+    },
+    exploredRegion: {
+      en: "Explored Region",
+      de: "Erkundete Region",
+      fr: "Région explorée",
+      es: "Región explorada",
+      pt: "Região explorada",
+    },
+    continent: {
+      en: "Continent (Origin)",
+      de: "Kontinent (Herkunft)",
+      fr: "Continent (origine)",
+      es: "Continente (origen)",
+      pt: "Continente (origem)",
+    },
+    explorationType: {
+      en: "Explorer Type",
+      de: "Entdeckertyp",
+      fr: "Type d'explorateur",
+      es: "Tipo de explorador",
+      pt: "Tipo de explorador",
+    },
+  },
+  valueTranslations: {
+    nationality: {
+      "İtalya": { en: "Italy", de: "Italien", fr: "Italie", es: "Italia", pt: "Itália" },
+      "Portekiz": { en: "Portugal", de: "Portugal", fr: "Portugal", es: "Portugal", pt: "Portugal" },
+      "Çin": { en: "China", de: "China", fr: "Chine", es: "China", pt: "China" },
+      "İngiltere": { en: "England", de: "England", fr: "Angleterre", es: "Inglaterra", pt: "Inglaterra" },
+      "Fas": { en: "Morocco", de: "Marokko", fr: "Maroc", es: "Marruecos", pt: "Marrocos" },
+      "İzlanda": { en: "Iceland", de: "Island", fr: "Islande", es: "Islandia", pt: "Islândia" },
+      "İspanya": { en: "Spain", de: "Spanien", fr: "Espagne", es: "España", pt: "Espanha" },
+      "Fransa": { en: "France", de: "Frankreich", fr: "France", es: "Francia", pt: "França" },
+      "Norveç": { en: "Norway", de: "Norwegen", fr: "Norvège", es: "Noruega", pt: "Noruega" },
+      "İrlanda": { en: "Ireland", de: "Irland", fr: "Irlande", es: "Irlanda", pt: "Irlanda" },
+      "ABD": { en: "USA", de: "USA", fr: "États-Unis", es: "EE. UU.", pt: "EUA" },
+      "İskoçya": { en: "Scotland", de: "Schottland", fr: "Écosse", es: "Escocia", pt: "Escócia" },
+      "Galler": { en: "Wales", de: "Wales", fr: "Pays de Galles", es: "Gales", pt: "País de Gales" },
+      "Almanya": { en: "Germany", de: "Deutschland", fr: "Allemagne", es: "Alemania", pt: "Alemanha" },
+      "Hollanda": { en: "Netherlands", de: "Niederlande", fr: "Pays-Bas", es: "Países Bajos", pt: "Países Baixos" },
+      "Danimarka": { en: "Denmark", de: "Dänemark", fr: "Danemark", es: "Dinamarca", pt: "Dinamarca" },
+    },
+    century: {
+      "11. yüzyıl": { en: "11th century", de: "11. Jahrhundert", fr: "XIe siècle", es: "Siglo XI", pt: "Século XI" },
+      "13. yüzyıl": { en: "13th century", de: "13. Jahrhundert", fr: "XIIIe siècle", es: "Siglo XIII", pt: "Século XIII" },
+      "14. yüzyıl": { en: "14th century", de: "14. Jahrhundert", fr: "XIVe siècle", es: "Siglo XIV", pt: "Século XIV" },
+      "15. yüzyıl": { en: "15th century", de: "15. Jahrhundert", fr: "XVe siècle", es: "Siglo XV", pt: "Século XV" },
+      "16. yüzyıl": { en: "16th century", de: "16. Jahrhundert", fr: "XVIe siècle", es: "Siglo XVI", pt: "Século XVI" },
+      "17. yüzyıl": { en: "17th century", de: "17. Jahrhundert", fr: "XVIIe siècle", es: "Siglo XVII", pt: "Século XVII" },
+      "18. yüzyıl": { en: "18th century", de: "18. Jahrhundert", fr: "XVIIIe siècle", es: "Siglo XVIII", pt: "Século XVIII" },
+      "19. yüzyıl": { en: "19th century", de: "19. Jahrhundert", fr: "XIXe siècle", es: "Siglo XIX", pt: "Século XIX" },
+      "20. yüzyıl": { en: "20th century", de: "20. Jahrhundert", fr: "XXe siècle", es: "Siglo XX", pt: "Século XX" },
+    },
+    exploredRegion: {
+      "Amerika": { en: "Americas", de: "Amerika", fr: "Amériques", es: "América", pt: "Américas" },
+      "Dünya Turu": { en: "Circumnavigation", de: "Weltumsegelung", fr: "Circumnavigation", es: "Circunnavegación", pt: "Circum-navegação" },
+      "Asya": { en: "Asia", de: "Asien", fr: "Asie", es: "Asia", pt: "Ásia" },
+      "Afrika": { en: "Africa", de: "Afrika", fr: "Afrique", es: "África", pt: "África" },
+      "Antarktika": { en: "Antarctica", de: "Antarktis", fr: "Antarctique", es: "Antártida", pt: "Antártida" },
+      "Kuzey Kutbu": { en: "Arctic", de: "Arktis", fr: "Arctique", es: "Ártico", pt: "Ártico" },
+      "Pasifik": { en: "Pacific", de: "Pazifik", fr: "Pacifique", es: "Pacífico", pt: "Pacífico" },
+    },
+    continent: {
+      "Avrupa": { en: "Europe", de: "Europa", fr: "Europe", es: "Europa", pt: "Europa" },
+      "Asya": { en: "Asia", de: "Asien", fr: "Asie", es: "Asia", pt: "Ásia" },
+      "Afrika": { en: "Africa", de: "Afrika", fr: "Afrique", es: "África", pt: "África" },
+      "Kuzey Amerika": { en: "North America", de: "Nordamerika", fr: "Amérique du Nord", es: "América del Norte", pt: "América do Norte" },
+    },
+    explorationType: {
+      "Deniz Kaşifi": { en: "Maritime Explorer", de: "Seefahrer", fr: "Explorateur maritime", es: "Explorador marítimo", pt: "Explorador marítimo" },
+      "Kara Kaşifi": { en: "Land Explorer", de: "Landforscher", fr: "Explorateur terrestre", es: "Explorador terrestre", pt: "Explorador terrestre" },
+      "Kutup Kaşifi": { en: "Polar Explorer", de: "Polarforscher", fr: "Explorateur polaire", es: "Explorador polar", pt: "Explorador polar" },
+    },
+  },
+};
+
+export default explorersI18n;

@@ -288,7 +288,7 @@ rights"). A new **Audio Mode** (`expo-audio`) was also added, optional per pack.
 Eight new packs were built in this round: Formula 1 Drivers (#13), Rivers of the
 World (#22), Track & Field Legends (#27), Swimming Legends (#28), Nobel Peace
 Prize Laureates (#33), Turkish TV series actors (#51), Hollywood actors (#52),
-plus one extra pack not on the list: **Mountains of the World** (`daglar`, 39
+plus one extra pack not on the list: **Mountains of the World** (`mountains`, 39
 records, pure geography — contains no people, low risk). The move into the
 medium risk group (#51-52) was deliberate: both packs use ONLY the actor's own
 Commons portrait, with no scene/costume/production imagery.
