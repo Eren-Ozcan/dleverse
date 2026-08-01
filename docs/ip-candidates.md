@@ -1,591 +1,598 @@
-# Fandom/Konu Adayları — Genişletilmiş Havuz + Risk Değerlendirmesi
+# Fandom/Topic Candidates — Expanded Pool + Risk Assessment
 
-> Bu doküman hukuki görüş değildir. Genel bilgiye, emsal "-dle" sitelerinin
-> (Loldle, Pokedle, Naruto­dle vb.) fiilen ne kadar süre ayakta kaldığına ve
-> telif/marka hukukunun genel mantığına (parodi/bilgi kullanımı vs. karakter
-> görseli/logosu kullanımı) dayanan bir **tahmindir**. Gerçek yayın öncesi
-> mutlaka bir avukata gösterilmeli — özellikle Orta ve Yüksek risk kategorileri.
-> Bir şikayet gelirse en olası sonuç genelde **para cezası değil, store'dan
-> kaldırma / tekrarlayan ihlalde geliştirici hesabının askıya alınmasıdır**;
-> maddi tazminat davası küçük ölçekli/reklamsız projelerde nadirdir.
+> This document is not legal advice. It is an **estimate** based on general
+> knowledge, on how long precedent "-dle" sites (Loldle, Pokedle, Naruto­dle
+> etc.) have actually stayed up, and on the general logic of copyright/trademark
+> law (parody/informational use vs. use of character artwork/logos). It must be
+> reviewed by a lawyer before an actual release — especially the Medium and High
+> risk categories. If a complaint arrives, the most likely outcome is generally
+> **not a fine, but removal from the store / suspension of the developer account
+> on repeat infringement**; damages lawsuits are rare for small-scale/ad-free
+> projects.
 
-Risk, iki eksene göre belirlenir: **(1)** veri türü — gerçek kişi/kamusal bilgi
-(düşük) mü, kurgusal karakter görseli/repliği (yüksek) mü? **(2)** hak
-sahibinin agresiflik geçmişi — büyük stüdyo/yayıncı aktif takip yapıyor mu?
+Risk is determined along two axes: **(1)** the type of data — is it a real
+person/public information (low) or fictional character artwork/quotes (high)?
+**(2)** the rights holder's history of aggressiveness — is a large
+studio/publisher actively monitoring?
 
-## Kaç alan/soru kullanmalı?
+## How many fields/questions should be used?
 
-Araştırma: LoLdle Classic modu 8 kategori kullanıyor (Pozisyon, Tür, Cinsiyet,
-Kaynak, Menzil, Bölge, Çıkış Yılı, Saldırı Tipi); Pokédle'ın çoğu sürümü 4-5
-mod/kategori kullanıyor (Classic/Silhouette/Cry/Description gibi ayrı modlar,
-Classic tek başına ~5 istatistik karşılaştırıyor). Sabit bir endüstri kuralı
-yok ama **5 alan** en yaygın "tatlı nokta" — yeterince ipucu veriyor, ama
-ilk tahminde oyunu bitirmeyecek kadar zor kalıyor. Bu projede **varsayılan 5
-alan**, IP'nin doğasına göre 4-6 arası esneklik uygulanıyor (ör. Periyodik
-Tablo'da 5 objektif bilimsel alan, Yayıncılar'da veri kıtlığı yüzünden 3).
+Research: LoLdle's Classic mode uses 8 categories (Position, Species, Gender,
+Resource, Range, Region, Release Year, Attack Type); most versions of Pokédle
+use 4-5 modes/categories (separate modes such as Classic/Silhouette/Cry/
+Description, with Classic alone comparing ~5 stats). There is no fixed industry
+rule, but **5 fields** is the most common "sweet spot" — it gives enough clues,
+yet stays hard enough not to end the game on the first guess. In this project the
+**default is 5 fields**, with flexibility between 4-6 depending on the nature of
+the IP (e.g. 5 objective scientific fields for the Periodic Table, 3 for
+Streamers due to data scarcity).
 
 ---
 
-## 🟢 Düşük Risk — gerçek kişi / kamusal veri, karakter görseli gerekmiyor
+## 🟢 Low Risk — real person / public data, no character artwork needed
 
-Bu 50 madde, veri seti üretim sırasına göre numaralandırıldı. **1-10 arası
-bu implementasyonda tam veri setiyle (50 kayıt × 5 alan) kuruldu** — seçim
-kriteri yalnızca popülerlik değil, **50 kayıtta yanlış bilgi verme riskinin
-en düşük olduğu konular** (çoğunlukla tarihi/emekli figürler veya saf bilimsel
-veri, güncel transfer/takipçi sayısı gibi çabuk eskiyen veri değil).
-11-50 arası havuzda bekliyor, ileride aynı desenle doldurulabilir.
+These 50 entries are numbered in data set production order. **Entries 1-10 were
+built in this implementation with a full data set (50 records × 5 fields)** — the
+selection criterion was not popularity alone, but **the topics with the lowest
+risk of stating incorrect information across 50 records** (mostly historical/
+retired figures or purely scientific data, not fast-decaying data such as current
+transfers or follower counts). Entries 11-50 are waiting in the pool and can be
+filled in later using the same pattern.
 
-| # | Konu | Veri Seti | Not |
+| # | Topic | Data Set | Note |
 |---|---|---|---|
-| 1 | Dünya Ülkeleri | ✅ Kuruldu (50) | Coğrafya, sıfır kişi-riski |
-| 2 | NBA Efsaneleri | ✅ Kuruldu (50) | Emekli+efsane ağırlıklı, istatistik kamusal |
-| 3 | Süper Lig Efsaneleri | ✅ Kuruldu (50) | "En çok anıldığı kulüp" — güncel kadro değil, kariyer boyu |
-| 4 | Periyodik Tablo Elementleri | ✅ Kuruldu (50) | Kişi yok, tamamen objektif bilim verisi |
-| 5 | Tarihi Dünya Liderleri | ✅ Kuruldu (50) | Kamusal tarih bilgisi, kaba alanlar (yüzyıl/unvan) |
-| 6 | Nobel Ödüllü Bilim İnsanları | ✅ Kuruldu (50) | Resmi/objektif kayıt (yıl, alan, ülke) |
-| 7 | Ünlü Ressamlar | ✅ Kuruldu (50) | Çoğu eser kamu malı, sanat tarihi kamusal |
-| 8 | Olimpiyat Efsaneleri | ✅ Kuruldu (50) | Madalya sayıları resmi kayıt |
-| 9 | ATP/WTA Tenis Efsaneleri | ✅ Kuruldu (50) | Grand Slam sayıları resmi kayıt (aktiflerde güncellenmeli) |
-| 10 | Ünlü Besteciler (Klasik Müzik) | ✅ Kuruldu (50) | Tamamen tarihi, yaşayan kişi yok |
-| 11 | Türkiye Kick/Twitch Yayıncıları | ✅ Kuruldu (50) | Web aramasıyla gerçek isim/kategori doğrulandı; kıdem aralıkları kaba tahmin — 80'e çıkmadan önce tek tek yeniden doğrulanmalı |
-| 12 | Premier League Efsaneleri | ✅ Kuruldu (50) | Süper Lig ile aynı desen: "en çok anıldığı kulüp" |
-| 13 | Formula 1 Pilotları (tüm zamanlar) | ✅ Kuruldu (40) | Wikimedia Commons gerçek fotoğraf+kredi ile; 80'e çıkarılabilir |
-| 14 | Dünya Başkentleri (ayrı bayrak/nüfus odaklı) | — | Ülkeler paketinden farklı alan seti ile varyasyon |
-| 15 | Ünlü Filozoflar | ✅ Kuruldu (40) | Tarihi, kamusal; antik dönem için büst/heykel görseli kullanıldı |
-| 16 | Ünlü Mucitler/Bilim İnsanları (Nobel dışı) | — | Kamusal |
-| 17 | Global Pop Yıldızları (gerçek kişi, bio) | — | Görsel yerine metin bio kullan |
-| 18 | Klasik Rock Grupları/Üyeleri | ✅ Kuruldu (50) | Kuruluş yılı/tür bazlı, gerçek Commons fotoğrafı |
-| 19 | Dünya Satranç Şampiyonları | ✅ Kuruldu (39) | Küçük ama sadık kitle, tamamen kamusal; Klasik+FIDE+Kadınlar unvanları birlikte |
-| 20 | Ünlü Şefler/Mutfak Dünyası | ✅ Kuruldu (40) | Kamusal figür; 2 Türk şef dahil (Fatih Tutak, Mehmet Gürs) |
-| 21 | Dünya Dağları/Zirveleri | ✅ Kuruldu (39) | Saf coğrafya, gerçek Commons fotoğrafı (bkz. 2026-07-24 güncellemesi notu) |
-| 22 | Dünya Nehirleri | ✅ Kuruldu (42) | Saf coğrafya, gerçek Commons fotoğrafı |
-| 23 | Nobel Ödüllü Yazarlar (Edebiyat) | ✅ Kuruldu (40) | #6/#40'tan ayrı, minimum örtüşme; Orhan Pamuk ve Bob Dylan dahil |
-| 24 | Ünlü Kaşifler | ✅ Kuruldu (40) | Tarihi, kamusal; gerçek Commons portresi/gravürü/heykeli |
-| 25 | Dünya İmparatorlukları (tarihi) | ✅ Kuruldu (40) | Coğrafya+tarih karışımı, kişi değil; görsel yok (emoji-clue) |
-| 26 | Boks Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı |
-| 27 | Atletizm Efsaneleri (100m, maraton vb.) | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
-| 28 | Yüzme Efsaneleri | ✅ Kuruldu (40) | Kamusal rekor verisi, gerçek Commons fotoğrafı |
-| 29 | Formula 1 Takımları/Tarihi | ✅ Kuruldu (45) | Kurumsal veri, kişi değil; çoğu logo hariç tutuldu |
-| 30 | Dünya Dilleri | — | Saf dilbilim trivia |
-| 31 | Türk Sporcular (genel, olimpik) | — | Kamusal ama araştırma gerektirir |
-| 32 | Astronotlar/Kozmonotlar | ✅ Kuruldu (40) | Kamusal, uzay tarihi; her ülkenin "ilk astronotu" temalı geniş çeşitlilik |
-| 33 | Nobel Ödüllü Barış Ödülü Sahipleri | ✅ Kuruldu (58) | Ayrı paket olarak kuruldu, gerçek Commons fotoğrafı |
-| 34 | Dünya Dinleri (kavramsal trivia) | — | Kişi değil, kavram |
-| 35 | Ünlü Heykeltıraşlar | ✅ Kuruldu (40) | #7 ile benzer desen; antik dönem için heykel/büst görseli kullanıldı |
-| 36 | Rönesans Dönemi Sanatçıları (alt küme) | ✅ Kuruldu (40) | #7'nin daha spesifik alt kümesi; #7 ile isim örtüşmesi minimize edildi |
-| 37 | Dünya Doğal Harikaları | ✅ Kuruldu (44) | Saf coğrafya, gerçek Commons fotoğrafı |
-| 38 | UNESCO Dünya Mirası Alanları | ✅ Kuruldu (40) | Saf coğrafya/kültür; sadece kültürel/mimari alanlar, #37 ile örtüşme yok |
-| 39 | Ünlü Mimarlar | ✅ Kuruldu (40) | Kamusal, eser bazlı; sadece mimar portresi, bina/eser fotoğrafı yok |
-| 40 | Klasik Edebiyat Yazarları (roman) | ✅ Kuruldu (40) | Roman odaklı; kitap kapağı değil sadece yazar portresi kullanıldı |
-| 41 | Dünya Para Birimleri (trivia) | ✅ Kuruldu (40) | Kişi değil, ekonomi trivia; görsel yok (emoji-clue) |
-| 42 | Ünlü Gazeteciler/Foto Muhabirleri | ✅ Kuruldu (40) | Kamusal figür; tarihi olay bazlı, tarafsız biyografik bilgi |
-| 43 | Formula 1 Pistleri | ✅ Kuruldu (39) | Kurumsal/coğrafya, kişi değil; görsel yok (emoji-clue) |
-| 44 | Dünya Havayolları (trivia) | ✅ Kuruldu (39) | Şirket, kişi değil; görsel yok (emoji-clue) |
-| 45 | Ünlü Girişimciler (teknoloji, tarihi) | — | Kamusal figür, dikkatli seçilmeli |
-| 46 | Kriket Efsaneleri | ✅ Kuruldu (40) | Kamusal spor kaydı, gerçek Commons fotoğrafı; global ama TR'de niş |
-| 47 | Rugby Efsaneleri | ✅ Kuruldu (40) | 13 ülke, emekli efsaneler; Commons foto + kredi deseni; TR'de niş |
-| 48 | Voleybol Efsaneleri (TR güçlü) | ✅ Kuruldu (40) | 12 ülke, salon + plaj; Commons foto + kredi deseni |
-| 49 | Masa Tenisi Efsaneleri | — | Niş ama kamusal |
-| 50 | Okçuluk/Güreş Efsaneleri (TR geleneksel sporları) | — | TR'ye özgü, düşük risk, düşük rekabet |
+| 1 | Countries of the World | ✅ Built (50) | Geography, zero person-risk |
+| 2 | NBA Legends | ✅ Built (50) | Weighted toward retired+legendary players, stats are public |
+| 3 | Süper Lig Legends | ✅ Built (50) | "Club they are most associated with" — career-wide, not the current squad |
+| 4 | Periodic Table Elements | ✅ Built (50) | No people, entirely objective scientific data |
+| 5 | Historical World Leaders | ✅ Built (50) | Public historical knowledge, coarse fields (century/title) |
+| 6 | Nobel Prize-Winning Scientists | ✅ Built (50) | Official/objective record (year, field, country) |
+| 7 | Famous Painters | ✅ Built (50) | Most works are public domain, art history is public |
+| 8 | Olympic Legends | ✅ Built (50) | Medal counts are official record |
+| 9 | ATP/WTA Tennis Legends | ✅ Built (50) | Grand Slam counts are official record (must be updated for active players) |
+| 10 | Famous Composers (Classical Music) | ✅ Built (50) | Entirely historical, no living people |
+| 11 | Turkish Kick/Twitch Streamers | ✅ Built (50) | Real names/categories verified via web search; tenure ranges are rough estimates — must be re-verified one by one before expanding to 80 |
+| 12 | Premier League Legends | ✅ Built (50) | Same pattern as Süper Lig: "club they are most associated with" |
+| 13 | Formula 1 Drivers (all time) | ✅ Built (40) | With real Wikimedia Commons photos+credits; could be expanded to 80 |
+| 14 | World Capitals (separate flag/population focus) | — | A variation on the Countries pack with a different field set |
+| 15 | Famous Philosophers | ✅ Built (40) | Historical, public; bust/statue images used for the ancient period |
+| 16 | Famous Inventors/Scientists (non-Nobel) | — | Public |
+| 17 | Global Pop Stars (real people, bio) | — | Use a text bio instead of an image |
+| 18 | Classic Rock Bands/Members | ✅ Built (50) | Based on formation year/genre, real Commons photo |
+| 19 | World Chess Champions | ✅ Built (39) | Small but loyal audience, entirely public; Classical+FIDE+Women's titles together |
+| 20 | Famous Chefs/Culinary World | ✅ Built (40) | Public figures; includes 2 Turkish chefs (Fatih Tutak, Mehmet Gürs) |
+| 21 | Mountains/Peaks of the World | ✅ Built (39) | Pure geography, real Commons photo (see the 2026-07-24 update note) |
+| 22 | Rivers of the World | ✅ Built (42) | Pure geography, real Commons photo |
+| 23 | Nobel Prize-Winning Authors (Literature) | ✅ Built (40) | Separate from #6/#40, minimal overlap; includes Orhan Pamuk and Bob Dylan |
+| 24 | Famous Explorers | ✅ Built (40) | Historical, public; real Commons portrait/engraving/statue |
+| 25 | Empires of the World (historical) | ✅ Built (40) | Mix of geography+history, not people; no images (emoji-clue) |
+| 26 | Boxing Legends | ✅ Built (40) | Public sports record, real Commons photo |
+| 27 | Track & Field Legends (100m, marathon etc.) | ✅ Built (40) | Public record data, real Commons photo |
+| 28 | Swimming Legends | ✅ Built (40) | Public record data, real Commons photo |
+| 29 | Formula 1 Teams/History | ✅ Built (45) | Corporate data, not people; most logos excluded |
+| 30 | Languages of the World | — | Pure linguistics trivia |
+| 31 | Turkish Athletes (general, Olympic) | — | Public but requires research |
+| 32 | Astronauts/Cosmonauts | ✅ Built (40) | Public, space history; broad variety themed on each country's "first astronaut" |
+| 33 | Nobel Peace Prize Laureates | ✅ Built (58) | Built as a separate pack, real Commons photo |
+| 34 | World Religions (conceptual trivia) | — | Concepts, not people |
+| 35 | Famous Sculptors | ✅ Built (40) | Similar pattern to #7; statue/bust images used for the ancient period |
+| 36 | Renaissance Artists (subset) | ✅ Built (40) | A more specific subset of #7; name overlap with #7 minimized |
+| 37 | Natural Wonders of the World | ✅ Built (44) | Pure geography, real Commons photo |
+| 38 | UNESCO World Heritage Sites | ✅ Built (40) | Pure geography/culture; cultural/architectural sites only, no overlap with #37 |
+| 39 | Famous Architects | ✅ Built (40) | Public, work-based; architect portraits only, no photos of buildings/works |
+| 40 | Classic Literature Authors (novels) | ✅ Built (40) | Novel-focused; only author portraits used, not book covers |
+| 41 | World Currencies (trivia) | ✅ Built (40) | Economics trivia, not people; no images (emoji-clue) |
+| 42 | Famous Journalists/Photojournalists | ✅ Built (40) | Public figures; event-based, neutral biographical information |
+| 43 | Formula 1 Circuits | ✅ Built (39) | Corporate/geography, not people; no images (emoji-clue) |
+| 44 | World Airlines (trivia) | ✅ Built (39) | Companies, not people; no images (emoji-clue) |
+| 45 | Famous Entrepreneurs (tech, historical) | — | Public figures, must be selected carefully |
+| 46 | Cricket Legends | ✅ Built (40) | Public sports record, real Commons photo; global but niche in Turkey |
+| 47 | Rugby Legends | ✅ Built (40) | 13 countries, retired legends; Commons photo + credit pattern; niche in Turkey |
+| 48 | Volleyball Legends (strong in Turkey) | ✅ Built (40) | 12 countries, indoor + beach; Commons photo + credit pattern |
+| 49 | Table Tennis Legends | — | Niche but public |
+| 50 | Archery/Wrestling Legends (traditional Turkish sports) | — | Turkey-specific, low risk, low competition |
 
-## 🟡 Orta Risk — franchise'a değiyor ama gerçek kişi/metin ağırlıklı, görsel yok
+## 🟡 Medium Risk — touches a franchise but is mostly real people/text, no artwork
 
-| # | Konu | Not |
+| # | Topic | Note |
 |---|---|---|
-| 51 | Türk dizi oyuncuları (rol/bio bazlı) | ✅ Kuruldu (40) — Karakter/sahne görseli değil, sadece oyuncunun kendi Commons portresi + rol metadata'sı |
-| 52 | Hollywood aktörleri (filmografi) | ✅ Kuruldu (40) — Aynı ilke: sadece oyuncu portresi, sahne/kostüm görseli yok |
-| 53 | Yönetmenler (filmografi trivia) | Metin ağırlıklı |
-| 54 | Ünlü diziler (meta bilgi: oyuncu/yıl/tür) | Sahne görseli kullanılmazsa nispeten güvenli |
-| 55 | Retro/klasik video oyunları (stüdyo bilgisi) | Eski, daha zayıf takip edilen IP'ler |
-| 56 | Belgesel/doğa serileri (Discovery, Nat Geo) | Format tabanlı, factual |
-| 57 | Grammy ödüllü albümler | Albüm kapağı kullanılmazsa düşük-orta |
-| 58 | Stand-up komedyenleri (TR + global) | Replik kullanımı gri alan |
-| 59 | Türk sinema oyuncuları (Yeşilçam dönemi) | Tarihi ama stüdyo hakları karışık olabilir |
-| 60 | E-spor takımları/oyuncuları (kişi bazlı) | Turnuva halka açık ama marka hassas |
-| 61 | Podcast'çiler (TR + global) | Görece yeni, kamusal ama marka gri alan |
-| 62 | Moda tasarımcıları | Kamusal figür, marka adı hassas olabilir |
-| 63 | Ünlü fotoğrafçılar (sanat eseri telifli olabilir) | Eser telifine dikkat |
-| 64 | TV sunucuları / yarışma programı sunucuları | Format telifi olabilir |
-| 65 | Reality show yarışmacıları | Prodüksiyon şirketi hakları gri alan |
+| 51 | Turkish TV series actors (role/bio based) | ✅ Built (40) — Not character/scene imagery, only the actor's own Commons portrait + role metadata |
+| 52 | Hollywood actors (filmography) | ✅ Built (40) — Same principle: actor portraits only, no scene/costume imagery |
+| 53 | Directors (filmography trivia) | Text-heavy |
+| 54 | Famous TV series (meta info: cast/year/genre) | Relatively safe if no scene imagery is used |
+| 55 | Retro/classic video games (studio information) | Older, less closely monitored IPs |
+| 56 | Documentary/nature series (Discovery, Nat Geo) | Format-based, factual |
+| 57 | Grammy-winning albums | Low-to-medium if album covers are not used |
+| 58 | Stand-up comedians (Turkish + global) | Use of quotes is a grey area |
+| 59 | Turkish cinema actors (Yeşilçam era) | Historical, but studio rights may be tangled |
+| 60 | Esports teams/players (person-based) | Tournaments are public but brands are sensitive |
+| 61 | Podcasters (Turkish + global) | Relatively new, public but brand is a grey area |
+| 62 | Fashion designers | Public figures, brand names may be sensitive |
+| 63 | Famous photographers (artwork may be copyrighted) | Watch out for copyright in the works |
+| 64 | TV hosts / game show hosts | Format may be copyrighted |
+| 65 | Reality show contestants | Production company rights are a grey area |
 
-## 🔴 Yüksek Risk — büyük stüdyo, aktif marka/telif takibi, karakter görseli/repliği şart
+## 🔴 High Risk — major studios, active trademark/copyright enforcement, character artwork/quotes required
 
-| # | Konu | Not |
+| # | Topic | Note |
 |---|---|---|
-| 66 | One Piece | Kalabalık pazar (onepiecedle var), Toei/Shueisha aktif takipçi |
-| 67 | Naruto | Narutodle zaten var — doğrudan rekabet + IP riski |
-| 68 | Pokémon | Nintendo/Game Freak dünyanın en agresif takipçilerinden |
-| 69 | Marvel Sinematik Evreni | Disney — çok agresif |
-| 70 | DC (Batman/Superman vb.) | WBD — agresif |
-| 71 | Star Wars | Disney — çok agresif |
-| 72 | Harry Potter | Warner Bros — agresif |
-| 73 | Disney animasyon karakterleri | En agresif hak sahibi |
-| 74 | Dragon Ball | Toei/Bird Studio — aktif |
-| 75 | Attack on Titan | Kodansha — orta-yüksek |
-| 76 | Demon Slayer | Aniplex — popüler, aktif |
-| 77 | My Hero Academia | Shueisha — aktif |
-| 78 | Game of Thrones | HBO/WBD — agresif |
-| 79 | Breaking Bad | AMC — orta-yüksek |
-| 80 | Stranger Things | Netflix — aktif marka takibi |
-| 81 | The Simpsons | Disney/Fox — çok agresif |
-| 82 | Rick and Morty | WBD — agresif |
-| 83 | League of Legends | Loldle zaten var + Riot aktif takipçi |
-| 84 | Genshin Impact | miHoYo — aktif, global |
-| 85 | Fortnite | Epic — aktif |
-| 86 | Minecraft | Microsoft — orta-agresif |
-| 87 | Zelda / Nintendo evreni | Nintendo — en agresif takipçilerden |
-| 88 | Friends | WBD — agresif |
-| 89 | The Office (US) | NBCUniversal — orta-agresif |
-| 90 | Squid Game | Netflix — çok yeni, çok agresif marka koruması |
-| 91 | Death Note | Shueisha — aktif |
-| 92 | Jujutsu Kaisen | Shueisha — aktif, çok popüler |
-| 93 | Chainsaw Man | Shueisha — aktif |
-| 94 | Bleach | Shueisha — aktif |
-| 95 | Hunter x Hunter | Shueisha — aktif |
-| 96 | One Punch Man | Shueisha/Madhouse — orta-yüksek |
-| 97 | Spy x Family | Shueisha — yeni, popüler, aktif |
-| 98 | Studio Ghibli filmleri | Ghibli/Disney dağıtım — çok agresif |
-| 99 | Pixar filmleri | Disney — çok agresif |
-| 100 | Toy Story / Disney-Pixar evreni | Disney — çok agresif |
-| 101 | Grand Theft Auto (GTA) | Rockstar/Take-Two — agresif |
-| 102 | Call of Duty | Activision — agresif |
-| 103 | The Witcher | CD Projekt / Netflix çapraz IP — orta-yüksek |
-| 104 | Red Dead Redemption | Rockstar — agresif |
-| 105 | Marvel/DC dışı süper kahraman çizgi romanları | Değişken, genelde büyük yayınevi |
-| 106 | Sailor Moon | Toei — aktif |
-| 107 | Yu-Gi-Oh! | Konami — aktif |
-| 108 | Digimon | Bandai — orta-yüksek |
-| 109 | Sword Art Online | Aniplex — orta-yüksek |
-| 110 | Tokyo Ghoul | Shueisha/Kodansha — orta-yüksek |
-| 111 | Fullmetal Alchemist | Square Enix — orta-yüksek |
-| 112 | Kimetsu no Yaiba yan ürünleri | Aniplex — aktif (Demon Slayer ile aynı IP) |
-| 113 | Avatar: The Last Airbender | Nickelodeon/Paramount — orta-yüksek |
-| 114 | The Boys | Amazon — aktif |
-| 115 | The Mandalorian | Disney — çok agresif (Star Wars ile aynı IP) |
-| 116 | Wednesday (Netflix dizisi) | Netflix — yeni, agresif |
-| 117 | House of the Dragon | HBO/WBD — agresif |
-| 118 | The Last of Us | Sony/HBO — agresif |
-| 119 | Türk dizi evreni (Netflix orijinalleri) | Netflix — agresif marka koruması |
-| 120 | Barbie (Mattel evreni) | Mattel — çok agresif |
+| 66 | One Piece | Crowded market (onepiecedle exists), Toei/Shueisha actively enforce |
+| 67 | Naruto | Narutodle already exists — direct competition + IP risk |
+| 68 | Pokémon | Nintendo/Game Freak are among the most aggressive enforcers in the world |
+| 69 | Marvel Cinematic Universe | Disney — very aggressive |
+| 70 | DC (Batman/Superman etc.) | WBD — aggressive |
+| 71 | Star Wars | Disney — very aggressive |
+| 72 | Harry Potter | Warner Bros — aggressive |
+| 73 | Disney animated characters | The most aggressive rights holder |
+| 74 | Dragon Ball | Toei/Bird Studio — active |
+| 75 | Attack on Titan | Kodansha — medium-high |
+| 76 | Demon Slayer | Aniplex — popular, active |
+| 77 | My Hero Academia | Shueisha — active |
+| 78 | Game of Thrones | HBO/WBD — aggressive |
+| 79 | Breaking Bad | AMC — medium-high |
+| 80 | Stranger Things | Netflix — active brand enforcement |
+| 81 | The Simpsons | Disney/Fox — very aggressive |
+| 82 | Rick and Morty | WBD — aggressive |
+| 83 | League of Legends | Loldle already exists + Riot actively enforces |
+| 84 | Genshin Impact | miHoYo — active, global |
+| 85 | Fortnite | Epic — active |
+| 86 | Minecraft | Microsoft — moderately aggressive |
+| 87 | Zelda / Nintendo universe | Nintendo — among the most aggressive enforcers |
+| 88 | Friends | WBD — aggressive |
+| 89 | The Office (US) | NBCUniversal — moderately aggressive |
+| 90 | Squid Game | Netflix — very new, very aggressive brand protection |
+| 91 | Death Note | Shueisha — active |
+| 92 | Jujutsu Kaisen | Shueisha — active, very popular |
+| 93 | Chainsaw Man | Shueisha — active |
+| 94 | Bleach | Shueisha — active |
+| 95 | Hunter x Hunter | Shueisha — active |
+| 96 | One Punch Man | Shueisha/Madhouse — medium-high |
+| 97 | Spy x Family | Shueisha — new, popular, active |
+| 98 | Studio Ghibli films | Ghibli/Disney distribution — very aggressive |
+| 99 | Pixar films | Disney — very aggressive |
+| 100 | Toy Story / Disney-Pixar universe | Disney — very aggressive |
+| 101 | Grand Theft Auto (GTA) | Rockstar/Take-Two — aggressive |
+| 102 | Call of Duty | Activision — aggressive |
+| 103 | The Witcher | CD Projekt / Netflix cross-IP — medium-high |
+| 104 | Red Dead Redemption | Rockstar — aggressive |
+| 105 | Superhero comics outside Marvel/DC | Varies, usually a large publisher |
+| 106 | Sailor Moon | Toei — active |
+| 107 | Yu-Gi-Oh! | Konami — active |
+| 108 | Digimon | Bandai — medium-high |
+| 109 | Sword Art Online | Aniplex — medium-high |
+| 110 | Tokyo Ghoul | Shueisha/Kodansha — medium-high |
+| 111 | Fullmetal Alchemist | Square Enix — medium-high |
+| 112 | Kimetsu no Yaiba spin-offs | Aniplex — active (same IP as Demon Slayer) |
+| 113 | Avatar: The Last Airbender | Nickelodeon/Paramount — medium-high |
+| 114 | The Boys | Amazon — active |
+| 115 | The Mandalorian | Disney — very aggressive (same IP as Star Wars) |
+| 116 | Wednesday (Netflix series) | Netflix — new, aggressive |
+| 117 | House of the Dragon | HBO/WBD — aggressive |
+| 118 | The Last of Us | Sony/HBO — aggressive |
+| 119 | Turkish series universe (Netflix originals) | Netflix — aggressive brand protection |
+| 120 | Barbie (Mattel universe) | Mattel — very aggressive |
 
-### 🔴 Yüksek Risk — devamı
+### 🔴 High Risk — continued
 
-| # | Konu | Not |
+| # | Topic | Note |
 |---|---|---|
-| 121 | Assassin's Creed | Ubisoft — agresif |
-| 122 | FIFA/EA Sports FC (oyun karakterleri değil marka) | EA — lisans hassasiyeti yüksek |
-| 123 | Roblox evreni | Roblox Corp — orta-agresif |
-| 124 | Among Us | Innersloth — orta, küçük stüdyo ama aktif |
-| 125 | Five Nights at Freddy's | Scott Cawthon/Blumhouse — orta-yüksek |
-| 126 | Rick Riordan evreni (Percy Jackson) | Disney dağıtım — agresif |
-| 127 | Marvel Yan Karakterleri (X-Men, Avengers alt kadro) | Disney — çok agresif |
-| 128 | Star Trek | Paramount — agresif |
-| 129 | Doctor Who | BBC — agresif |
-| 130 | Sherlock (BBC dizisi) | BBC — orta-yüksek |
-| 131 | Peaky Blinders | BBC/Netflix — orta-yüksek |
-| 132 | La Casa de Papel (Money Heist) | Netflix — agresif |
-| 133 | Money Heist Kore uyarlaması vb. | Netflix — agresif |
-| 134 | Dark (Netflix dizisi) | Netflix — agresif |
-| 135 | Peppa Pig | Hasbro — çocuk IP, çok agresif |
-| 136 | Paw Patrol | Nickelodeon — çocuk IP, agresif |
-| 137 | SpongeBob SquarePants | Nickelodeon/Paramount — çok agresif |
-| 138 | Hello Kitty / Sanrio evreni | Sanrio — çok agresif |
-| 139 | Super Mario evreni | Nintendo — en agresif takipçilerden |
-| 140 | Animal Crossing | Nintendo — agresif |
-| 141 | Kirby | Nintendo — agresif |
-| 142 | Fire Emblem | Nintendo — orta-agresif |
-| 143 | Final Fantasy | Square Enix — agresif |
-| 144 | Kingdom Hearts | Square Enix/Disney çapraz — çok agresif |
-| 145 | Persona / Shin Megami Tensei | Atlus/Sega — orta-yüksek |
-| 146 | Elden Ring / FromSoftware evreni | FromSoftware/Bandai Namco — orta-yüksek |
-| 147 | Dark Souls | FromSoftware — orta-yüksek |
-| 148 | Overwatch | Blizzard/Microsoft — agresif |
-| 149 | World of Warcraft | Blizzard — agresif |
-| 150 | Valorant | Riot — agresif (LoL ile aynı şirket) |
+| 121 | Assassin's Creed | Ubisoft — aggressive |
+| 122 | FIFA/EA Sports FC (the brand, not the in-game characters) | EA — highly licence-sensitive |
+| 123 | Roblox universe | Roblox Corp — moderately aggressive |
+| 124 | Among Us | Innersloth — medium, small studio but active |
+| 125 | Five Nights at Freddy's | Scott Cawthon/Blumhouse — medium-high |
+| 126 | Rick Riordan universe (Percy Jackson) | Disney distribution — aggressive |
+| 127 | Marvel Side Characters (X-Men, secondary Avengers roster) | Disney — very aggressive |
+| 128 | Star Trek | Paramount — aggressive |
+| 129 | Doctor Who | BBC — aggressive |
+| 130 | Sherlock (BBC series) | BBC — medium-high |
+| 131 | Peaky Blinders | BBC/Netflix — medium-high |
+| 132 | La Casa de Papel (Money Heist) | Netflix — aggressive |
+| 133 | Money Heist Korean adaptation etc. | Netflix — aggressive |
+| 134 | Dark (Netflix series) | Netflix — aggressive |
+| 135 | Peppa Pig | Hasbro — children's IP, very aggressive |
+| 136 | Paw Patrol | Nickelodeon — children's IP, aggressive |
+| 137 | SpongeBob SquarePants | Nickelodeon/Paramount — very aggressive |
+| 138 | Hello Kitty / Sanrio universe | Sanrio — very aggressive |
+| 139 | Super Mario universe | Nintendo — among the most aggressive enforcers |
+| 140 | Animal Crossing | Nintendo — aggressive |
+| 141 | Kirby | Nintendo — aggressive |
+| 142 | Fire Emblem | Nintendo — moderately aggressive |
+| 143 | Final Fantasy | Square Enix — aggressive |
+| 144 | Kingdom Hearts | Square Enix/Disney crossover — very aggressive |
+| 145 | Persona / Shin Megami Tensei | Atlus/Sega — medium-high |
+| 146 | Elden Ring / FromSoftware universe | FromSoftware/Bandai Namco — medium-high |
+| 147 | Dark Souls | FromSoftware — medium-high |
+| 148 | Overwatch | Blizzard/Microsoft — aggressive |
+| 149 | World of Warcraft | Blizzard — aggressive |
+| 150 | Valorant | Riot — aggressive (same company as LoL) |
 
-## 🟡 Orta Risk — devamı
+## 🟡 Medium Risk — continued
 
-| # | Konu | Not |
+| # | Topic | Note |
 |---|---|---|
-| 151 | Türk pop/rock grupları (aktif, marka hassas isim) | Sahne adı marka tescilliyse dikkat |
-| 152 | Ünlü YouTuber prodüksiyon formatları (ör. belirli bir dizi/segment adı) | Format adı marka olabilir |
-| 153 | Spor yorumcuları (TR) | Kamusal ama yayın kurumuyla bağlantı gri alan |
-| 154 | Ünlü şarkı sözü yazarları (replik/söz kullanımıyla) | Söz alıntısı telif riski taşır |
-| 155 | K-pop grupları (gerçek kişi, ajans markası hassas) | Ajans (HYBE, SM vb.) marka takibi orta-yüksek |
-| 156 | Ünlü moda markaları tarihi (marka trivia) | Marka ismi kullanımı gri alan |
-| 157 | Reklam filmleri / jingle'lar (kültürel trivia) | Marka+reklam ajansı telifi karışık |
-| 158 | Ünlü spor kulüpleri tarihi (logo kullanılmadan) | Kulüp ismi serbest, logo/forma görseli riskli |
-| 159 | Ünlü stadyumlar/arenalar | Yapı/isim hakları genelde düşük ama sponsor isim değişimi kafa karıştırabilir |
-| 160 | Belirli konser turneleri (isim/yıl trivia) | Turne adı marka olabilir |
+| 151 | Turkish pop/rock bands (active, brand-sensitive names) | Careful if the stage name is a registered trademark |
+| 152 | Famous YouTuber production formats (e.g. a specific series/segment name) | The format name may be a trademark |
+| 153 | Sports commentators (Turkey) | Public but the link to the broadcaster is a grey area |
+| 154 | Famous lyricists (with use of quotes/lyrics) | Quoting lyrics carries copyright risk |
+| 155 | K-pop groups (real people, agency brands are sensitive) | Agency (HYBE, SM etc.) brand enforcement is medium-high |
+| 156 | History of famous fashion brands (brand trivia) | Use of brand names is a grey area |
+| 157 | Commercials / jingles (cultural trivia) | Brand + ad agency copyright is tangled |
+| 158 | History of famous sports clubs (without using logos) | Club names are free, logo/kit imagery is risky |
+| 159 | Famous stadiums/arenas | Structure/name rights are generally low risk, but sponsor name changes can be confusing |
+| 160 | Specific concert tours (name/year trivia) | The tour name may be a trademark |
 
-## 🟢 Düşük Risk — devamı (havuzu ~200'e tamamlamak için)
+## 🟢 Low Risk — continued (to bring the pool up to ~200)
 
-| # | Konu | Not |
+| # | Topic | Note |
 |---|---|---|
-| 161 | Dünya Adaları (coğrafya) | ✅ Kuruldu (44) — Saf coğrafya, gerçek Commons fotoğrafı |
-| 162 | Dünya Çölleri | ✅ Kuruldu (43) — Saf coğrafya, gerçek Commons fotoğrafı |
-| 163 | Dünya Gölleri | ✅ Kuruldu (46) — Saf coğrafya, gerçek Commons fotoğrafı |
-| 164 | Ünlü Matematikçiler | Kamusal, tarihi |
-| 165 | Ünlü Filozoflar (Doğu felsefesi) | #15'in genişletilmiş versiyonu |
-| 166 | Nobel Ekonomi Ödülü Sahipleri | #6/#33 ile aynı desen, ayrı alan |
-| 167 | Dünya Tarihi Savaşları (kavramsal trivia, kişi değil) | Olay bazlı, kişi riski yok |
-| 168 | Antik Uygarlıklar | ✅ Kuruldu (44) — İmparatorluklar (#25) ile örtüşme yok, görsel yok (emoji-clue) |
-| 169 | Dünya Mutfakları (ülke bazlı yemek trivia'sı) | Kişi/marka değil, kültürel bilgi |
-| 170 | Ünlü Kütüphaneler/Müzeler | Kurum trivia'sı |
-| 171 | Gezegenler ve Uzay Cisimleri | ✅ Kuruldu (42) — Bilimsel, kişi riski yok, gerçek NASA/ESA fotoğrafı |
-| 172 | Dünya Zaman Dilimleri / Meridyenler | Saf coğrafya/bilim |
-| 173 | Ünlü Denizciler/Kaşifler (genişletilmiş #24) | Tarihi |
-| 174 | Dünya Tren Hatları/İstasyonları (trivia) | Altyapı trivia'sı |
-| 175 | Formula 1 Şampiyonluk Yılları (yıl bazlı, kişiden bağımsız) | Kurumsal/istatistik |
-| 176 | Dünya Kupası Şampiyonları (ülke bazlı, kişi değil) | Resmi turnuva kaydı |
-| 177 | Wimbledon/Grand Slam Şampiyonluk Tarihi (yıl bazlı) | Resmi turnuva kaydı |
-| 178 | Nobel Ödülsüz Büyük Bilim Buluşları (olay bazlı) | Olay/keşif trivia'sı |
-| 179 | Dünya Para Birimi Tarihi (Euro öncesi vb.) | Ekonomi trivia'sı |
-| 180 | Ünlü Kütüphane/Arşiv Koleksiyonları | Kurum trivia'sı |
-| 181 | Türkiye İlleri (şehir trivia'sı: nüfus/bölge/plaka) | Yerel coğrafya, sıfır risk |
-| 182 | Türkiye'nin Doğal Güzellikleri | Yerel coğrafya |
-| 183 | Dünya Mimari Stilleri (dönem bazlı) | Kavramsal, kişi değil |
-| 184 | Ünlü Bilim Kurgu Yazarları (eser adı olmadan, yazar bio'su) | Yazar kamusal, eser adı ayrı telif riski taşıyabilir |
-| 185 | Ünlü Şairler | Tarihi, kamusal |
-| 186 | Dünya Bağımsızlık Tarihleri (ülke bazlı) | Tarih trivia'sı |
-| 187 | Element Simgeleri / Kimyasal Bileşikler (genişletilmiş #4) | Bilimsel |
-| 188 | Dünya Saat Kuşakları Rekorları (en erken/en geç gün batımı vb.) | Coğrafya trivia'sı |
-| 189 | Ünlü Kadın Bilim İnsanları (özel odak) | #6/#16 ile örtüşebilir, temsil odaklı ayrı koleksiyon |
-| 190 | Dünya Spor Organizasyonları Tarihi (FIFA, IOC vb. kuruluş trivia'sı) | Kurumsal tarih |
-| 191 | Voleybol/Basketbol Milli Takım Tarihi (TR) | Kamusal spor kaydı |
-| 192 | Dünya Barajları/Köprüleri (mühendislik trivia'sı) | Altyapı trivia'sı |
-| 193 | Ünlü Yayınevleri Tarihi | Kurumsal trivia |
-| 194 | Dünya Film Festivalleri (Cannes, Venedik vb. — ödül bazlı, film adı değil) | Organizasyon trivia'sı |
-| 195 | Ünlü Orkestra ve Operalar (kurum bazlı) | Kurumsal, #10 ile ilişkili |
-| 196 | Dünya Uzay Ajansları (NASA, ESA vb.) | Kurumsal trivia |
-| 197 | Ünlü Deniz Feneri/Tarihi Yapılar | Coğrafya/tarih trivia'sı |
-| 198 | Dünya Rekor Sahipleri (Guinness, spor dışı) | Kamusal rekor verisi |
-| 199 | Ünlü Kaligrafi/Hat Sanatı Ustaları (TR-İslam sanatı) | Tarihi, kamusal |
-| 200 | Dünya Fuarları (Expo) Tarihi | Organizasyon trivia'sı |
-| 201 | CS2 Efsaneleri (e-spor oyuncuları) | ✅ Kuruldu (40) — Gerçek kişi, kamusal e-spor kaydı; Valve karakter/silah görseli KULLANILMADI |
+| 161 | Islands of the World (geography) | ✅ Built (44) — Pure geography, real Commons photo |
+| 162 | Deserts of the World | ✅ Built (43) — Pure geography, real Commons photo |
+| 163 | Lakes of the World | ✅ Built (46) — Pure geography, real Commons photo |
+| 164 | Famous Mathematicians | Public, historical |
+| 165 | Famous Philosophers (Eastern philosophy) | An expanded version of #15 |
+| 166 | Nobel Prize in Economics Laureates | Same pattern as #6/#33, separate field |
+| 167 | Historical Wars of the World (conceptual trivia, not people) | Event-based, no person-risk |
+| 168 | Ancient Civilizations | ✅ Built (44) — No overlap with Empires (#25), no images (emoji-clue) |
+| 169 | World Cuisines (country-based food trivia) | Cultural knowledge, not people/brands |
+| 170 | Famous Libraries/Museums | Institutional trivia |
+| 171 | Planets and Space Objects | ✅ Built (42) — Scientific, no person-risk, real NASA/ESA photos |
+| 172 | World Time Zones / Meridians | Pure geography/science |
+| 173 | Famous Seafarers/Explorers (expanded #24) | Historical |
+| 174 | World Rail Lines/Stations (trivia) | Infrastructure trivia |
+| 175 | Formula 1 Championship Years (year-based, independent of people) | Corporate/statistical |
+| 176 | World Cup Champions (country-based, not people) | Official tournament record |
+| 177 | Wimbledon/Grand Slam Championship History (year-based) | Official tournament record |
+| 178 | Major Scientific Discoveries Without a Nobel (event-based) | Event/discovery trivia |
+| 179 | History of World Currencies (pre-Euro etc.) | Economics trivia |
+| 180 | Famous Library/Archive Collections | Institutional trivia |
+| 181 | Provinces of Turkey (city trivia: population/region/licence plate) | Local geography, zero risk |
+| 182 | Turkey's Natural Beauties | Local geography |
+| 183 | World Architectural Styles (period-based) | Conceptual, not people |
+| 184 | Famous Science Fiction Authors (author bio, without work titles) | Authors are public, work titles may carry separate copyright risk |
+| 185 | Famous Poets | Historical, public |
+| 186 | World Independence Dates (country-based) | History trivia |
+| 187 | Element Symbols / Chemical Compounds (expanded #4) | Scientific |
+| 188 | World Time Zone Records (earliest/latest sunset etc.) | Geography trivia |
+| 189 | Famous Women Scientists (special focus) | May overlap with #6/#16, a separate representation-focused collection |
+| 190 | History of World Sports Organizations (founding trivia for FIFA, IOC etc.) | Institutional history |
+| 191 | Volleyball/Basketball National Team History (Turkey) | Public sports record |
+| 192 | World Dams/Bridges (engineering trivia) | Infrastructure trivia |
+| 193 | History of Famous Publishing Houses | Corporate trivia |
+| 194 | World Film Festivals (Cannes, Venice etc. — award-based, not film titles) | Organizational trivia |
+| 195 | Famous Orchestras and Operas (institution-based) | Institutional, related to #10 |
+| 196 | World Space Agencies (NASA, ESA etc.) | Institutional trivia |
+| 197 | Famous Lighthouses/Historic Structures | Geography/history trivia |
+| 198 | World Record Holders (Guinness, non-sports) | Public record data |
+| 199 | Famous Calligraphy Masters (Turkish-Islamic art) | Historical, public |
+| 200 | History of World's Fairs (Expo) | Organizational trivia |
+| 201 | CS2 Legends (esports players) | ✅ Built (40) — Real people, public esports record; Valve character/weapon imagery WAS NOT USED |
 
 ---
 
-## 🚫 Bu implementasyonda yapılmayanlar
+## 🚫 Not done in this implementation
 
-Yüksek risk grubu (66-120) için **hiçbir veri seti kurulmadı** — yalnızca
-dokümante edildi.
+**No data set was built** for the high risk group (66-120) — it was only
+documented.
 
-## 2026-07-24 güncellemesi — gerçek görsel + genişletme
+## 2026-07-24 update — real images + expansion
 
-Kullanıcı kararıyla strateji değişti: artık paketlerde emoji-clue yerine
-**gerçek Wikimedia Commons fotoğrafı + yazar/lisans kredisi** kullanılıyor
-(bkz. `engine/types.ts` → `Entity.image`/`imageCredit`, `scripts/fetch-wiki-image.js`).
-Bu, dokümanın başındaki "karakter görseli kullanma" ilkesini değiştirmez
-(hâlâ hiçbir kurgusal karakter/logo görseli yok) ama gerçek kişi
-fotoğraflarının getirdiği ek riski (özellikle "personality rights") bilerek
-kabul ediyor. Ayrıca yeni bir **Ses Modu** eklendi (`expo-audio`), paket
-bazında opsiyonel.
+The strategy changed by user decision: packs now use **real Wikimedia Commons
+photos + author/licence credits** instead of emoji clues (see `engine/types.ts`
+→ `Entity.image`/`imageCredit`, `scripts/fetch-wiki-image.js`). This does not
+change the "no character artwork" principle stated at the top of the document
+(there is still no fictional character/logo artwork), but it knowingly accepts
+the additional risk that photos of real people bring (particularly "personality
+rights"). A new **Audio Mode** (`expo-audio`) was also added, optional per pack.
 
-Bu turda 8 yeni paket kuruldu: Formula 1 Pilotları (#13), Dünya Nehirleri
-(#22), Atletizm Efsaneleri (#27), Yüzme Efsaneleri (#28), Nobel Ödüllü Barış
-Ödülü Sahipleri (#33), Türk dizi oyuncuları (#51), Hollywood aktörleri (#52)
-ve listede olmayan bir ek paket: **Dünya Dağları** (`daglar`, 39 kayıt, saf
-coğrafya — kişi içermiyor, düşük risk). Orta risk grubuna (#51-52) bilinçli
-olarak geçildi: her iki paket de SADECE oyuncunun kendi Commons portresini
-kullanıyor, sahne/kostüm/prodüksiyon görseli yok.
+Eight new packs were built in this round: Formula 1 Drivers (#13), Rivers of the
+World (#22), Track & Field Legends (#27), Swimming Legends (#28), Nobel Peace
+Prize Laureates (#33), Turkish TV series actors (#51), Hollywood actors (#52),
+plus one extra pack not on the list: **Mountains of the World** (`daglar`, 39
+records, pure geography — contains no people, low risk). The move into the
+medium risk group (#51-52) was deliberate: both packs use ONLY the actor's own
+Commons portrait, with no scene/costume/production imagery.
 
-## 2026-07-29 güncellemesi — 4 yeni paket
+## 2026-07-29 update — 4 new packs
 
-Bu turda 4 yeni paket kuruldu: Premier Lig Efsaneleri (#12, 50 kayıt, Süper
-Lig ile aynı "en çok anıldığı kulüp" deseni), Klasik Rock Grupları/Üyeleri
-(#18, 50 kayıt, gerçek Commons grup fotoğrafı), Formula 1 Takımları/Tarihi
-(#29, 45 kayıt, kurumsal/takım verisi — logo taşıyan takımların çoğunda
-`image` alanı bilinçli olarak boş bırakıldı, sadece birkaçında logosuz
-araç/pist fotoğrafı var) ve Dünya Doğal Harikaları (#37, 44 kayıt, saf
-coğrafya). Her 4 paket için de `data/packs/i18n/` altında tam 5 dilli
-(en/de/fr/es/pt) çeviri dosyası eklendi ve `data/packs/index.ts`'e
-kaydedildi. Ayrıca #21 (Dünya Dağları) daha önce kurulmuş ama bu tabloda
-işaretlenmemiş bir oversight'tı — düzeltildi.
+Four new packs were built in this round: Premier League Legends (#12, 50 records,
+the same "club they are most associated with" pattern as Süper Lig), Classic Rock
+Bands/Members (#18, 50 records, real Commons band photos), Formula 1 Teams/History
+(#29, 45 records, corporate/team data — the `image` field was deliberately left
+empty for most teams carrying logos, with only a few having a logo-free car/track
+photo) and Natural Wonders of the World (#37, 44 records, pure geography). Full
+5-language (en/de/fr/es/pt) translation files were added under
+`data/packs/i18n/` for all 4 packs and they were registered in
+`data/packs/index.ts`. Also, #21 (Mountains of the World) had been built earlier
+but not marked in this table, an oversight — now corrected.
 
-## 2026-07-29 güncellemesi #2 — Boks Efsaneleri (#26)
+## 2026-07-29 update #2 — Boxing Legends (#26)
 
-`scripts/fetch-wiki-image.js` ile gerçek Wikimedia API çağrıları üzerinden
-40 boksör için görsel+kredi bilgisi toplu çekildi (halüsinasyon riski yok).
-2 boksör (Pernell Whitaker, Ricardo López) için kullanılabilir kapak görseli
-bulunamadı, image/imageCredit boş bırakıldı. Tam 5 dilli çeviri dosyası
-eklendi, `data/packs/index.ts`'e kaydedildi.
+Image + credit information was fetched in bulk for 40 boxers through real
+Wikimedia API calls using `scripts/fetch-wiki-image.js` (no hallucination risk).
+No usable lead image could be found for 2 boxers (Pernell Whitaker, Ricardo
+López), so image/imageCredit were left empty. Full 5-language translation files
+were added and it was registered in `data/packs/index.ts`.
 
-## 2026-07-29 güncellemesi #3 — Dünya Satranç Şampiyonları (#19)
+## 2026-07-29 update #3 — World Chess Champions (#19)
 
-39 kayıt: 18 Klasik dünya şampiyonu (Steinitz'den Gukesh'e), 4 FIDE-bölünme
-dönemi şampiyonu (Karpov/Anand hariç, onlar zaten Klasik listede) ve 17
-Kadınlar Dünya Şampiyonu — hepsi `titleType` alanıyla ayırt ediliyor.
-Görseller yine `fetch-wiki-image.js` ile toplu çekildi; Susan Polgar için
-API'nin döndürdüğü kapak görseli başka bir oyuncuya (Anna Muzychuk) aitti,
-bu yanlış eşleşme fark edilip image/imageCredit boş bırakıldı. Tam 5 dilli
-çeviri eklendi, index.ts'e kaydedildi.
+39 records: 18 Classical world champions (from Steinitz to Gukesh), 4 champions
+from the FIDE-split period (excluding Karpov/Anand, who are already on the
+Classical list) and 17 Women's World Champions — all distinguished by the
+`titleType` field. Images were again fetched in bulk with `fetch-wiki-image.js`;
+for Susan Polgar the lead image returned by the API belonged to a different
+player (Anna Muzychuk), this mismatch was caught and image/imageCredit were left
+empty. Full 5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #4 — Ünlü Kaşifler (#24)
+## 2026-07-29 update #4 — Famous Explorers (#24)
 
-40 kayıt: 15-20. yüzyıl arası deniz/kara/kutup kaşifleri (Kolomb'dan
-Thor Heyerdahl'a). Görseller yine `fetch-wiki-image.js` ile toplu çekildi
-— erken dönem kaşiflerde dönem tablosu/gravürü, birkaçında (Zheng He,
-Leif Erikson) anıt/heykel fotoğrafı kullanıldı (fotoğraf öncesi dönem).
-Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: sea/land/polar explorers from the 15th to the 20th century (from
+Columbus to Thor Heyerdahl). Images were again fetched in bulk with
+`fetch-wiki-image.js` — period paintings/engravings for the earlier explorers,
+and for a few (Zheng He, Leif Erikson) photos of monuments/statues were used
+(pre-photography era). Full 5-language translation was added and it was
+registered in index.ts.
 
-## 2026-07-29 güncellemesi #5 — Astronotlar/Kozmonotlar (#32)
+## 2026-07-29 update #5 — Astronauts/Cosmonauts (#32)
 
-40 kayıt: Gagarin'den 2021 Blue Origin uçuşuna kadar, çoğu ülkenin "ilk
-astronotu" temasıyla geniş uyruk çeşitliliği (16 farklı ülke). Görseller
-`fetch-wiki-image.js` ile toplu çekildi (çoğu NASA kaynaklı, Public
-domain). Abdul Ahad Mohmand için kullanılabilir görsel bulunamadı, boş
-bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: from Gagarin to the 2021 Blue Origin flight, with broad nationality
+diversity themed on each country's "first astronaut" (16 different countries).
+Images were fetched in bulk with `fetch-wiki-image.js` (mostly NASA-sourced,
+public domain). No usable image was found for Abdul Ahad Mohmand, so it was left
+empty. Full 5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #6 — Ünlü Mimarlar (#39)
+## 2026-07-29 update #6 — Famous Architects (#39)
 
-40 kayıt: Rönesans'tan (Brunelleschi, Bramante) günümüz yıldız mimarlarına
-(Zaha Hadid, Bjarke Ingels) kadar. Bilinçli olarak SADECE mimarın kendi
-portresi kullanıldı — bina/eser fotoğrafı yok, çünkü "freedom of panorama"
-(kamusal alandaki eserlerin fotoğraflanma telifi) ülkeye göre değişir ve
-bu ek riskten kaçınıldı. Mimar Sinan için portre bulunamadığından imzası
-kullanıldı. 2 mimar için görsel bulunamadı, boş bırakıldı. Tam 5 dilli
-çeviri eklendi, index.ts'e kaydedildi.
+40 records: from the Renaissance (Brunelleschi, Bramante) to today's star
+architects (Zaha Hadid, Bjarke Ingels). Deliberately, ONLY the architect's own
+portrait was used — no photos of buildings/works, because "freedom of panorama"
+(the copyright status of photographing works in public spaces) varies by country
+and this additional risk was avoided. As no portrait could be found for Mimar
+Sinan, his signature was used. No image could be found for 2 architects, so they
+were left empty. Full 5-language translation was added and it was registered in
+index.ts.
 
-## 2026-07-29 güncellemesi #7 — Ünlü Heykeltıraşlar (#35)
+## 2026-07-29 update #7 — Famous Sculptors (#35)
 
-40 kayıt: antik Yunan'dan (Phidias, Praxiteles) günümüz kavramsal
-sanatçılarına (Damien Hirst, Antony Gormley) kadar. Antik dönem için
-fotoğraf yerine dönemin/sonraki dönemin betimlediği heykel/büst
-kullanıldı. Michelangelo ve Bernini gibi bazı isimler Ressamlar/Mimarlar
-paketleriyle kasıtlı olarak örtüşüyor (bu kişiler her iki disiplinde de
-tarihe geçmiştir). Duane Hanson için görsel bulunamadı, boş bırakıldı.
-Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: from ancient Greece (Phidias, Praxiteles) to today's conceptual
+artists (Damien Hirst, Antony Gormley). For the ancient period, statues/busts
+depicted in that period or later ones were used instead of photographs. Some
+names such as Michelangelo and Bernini intentionally overlap with the Painters/
+Architects packs (these people made history in both disciplines). No image could
+be found for Duane Hanson, so it was left empty. Full 5-language translation was
+added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #8 — Ünlü Filozoflar (#15)
+## 2026-07-29 update #8 — Famous Philosophers (#15)
 
-40 kayıt: antik Yunan/Roma'dan (Sokrates, Marcus Aurelius) 20. yüzyıl
-düşünürlerine (Foucault, Arendt) kadar; Konfüçyüs/Laozi (Çin) ve İbn
-Sina/İbn Rüşd (İslam Altın Çağı) ile Batı-dışı çeşitlilik de eklendi.
-Antik dönem için fotoğraf yerine büst/heykel görseli kullanıldı, Laozi
-için tarihsel portre bulunamadığından ismi Çince karakterlerle temsil
-edildi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: from ancient Greece/Rome (Socrates, Marcus Aurelius) to 20th-century
+thinkers (Foucault, Arendt); non-Western diversity was also added with Confucius/
+Laozi (China) and Ibn Sina/Ibn Rushd (Islamic Golden Age). For the ancient period,
+bust/statue images were used instead of photographs; as no historical portrait
+could be found for Laozi, his name was represented in Chinese characters. Full
+5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #9 — Klasik Edebiyat Yazarları (#40)
+## 2026-07-29 update #9 — Classic Literature Authors (#40)
 
-40 kayıt: Cervantes'ten (16. yy) Toni Morrison'a (20./21. yy) roman
-odaklı klasik yazarlar; Rus, Fransız, İngiliz, Amerikan ve Latin Amerika
-edebiyatından geniş temsil. "famousWork" alanı sadece eser ADI (metin)
-içeriyor, kapak görseli/eser metni kullanılmadı. Tam 5 dilli çeviri
-eklendi, index.ts'e kaydedildi.
+40 records: novel-focused classic authors from Cervantes (16th c.) to Toni
+Morrison (20th/21st c.); broad representation from Russian, French, English,
+American and Latin American literature. The "famousWork" field contains only the
+TITLE of the work (text), no cover imagery or text from the work was used. Full
+5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #10 — Ünlü Şefler (#20)
+## 2026-07-29 update #10 — Famous Chefs (#20)
 
-40 kayıt: Fransız Grande Cuisine kurucularından (Carême, Escoffier,
-17. yy'dan Vatel) günümüz TV şeflerine (Gordon Ramsay, Jamie Oliver)
-kadar; 2 Türk şef dahil (Fatih Tutak, Mehmet Gürs). "role" alanı
-Restoran Şefi/TV Şefi/Tarihi Şef olarak ayırıyor. Nigel Slater için
-görsel bulunamadı, boş bırakıldı. Tam 5 dilli çeviri eklendi,
-index.ts'e kaydedildi.
+40 records: from the founders of French Grande Cuisine (Carême, Escoffier, and
+Vatel from the 17th c.) to today's TV chefs (Gordon Ramsay, Jamie Oliver);
+includes 2 Turkish chefs (Fatih Tutak, Mehmet Gürs). The "role" field
+distinguishes Restaurant Chef/TV Chef/Historical Chef. No image could be found
+for Nigel Slater, so it was left empty. Full 5-language translation was added and
+it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #11 — Ünlü Gazeteciler (#42)
+## 2026-07-29 update #11 — Famous Journalists (#42)
 
-40 kayıt: savaş muhabirlerinden (Robert Capa, Martha Gellhorn) TV
-sunucularına (Walter Cronkite, Anderson Cooper) ve foto muhabirlerine
-(Nick Ut, Steve McCurry) kadar. Jamal Khashoggi ve Marie Colvin gibi
-görev başında hayatını kaybeden isimler sırf tarafsız biyografik/tarihi
-kayıt amacıyla dahil edildi. Marie Colvin için görsel bulunamadı, boş
-bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: from war correspondents (Robert Capa, Martha Gellhorn) to TV anchors
+(Walter Cronkite, Anderson Cooper) and photojournalists (Nick Ut, Steve McCurry).
+Names who lost their lives on assignment, such as Jamal Khashoggi and Marie
+Colvin, were included purely for neutral biographical/historical record. No image
+could be found for Marie Colvin, so it was left empty. Full 5-language translation
+was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #12 — Dünya İmparatorlukları (#25)
+## 2026-07-29 update #12 — Empires of the World (#25)
 
-40 kayıt: Roma'dan Osmanlı'ya, Aztek/İnka'dan Mali/Songay'a, Han/Tang/
-Çing'den Khmer/Majapahit'e kadar altı kıtadan imparatorluk/hanedanlık.
-Kişi içermediği için görsel gerekmiyor — Dünya Ülkeleri paketiyle aynı
-desen (sadece emoji-clue). Tam 5 dilli çeviri eklendi, index.ts'e
-kaydedildi.
+40 records: empires/dynasties from six continents, from Rome to the Ottomans,
+from the Aztecs/Inca to Mali/Songhai, from the Han/Tang/Qing to the Khmer/
+Majapahit. As it contains no people, no images are needed — the same pattern as
+the Countries of the World pack (emoji clues only). Full 5-language translation
+was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #13 — Nobel Ödüllü Yazarlar (#23)
+## 2026-07-29 update #13 — Nobel Prize-Winning Authors (#23)
 
-40 kayıt: Tagore'dan (1913) Ishiguro'ya (2017) Nobel Edebiyat Ödülü
-sahipleri. #40 (Klasik Edebiyat Yazarları) ile örtüşen isimler (Faulkner,
-Hemingway, Camus, Marquez, Morrison, Vargas Llosa) bilinçli olarak
-dışarıda bırakıldı — sadece Sartre (ödülü reddetmesiyle ünlü) ortak.
-Orhan Pamuk (2006) ve Bob Dylan (2016, şarkı sözü yazarlığıyla) dahil
-edildi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: Nobel Prize in Literature laureates from Tagore (1913) to Ishiguro
+(2017). Names overlapping with #40 (Classic Literature Authors) — Faulkner,
+Hemingway, Camus, Marquez, Morrison, Vargas Llosa — were deliberately left out;
+only Sartre (famous for declining the prize) is shared. Orhan Pamuk (2006) and
+Bob Dylan (2016, as a lyricist) were included. Full 5-language translation was
+added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #14 — Rönesans Dönemi Sanatçıları (#36)
+## 2026-07-29 update #14 — Renaissance Artists (#36)
 
-40 kayıt: Proto-Rönesans'tan (Giotto, Cimabue) Kuzey Rönesansı'na (Van
-Eyck, Dürer, Bosch) kadar. #7 (Ünlü Ressamlar) paketinde zaten yer alan
-5 isim (Leonardo da Vinci, Michelangelo, Rafael, Botticelli, Tiziano) ve
-Heykeltıraşlar paketindeki Donatello/Verrocchio bilinçli olarak dışarıda
-bırakıldı — sıfıra yakın örtüşme. Çoğu görsel sanatçının kendi
-özportresi. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: from the Proto-Renaissance (Giotto, Cimabue) to the Northern
+Renaissance (Van Eyck, Dürer, Bosch). The 5 names already present in the #7
+(Famous Painters) pack (Leonardo da Vinci, Michelangelo, Raphael, Botticelli,
+Titian) and Donatello/Verrocchio from the Sculptors pack were deliberately left
+out — near-zero overlap. Most images are the artist's own self-portrait. Full
+5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #15 — UNESCO Dünya Mirası Alanları (#38)
+## 2026-07-29 update #15 — UNESCO World Heritage Sites (#38)
 
-40 kayıt: Petra'dan Göbeklitepe'ye, Machu Picchu'dan Vatikan'a kadar
-kültürel/mimari UNESCO alanları. #37 (Dünya Doğal Harikaları) ile
-kasıtlı olarak sıfır örtüşme — doğal alanlar bu pakete dahil edilmedi.
-Siyasi olarak tartışmalı statüdeki alanlar (ör. Kudüs) bilinçli olarak
-dışarıda bırakıldı. Persepolis için görsel bulunamadı, boş bırakıldı.
-Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: cultural/architectural UNESCO sites from Petra to Göbeklitepe, from
+Machu Picchu to the Vatican. Deliberately zero overlap with #37 (Natural Wonders
+of the World) — natural sites were not included in this pack. Sites with a
+politically contested status (e.g. Jerusalem) were deliberately left out. No
+image could be found for Persepolis, so it was left empty. Full 5-language
+translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #16 — Dünya Para Birimleri (#41)
+## 2026-07-29 update #16 — World Currencies (#41)
 
-40 kayıt: dünyanın büyük para birimleri, 6 kıtadan. Kişi içermediği için
-görsel gerekmiyor — Dünya Ülkeleri/İmparatorluklar paketleriyle aynı
-desen (sadece emoji-clue). Tam 5 dilli çeviri eklendi, index.ts'e
-kaydedildi.
+40 records: the world's major currencies, from 6 continents. As it contains no
+people, no images are needed — the same pattern as the Countries of the World/
+Empires packs (emoji clues only). Full 5-language translation was added and it
+was registered in index.ts.
 
-## 2026-07-29 güncellemesi #17 — Formula 1 Pistleri (#43)
+## 2026-07-29 update #17 — Formula 1 Circuits (#43)
 
-39 kayıt: Monza/Silverstone gibi 1950 kuruluş şampiyonasından Las Vegas
-(2023) ve Lusail (2021) gibi en yeni pistlere kadar. "firstGrandPrixYear"
-sadece DÜNYA ŞAMPİYONASI'na sayılan ilk Grand Prix'yi baz alıyor
-(şampiyonluk dışı yarışlar hariç). Kurumsal/coğrafya verisi olduğu için
-kişi görseli gerekmiyor — emoji-clue deseni. Tam 5 dilli çeviri eklendi,
-index.ts'e kaydedildi.
+39 records: from the founding 1950 championship circuits such as Monza/
+Silverstone to the newest ones such as Las Vegas (2023) and Lusail (2021).
+"firstGrandPrixYear" is based only on the first Grand Prix that counted toward
+the WORLD CHAMPIONSHIP (non-championship races excluded). As this is corporate/
+geographical data, no images of people are needed — the emoji-clue pattern. Full
+5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #18 — Dünya Havayolları (#44)
+## 2026-07-29 update #18 — World Airlines (#44)
 
-39 kayıt, 6 kıtadan tarifeli/düşük maliyetli taşıyıcı karışımı.
-"foundedYear" şirketin GÜNCEL tüzel kişiliğinin kuruluş tarihi (selef
-şirketler hariç). Kurumsal veri olduğu için kişi görseli gerekmiyor —
-emoji-clue deseni. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+39 records, a mix of scheduled/low-cost carriers from 6 continents. "foundedYear"
+is the founding date of the company's CURRENT legal entity (predecessor companies
+excluded). As this is corporate data, no images of people are needed — the
+emoji-clue pattern. Full 5-language translation was added and it was registered
+in index.ts.
 
-## 2026-07-29 güncellemesi #19 — Kriket Efsaneleri (#46)
+## 2026-07-29 update #19 — Cricket Legends (#46)
 
-40 kayıt: W. G. Grace (1848) ve Jack Hobbs'tan (1882) Virat Kohli ve Kane
-Williamson'a kadar ~140 yıllık kriket tarihi; 9 kriket ulusundan (Hindistan,
-Pakistan, Avustralya, İngiltere, Batı Hint Adaları, Güney Afrika, Sri Lanka,
-Yeni Zelanda, Bangladeş) temsil. Görseller `fetch-wiki-image.js` ile toplu
-çekildi. İki veri notu: Malcolm Marshall için Wikimedia'da kullanılabilir
-kapak görseli bulunamadı, image/imageCredit boş bırakıldı; Shakib Al Hasan'ın
-görseli İngilizce Wikipedia'da kapak görseli olmadığı için Bengalce Wikipedia
-sayfasından alındı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: ~140 years of cricket history, from W. G. Grace (1848) and Jack Hobbs
+(1882) to Virat Kohli and Kane Williamson; representation from 9 cricketing
+nations (India, Pakistan, Australia, England, West Indies, South Africa, Sri
+Lanka, New Zealand, Bangladesh). Images were fetched in bulk with
+`fetch-wiki-image.js`. Two data notes: no usable lead image could be found on
+Wikimedia for Malcolm Marshall, so image/imageCredit were left empty; Shakib Al
+Hasan's image was taken from the Bengali Wikipedia page because there was no lead
+image on the English Wikipedia. Full 5-language translation was added and it was
+registered in index.ts.
 
-## 2026-07-29 güncellemesi #20 — Voleybol Efsaneleri (#48)
+## 2026-07-29 update #20 — Volleyball Legends (#48)
 
-40 kayıt: Mireya Luis ve Karch Kiraly'den Tijana Bošković ve Zhu Ting'e
-kadar 12 ülkeden (Türkiye 7, Brezilya 7, ABD 6, İtalya 5, Rusya 3,
-Sırbistan 3, Polonya 2, Küba 2, Çin 2, Güney Kore, Fransa, Hollanda)
-salon ve plaj voleybolu efsaneleri. TR ilgisi gereği milli takım
-kuşağı (Neslihan Demir, Gözde Kırdar, Eda Erdem, Naz Aydemir vb.) geniş
-tutuldu. Görseller `fetch-wiki-image.js` ile toplu çekildi. Veri notları:
-Steve Timmons için hiçbir dilde kullanılabilir kapak görseli bulunamadı,
-image/imageCredit boş bırakıldı; Giba, Gözde Kırdar, Fofão, Ivan Zaytsev,
-Ekaterina Gamova ve Earvin Ngapeth görselleri İngilizce Wikipedia'da
-bulunamadığı için sırasıyla Portekizce, tekrar denenen İngilizce,
-Portekizce, alternatif İngilizce başlık, Rusça ve Fransızca sayfalardan
-alındı. "hittingHand" voleybolda seyrek belgelenen bir veri — sadece
-doğrulanabilen solaklar sol olarak işaretlendi. Tam 5 dilli çeviri
-eklendi, index.ts'e kaydedildi.
+40 records: indoor and beach volleyball legends from 12 countries (Turkey 7,
+Brazil 7, USA 6, Italy 5, Russia 3, Serbia 3, Poland 2, Cuba 2, China 2, South
+Korea, France, Netherlands), from Mireya Luis and Karch Kiraly to Tijana Bošković
+and Zhu Ting. Given the Turkish interest, the national team generation (Neslihan
+Demir, Gözde Kırdar, Eda Erdem, Naz Aydemir etc.) was kept broad. Images were
+fetched in bulk with `fetch-wiki-image.js`. Data notes: no usable lead image
+could be found in any language for Steve Timmons, so image/imageCredit were left
+empty; the images for Giba, Gözde Kırdar, Fofão, Ivan Zaytsev, Ekaterina Gamova
+and Earvin Ngapeth could not be found on the English Wikipedia and were taken
+respectively from the Portuguese, a retried English, Portuguese, an alternative
+English title, Russian and French pages. "hittingHand" is rarely documented data
+in volleyball — only verifiable left-handers were marked as left. Full 5-language
+translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #21 — Rugby Efsaneleri (#47)
+## 2026-07-29 update #21 — Rugby Legends (#47)
 
-40 kayıt: 1930'ların kuşağından (Colin Meads, Willie John McBride) 2010'larda
-emekli olan isimlere (Richie McCaw, Sergio Parisse, Ayumu Goromaru) kadar 13
-ülkeden rugby union efsaneleri — Yeni Zelanda 6, Güney Afrika 6, İngiltere 5,
-Galler 4, İrlanda 4, Avustralya 4, Fransa 3, İskoçya 2, Arjantin 2, Fiji,
-Samoa, İtalya, Japonya birer. Aktif oyuncu yok, tamamı emekli (kariyer
-istatistikleri kapanmış veri). On mevkinin hepsi temsil ediliyor. Görseller
-`fetch-wiki-image.js` ile toplu çekildi; Gareth Edwards için İngilizce
-Wikipedia'da kapak görseli yoktu, Fransızca sayfadan alındı. Veri notları:
-6 oyuncu için kullanılabilir tekil portre bulunamadı, image/imageCredit boş
-bırakıldı (Willie John McBride, John Jeffrey, John Eales, Michael Lynagh,
-Brian Lima ve Os du Randt — sonuncusunda API bir Springbok forvet grup
-fotoğrafı döndürdüğü için bilinçli olarak kullanılmadı). "caps" değerleri
-sadece milli takım maçlarını sayar, British & Irish Lions maçları hariç.
-Türkçe rugby mevki terminolojisi standartlaşmamış (spor TR'de niş) —
-"Açık Ayak", "Skrum Yarısı", "Aç", "Kilit", "Santra", "Tam Bek" gibi
-etiketler tutarlı kullanıldı ama yayın öncesi bir rugby bilenine
-doğrulatılmalı; "Hooker", "Flanker", "Numara 8" İngilizce/uluslararası
-biçimde bırakıldı. Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+40 records: rugby union legends from 13 countries, from the 1930s generation
+(Colin Meads, Willie John McBride) to names who retired in the 2010s (Richie
+McCaw, Sergio Parisse, Ayumu Goromaru) — New Zealand 6, South Africa 6, England 5,
+Wales 4, Ireland 4, Australia 4, France 3, Scotland 2, Argentina 2, and one each
+from Fiji, Samoa, Italy and Japan. No active players, all retired (career
+statistics are closed data). All ten positions are represented. Images were
+fetched in bulk with `fetch-wiki-image.js`; there was no lead image on the English
+Wikipedia for Gareth Edwards, so it was taken from the French page. Data notes: no
+usable individual portrait could be found for 6 players, so image/imageCredit were
+left empty (Willie John McBride, John Jeffrey, John Eales, Michael Lynagh, Brian
+Lima and Os du Randt — for the last one the API returned a group photo of
+Springbok forwards, so it was deliberately not used). "caps" values count only
+national team matches, excluding British & Irish Lions matches. Turkish rugby
+position terminology is not standardized (the sport is niche in Turkey) — labels
+such as "Açık Ayak", "Skrum Yarısı", "Aç", "Kilit", "Santra" and "Tam Bek" were
+used consistently but should be verified by someone who knows rugby before
+release; "Hooker", "Flanker" and "Numara 8" were left in their English/
+international form. Full 5-language translation was added and it was registered
+in index.ts.
 
-## 2026-07-29 güncellemesi #22 — Gezegenler ve Uzay Cisimleri (#171)
+## 2026-07-29 update #22 — Planets and Space Objects (#171)
 
-42 kayıt: 8 gezegen (Merkür–Neptün), 17 uydu (Ay, Phobos, Deimos, dört
-Galileo uydusu, Titan/Enceladus/Mimas/Rhea/Iapetus, Titania/Oberon/Miranda,
-Triton, Charon), 5 cüce gezegen (Plüton, Ceres, Eris, Haumea, Makemake),
-7 asteroit (Vesta, Pallas, Hygiea, Eros, Bennu, Ryugu, Psyche), 2
-trans-Neptün cismi (Sedna, Quaoar) ve 3 kuyruklu yıldız (Halley, Hale-Bopp,
-67P/Churyumov-Gerasimenko). Kişi içermeyen saf astronomi paketi — hem IP
-hem kişilik hakkı riski sıfır. Görseller `fetch-wiki-image.js` ile toplu
-çekildi; 42 kaydın tamamında görsel var, hiçbiri kısıtlı lisanslı değil ve
-büyük çoğunluğu NASA/ESA kaynaklı Public domain. Mimas, Sedna ve Quaoar
-için İngilizce Wikipedia sayfalarında kapak görseli yoktu, İspanyolca
-sayfalardan alındı.
+42 records: 8 planets (Mercury–Neptune), 17 moons (the Moon, Phobos, Deimos, the
+four Galilean moons, Titan/Enceladus/Mimas/Rhea/Iapetus, Titania/Oberon/Miranda,
+Triton, Charon), 5 dwarf planets (Pluto, Ceres, Eris, Haumea, Makemake), 7
+asteroids (Vesta, Pallas, Hygiea, Eros, Bennu, Ryugu, Psyche), 2 trans-Neptunian
+objects (Sedna, Quaoar) and 3 comets (Halley, Hale-Bopp, 67P/Churyumov-
+Gerasimenko). A pure astronomy pack containing no people — both IP and
+personality rights risk are zero. Images were fetched in bulk with
+`fetch-wiki-image.js`; all 42 records have an image, none are restrictively
+licensed and the vast majority are NASA/ESA-sourced public domain. For Mimas,
+Sedna and Quaoar there was no lead image on the English Wikipedia pages, so they
+were taken from the Spanish pages.
 
-Veri notları: Uydular için "Güneşe Uzaklık (AU)" alanı bağlı oldukları
-gezegenin Güneş'e ortalama uzaklığıdır — oyun içi karşılaştırmayı anlamlı
-tutan bilinçli bir basitleştirme. Kuyruklu yıldızlarda aynı alan günberi
-(perihel) uzaklığını gösterir; yörünge yarı-büyük ekseni kullanılsaydı
-Hale-Bopp (~186 AU) ölçeği bozacaktı. Kuyruklu yıldızların "Atmosferi Var
-mı" değeri, koma geçici bir atmosfer sayıldığı için "Evet". Çap değerleri
-ortalama/yaklaşık — Haumea gibi belirgin düzensiz cisimlerde ortalama çap
-alındı. Io ve Triton'un ince ama gerçek atmosferleri "Evet", Europa/
-Ganymede/Enceladus gibi yalnızca çok seyrek ekzosferi olan cisimler "Hayır"
-olarak işaretlendi. Çap aralığı 0,49 km'den (Bennu) 139.820 km'ye (Jüpiter)
-uzandığı için `near` toleransı 1000 km seçildi. Tam 5 dilli çeviri eklendi
-(gezegen/uydu adlarında anlamlı fark olan yerlerde `nameByLocale` dolduruldu),
-index.ts'e kaydedildi.
+Data notes: for moons, the "Distance from the Sun (AU)" field is the mean
+distance from the Sun of the planet they belong to — a deliberate simplification
+that keeps in-game comparison meaningful. For comets, the same field shows the
+perihelion distance; had the orbital semi-major axis been used, Hale-Bopp (~186
+AU) would have broken the scale. The "Has an Atmosphere" value for comets is
+"Yes", because a coma counts as a temporary atmosphere. Diameter values are
+mean/approximate — for markedly irregular bodies such as Haumea, the mean
+diameter was taken. Io's and Triton's thin but real atmospheres are marked "Yes",
+while bodies with only a very tenuous exosphere such as Europa/Ganymede/Enceladus
+are marked "No". Because the diameter range spans from 0.49 km (Bennu) to 139,820
+km (Jupiter), a `near` tolerance of 1000 km was chosen. Full 5-language
+translation was added (with `nameByLocale` filled in where there is a meaningful
+difference in planet/moon names) and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #23 — Dünya Adaları (#161)
+## 2026-07-29 update #23 — Islands of the World (#161)
 
-44 kayıt: Grönland'dan (dünyanın en büyük adası) Capri gibi küçük ama
-ünlü adalara kadar altı kıtadan gerçek adalar. Birden fazla ülkeye
-bölünmüş adalarda (Borneo, Yeni Gine, İrlanda, Hispaniola, Ateş
-Toprakları) egemenlik kısaca birlikte verildi. Görseller
-`fetch-wiki-image.js` ile toplu çekildi (çoğu NASA/ESA uydu görüntüsü,
-Public domain). Tam 5 dilli çeviri eklendi, index.ts'e kaydedildi.
+44 records: real islands from six continents, from Greenland (the world's largest
+island) to small but famous islands such as Capri. For islands divided between
+more than one country (Borneo, New Guinea, Ireland, Hispaniola, Tierra del
+Fuego), sovereignty was briefly given jointly. Images were fetched in bulk with
+`fetch-wiki-image.js` (mostly NASA/ESA satellite imagery, public domain). Full
+5-language translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #24 — Dünya Çölleri (#162)
+## 2026-07-29 update #24 — Deserts of the World (#162)
 
-43 kayıt: Sahra'dan (dünyanın en büyük sıcak çölü) kutup çöllerine
-(Antarktika, Arktik) kadar sıcak/soğuk çöl karışımı, altı kıtadan.
-Wahiba Kumları için Commons'ta uygun görsel bulunamadı, o kayıt
-görselsiz bırakıldı. Görseller `fetch-wiki-image.js` ile toplu çekildi
-(çoğu NASA uydu görüntüsü, Public domain). Tam 5 dilli çeviri eklendi,
-index.ts'e kaydedildi.
+43 records: a mix of hot/cold deserts from six continents, from the Sahara (the
+world's largest hot desert) to the polar deserts (Antarctic, Arctic). No suitable
+image could be found on Commons for the Wahiba Sands, so that record was left
+without an image. Images were fetched in bulk with `fetch-wiki-image.js` (mostly
+NASA satellite imagery, public domain). Full 5-language translation was added and
+it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #25 — Dünya Gölleri (#163)
+## 2026-07-29 update #25 — Lakes of the World (#163)
 
-46 kayıt: Hazar Denizi'nden (dünyanın en büyük gölü) Van Gölü'ne kadar
-tatlı su/tuzlu göl karışımı, altı kıtadan. Bazı göllerin yüzölçümü
-mevsimlik/uzun vadeli değişkenlik gösterdiği için (Çad, Aral, Urmiye,
-Büyük Tuz Gölü küçülüyor; Eyre ve Tonle Sap mevsimlik değişiyor) güncel
-ortalama değerler kullanıldı. Görseller `fetch-wiki-image.js` ile toplu
-çekildi (çoğu NASA/ESA uydu görüntüsü, Public domain). Tam 5 dilli
-çeviri eklendi, index.ts'e kaydedildi.
+46 records: a mix of freshwater/salt lakes from six continents, from the Caspian
+Sea (the world's largest lake) to Lake Van. Because the surface area of some
+lakes shows seasonal/long-term variability (Chad, Aral, Urmia and the Great Salt
+Lake are shrinking; Eyre and Tonle Sap vary seasonally), current average values
+were used. Images were fetched in bulk with `fetch-wiki-image.js` (mostly
+NASA/ESA satellite imagery, public domain). Full 5-language translation was added
+and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #26 — Antik Uygarlıklar (#168)
+## 2026-07-29 update #26 — Ancient Civilizations (#168)
 
-44 kayıt: Sümer'den (MÖ 3. binyıl, yazının icadı) Nazca Kültürü'ne (MS
-1-7. yüzyıl) kadar altı kıtadan pre-klasik/antik uygarlıklar. İmparatorluklar
-paketinde (#25) zaten bulunan Asur, Babil, Akamenid Pers, Makedon, Aztek,
-İnka ve Han/Tang/Çing bilinçli olarak dışarıda bırakıldı; sıfıra yakın
-örtüşme. Kişi içermediği için İmparatorluklar ile aynı desen kullanıldı —
-görsel yok, sadece emoji-clue. Tam 5 dilli çeviri eklendi, index.ts'e
-kaydedildi.
+44 records: pre-classical/ancient civilizations from six continents, from Sumer
+(3rd millennium BC, the invention of writing) to the Nazca culture (1st-7th
+century AD). Assyria, Babylon, Achaemenid Persia, Macedon, the Aztecs, the Inca
+and the Han/Tang/Qing, already present in the Empires pack (#25), were
+deliberately left out; near-zero overlap. As it contains no people, the same
+pattern as Empires was used — no images, emoji clues only. Full 5-language
+translation was added and it was registered in index.ts.
 
-## 2026-07-29 güncellemesi #27 — CS2 Efsaneleri (#201, havuza yeni eklendi)
+## 2026-07-29 update #27 — CS2 Legends (#201, newly added to the pool)
 
-40 kayıt: gerçek, kamusal Counter-Strike (CS:GO/CS2) profesyonel oyuncusu —
-s1mple, ZywOo, NiKo, device, GeT_RiGhT/f0rest gibi efsanelerden donk/m0NESY
-gibi güncel yıldızlara kadar 14 ülkeden. Bilinçli tasarım kararı: Valve'ın
-oyun içi karakter/silah kaplama görselleri KULLANILMADI — bunun yerine
-turnuva organizatörlerinin (ESL/DreamHack/BLAST/PGL/VaKarM) serbest
-lisansla yayımladığı gerçek oyuncu fotoğrafları, Wikimedia Commons üzerinden
-kullanıldı (Yayıncılar paketiyle aynı ilke). electronic, sh1ro ve KSCERATO
-için uygun görsel bulunamadı, o 3 kayıt görselsiz bırakıldı. Tam 5 dilli
-çeviri eklendi, index.ts'e kaydedildi, #201 olarak listeye eklendi (havuz
-200'den 201'e çıktı).
+40 records: real, public Counter-Strike (CS:GO/CS2) professional players — from
+legends such as s1mple, ZywOo, NiKo, device, GeT_RiGhT/f0rest to current stars
+such as donk/m0NESY, from 14 countries. Deliberate design decision: Valve's
+in-game character/weapon skin imagery WAS NOT USED — instead, real player photos
+published under a free licence by tournament organizers (ESL/DreamHack/BLAST/
+PGL/VaKarM) were used via Wikimedia Commons (the same principle as the Streamers
+pack). No suitable image could be found for electronic, sh1ro and KSCERATO, so
+those 3 records were left without an image. Full 5-language translation was
+added, it was registered in index.ts, and it was added to the list as #201 (the
+pool grew from 200 to 201).
 
-## Öneri — sıradaki adımlar
+## Recommendation — next steps
 
-- **11-50 arası düşük risk havuzu**nun geri kalanı (#14-17, #19-21, #23-26,
-  #30-32, #34-36, #38-50) aynı desenle (gerçek Commons fotoğrafı + doğrulanmış veri)
-  doldurulabilir.
-- **Yayıncılar paketi** (#11) web aramasıyla doğrulanan 50 kayıtla kuruldu
-  (2026-07-20). 80'e çıkarmak isteniyorsa geri kalan adaylar için "kıdem"
-  ve "kategori" alanları tek tek doğrulanmadan eklenmemeli — bu kategori en
-  hızlı eskiyen veri türü.
-- **Orta risk** grubunun geri kalanı (#53-65) aynı ilkeyle (sadece kişi
-  portresi, prodüksiyon/sahne görseli yok) genişletilebilir.
+- The rest of the **low risk pool between 11-50** (#14-17, #19-21, #23-26,
+  #30-32, #34-36, #38-50) can be filled in with the same pattern (real Commons
+  photos + verified data).
+- The **Streamers pack** (#11) was built with 50 records verified via web search
+  (2026-07-20). If it is to be expanded to 80, the remaining candidates should
+  not be added without verifying the "tenure" and "category" fields one by one —
+  this category is the fastest-decaying type of data.
+- The rest of the **medium risk** group (#53-65) can be expanded with the same
+  principle (person portraits only, no production/scene imagery).
