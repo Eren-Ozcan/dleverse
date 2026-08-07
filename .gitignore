@@ -40,6 +40,11 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# Paket üretimi sırasındaki geçici çalışma klasörleri (gen.js, input/output.json,
+# entities.txt, err.log) — üretilen paket data/packs/ altına taşındıktan sonra
+# geriye kalan döküntü.
+.tmp-*/
+
 # generated native folders
 /ios
 /android
