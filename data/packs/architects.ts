@@ -2,13 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { architectsI18n } from "./i18n/architects";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/
- * tablolar — her entity.imageCredit alanı yazar+lisans bilgisini taşır.
- * Bina/eser fotoğrafı KULLANILMADI — yalnızca mimarın kendi portresi
- * (bazı eserlerin "freedom of panorama" telifi ülkeye göre değişir, bu
- * riskten kaçınıldı). Mimar Sinan için tarihsel portre bulunamadığından
- * imzası kullanıldı. İki mimar (Jørn Utzon, Luis Barragán) için
- * kullanılabilir görsel bulunamadı, image/imageCredit boş bırakıldı.
+ * Images are real, freely licensed photographs/paintings from Wikimedia
+ * Commons - every entity.imageCredit field carries the author + license.
+ * NO photographs of buildings or works were used - only the architect's own
+ * portrait (the "freedom of panorama" copyright on some works varies by
+ * country, and that risk was avoided). For Mimar Sinan no historical portrait
+ * was found, so his signature is used instead. For two architects (Jorn
+ * Utzon, Luis Barragan) no usable image was found, so image/imageCredit were
+ * left empty.
  */
 const architects: PackConfig = {
   id: "architects",

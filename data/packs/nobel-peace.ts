@@ -2,12 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { nobelPeaceI18n } from "./i18n/nobel-peace";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. "decade" alanı
- * ödülün verildiği yılın on yılına yuvarlanmıştır (ör. 2014 → 2010). Bazı
- * laureate'lerin (Liu Xiaobo, Wangari Maathai) Wikimedia'da serbest lisanslı
- * bir kapak fotoğrafı bulunmadığından image/imageCredit alanları boş
- * bırakıldı — halüsinasyon riski almamak için URL uydurulmadı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. The "decade" field is
+ * the award year rounded down to its decade (e.g. 2014 -> 2010). Some
+ * laureates (Liu Xiaobo, Wangari Maathai) have no freely licensed lead photo
+ * on Wikimedia, so their image/imageCredit fields were left empty - no URL was
+ * invented, to avoid any risk of hallucination.
  */
 const nobelPeace: PackConfig = {
   id: "nobel-peace",

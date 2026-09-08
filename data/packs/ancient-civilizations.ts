@@ -2,13 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { ancientCivilizationsI18n } from "./i18n/ancient-civilizations";
 
 /**
- * Antik/pre-klasik uygarlıklar — kişi değil, arkeoloji+coğrafya trivia'sı
- * (İmparatorluklar paketiyle aynı desen: emoji-clue, gerçek fotoğraf yok).
- * İmparatorluklar paketinde zaten bulunan Asur, Babil, Akamenid Pers,
- * Makedon, Aztek, İnka, Han/Tang/Çing ve "Yeni Krallık Mısır" bilinçli olarak
- * dışarıda bırakıldı; Mısır sadece açıkça farklı bir dönem olan "Eski Krallık"
- * (piramit çağı) kaydıyla temsil ediliyor. "peakPeriod" uygarlığın en parlak
- * dönemini, "writingSystem" o dönemde kullandığı yazıyı gösterir.
+ * Ancient/pre-classical civilizations - not people, this is archaeology +
+ * geography trivia (same pattern as the Empires pack: emoji clue, no real
+ * photos). Assyria, Babylon, Achaemenid Persia, Macedon, the Aztecs, the Inca,
+ * Han/Tang/Qing and "New Kingdom Egypt" are deliberately left out because the
+ * Empires pack already covers them; Egypt is represented only by the clearly
+ * distinct "Old Kingdom" (pyramid age) entry. "peakPeriod" is the
+ * civilization's height, "writingSystem" the script it used in that period.
  */
 const ancientCivilizations: PackConfig = {
   id: "ancient-civilizations",

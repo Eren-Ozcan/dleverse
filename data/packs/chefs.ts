@@ -2,13 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { chefsI18n } from "./i18n/chefs";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. François
- * Vatel (17. yüzyıl, fotoğraf öncesi dönem) için sonraki dönemde yapılmış
- * bir tablo kullanıldı. Nigel Slater için kullanılabilir görsel
- * bulunamadı, image/imageCredit kasıtlı olarak boş bırakıldı. "role"
- * alanı şefin kamuoyunda en çok tanındığı kimliği ayırt eder (restoran
- * şefi / TV şefi / tarihi şef).
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. For Francois Vatel
+ * (17th century, before photography) a later painting is used. For Nigel
+ * Slater no usable image was found, so image/imageCredit were deliberately
+ * left empty. The "role" field distinguishes the identity the chef is best
+ * known for publicly (restaurant chef / TV chef / historical chef).
  */
 const chefs: PackConfig = {
   id: "chefs",

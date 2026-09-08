@@ -2,11 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { riversI18n } from "./i18n/rivers";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/haritalar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Uzunluk (km) değerleri
- * yaygın olarak kabul gören atlas/coğrafya kaynaklarına dayanır; nehir uzunlukları
- * kaynağa göre birkaç yüz km farklılık gösterebilir (özellikle Amazon, Nil gibi
- * "en uzun nehir" tartışmalı örneklerde) — bu tür farklar doğaldır.
+ * Images are real, freely licensed photographs/maps from Wikimedia Commons -
+ * every entity.imageCredit field carries the author + license. Length (km)
+ * values follow widely accepted atlas/geography sources; river lengths can
+ * differ by a few hundred km between sources (especially for disputed
+ * "longest river" cases such as the Amazon and the Nile) - such differences
+ * are normal.
  */
 const rivers: PackConfig = {
   id: "rivers",

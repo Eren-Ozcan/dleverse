@@ -2,12 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { explorersI18n } from "./i18n/explorers";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/
- * tablolar/heykeller — her entity.imageCredit alanı yazar+lisans bilgisini
- * taşır. Erken dönem kaşifler için çoğunlukla dönemin tablosu/gravürü
- * kullanıldı (o dönemde fotoğraf yok), bazıları için (Zheng He, Leif
- * Erikson) anıt/heykel fotoğrafı kullanıldı — orijinal portre yok.
- * "century" alanı kaşifin en bilinen seferinin yapıldığı yüzyıl.
+ * Images are real, freely licensed photographs/paintings/statues from
+ * Wikimedia Commons - every entity.imageCredit field carries the author +
+ * license. For early explorers a contemporary painting/engraving is mostly
+ * used (photography did not exist yet), and for some (Zheng He, Leif Erikson)
+ * a photo of a monument/statue - there is no original portrait. The "century"
+ * field is the century of the explorer's best-known voyage.
  */
 const explorers: PackConfig = {
   id: "explorers",

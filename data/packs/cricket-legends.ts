@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { cricketLegendsI18n } from "./i18n/cricket-legends";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Malcolm Marshall
- * için Wikimedia API'sinde kullanılabilir kapak görseli bulunamadı;
- * image/imageCredit kasıtlı olarak boş bırakıldı. Shakib Al Hasan'ın görseli
- * İngilizce Wikipedia'da kapak görseli olmadığı için Bengalce Wikipedia
- * sayfasından alındı. "status" alanı 2026-07 itibarıyla güncel — hâlâ aktif
- * oyuncular (Virat Kohli, Kane Williamson) sezondan sezona değişebilir,
- * yayına almadan önce doğrulanmalı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. For Malcolm Marshall
+ * no usable lead image was found in the Wikimedia API; image/imageCredit were
+ * deliberately left empty. Shakib Al Hasan's image was taken from the Bengali
+ * Wikipedia page because the English Wikipedia has no lead image. The "status"
+ * field is current as of 2026-07 - players who are still active (Virat Kohli,
+ * Kane Williamson) can change from season to season, so verify before
+ * shipping.
  */
 const cricketLegends: PackConfig = {
   id: "cricket-legends",

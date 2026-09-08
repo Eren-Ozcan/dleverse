@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { astronautsI18n } from "./i18n/astronauts";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır (çoğu NASA
- * kaynaklı, Public domain). "year" alanı kişinin en bilinen uçuşunun/
- * başarısının yılı; "program" alanı uçtuğu araç ailesini gösterir.
- * "spacewalk" alanı kariyer boyunca en az bir uzay yürüyüşü (EVA veya Ay
- * yürüyüşü) yapıp yapmadığını belirtir. Abdul Ahad Mohmand için
- * Wikimedia API'sinde kullanılabilir kapak görseli bulunamadı; image/
- * imageCredit kasıtlı olarak boş bırakıldı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license (most are NASA
+ * sourced, public domain). The "year" field is the year of the person's
+ * best-known flight/achievement; "program" shows the vehicle family they flew.
+ * The "spacewalk" field states whether they made at least one spacewalk (EVA
+ * or moonwalk) during their career. For Abdul Ahad Mohmand no usable lead
+ * image was found in the Wikimedia API; image/imageCredit were deliberately
+ * left empty.
  */
 const astronauts: PackConfig = {
   id: "astronauts",

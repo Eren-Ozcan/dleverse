@@ -2,11 +2,11 @@ import type { PackConfig } from "../../engine/types";
 import { classicLiteratureAuthorsI18n } from "./i18n/classic-literature-authors";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/
- * tablolar — her entity.imageCredit alanı yazar+lisans bilgisini taşır.
- * "famousWork" alanı sadece eser ADI (metin) içerir, kapak görseli veya
- * eser metni kullanılmaz — bu, kitap kapağı telifiyle ilgili ek riskten
- * kaçınır.
+ * Images are real, freely licensed photographs/paintings from Wikimedia
+ * Commons - every entity.imageCredit field carries the author + license. The
+ * "famousWork" field holds only the work's NAME (as text); no cover art or
+ * text of the work is used - this avoids the extra risk around book cover
+ * copyright.
  */
 const classicLiteratureAuthors: PackConfig = {
   id: "classic-literature-authors",

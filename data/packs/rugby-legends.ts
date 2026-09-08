@@ -2,15 +2,15 @@ import type { PackConfig } from "../../engine/types";
 import { rugbyLegendsI18n } from "./i18n/rugby-legends";
 
 /**
- * 40 kayıt: 1930'ların Colin Meads/Willie John McBride kuşağından 2010'larda
- * emekli olan Richie McCaw/Sergio Parisse kuşağına kadar 13 ülkeden rugby
- * union efsaneleri. Tüm mevkiler temsil ediliyor (aç/hooker'dan tam bek'e).
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * imageCredit yazar+lisans bilgisini taşır. 6 oyuncu (Willie John McBride,
- * John Jeffrey, John Eales, Michael Lynagh, Brian Lima, Os du Randt) için
- * kullanılabilir tekil kapak görseli bulunamadı; image/imageCredit kasıtlı
- * olarak boş bırakıldı. "caps" değerleri sadece MİLLİ TAKIM maçlarını sayar
- * (British & Irish Lions maçları hariç).
+ * 40 entries: rugby union legends from 13 countries, spanning the Colin
+ * Meads/Willie John McBride generation of the 1930s to the Richie
+ * McCaw/Sergio Parisse generation that retired in the 2010s. Every position is
+ * represented (from hooker to fullback). Images are real, freely licensed
+ * photographs from Wikimedia Commons - imageCredit carries the author +
+ * license. For 6 players (Willie John McBride, John Jeffrey, John Eales,
+ * Michael Lynagh, Brian Lima, Os du Randt) no usable individual lead image was
+ * found; image/imageCredit were deliberately left empty. "caps" values count
+ * NATIONAL TEAM matches only (British & Irish Lions matches excluded).
  */
 const rugbyLegends: PackConfig = {
   id: "rugby-legends",

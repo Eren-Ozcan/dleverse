@@ -2,12 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { nobelLiteratureI18n } from "./i18n/nobel-literature";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. #40 (Klasik
- * Edebiyat Yazarları) ile kasıtlı olarak minimum örtüşme var — bu paket
- * SADECE Nobel Edebiyat Ödülü kazananlarına odaklanıyor (Nobel yılı ayrı
- * bir alan). famousWork alanı sadece eser adı (metin), kapak görseli
- * kullanılmadı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. Overlap with #40
+ * (Classic Literature Authors) is deliberately kept minimal - this pack
+ * focuses ONLY on Nobel Prize in Literature laureates (the Nobel year is a
+ * separate field). The famousWork field holds only the work's title (as text);
+ * no cover art is used.
  */
 const nobelLiterature: PackConfig = {
   id: "nobel-literature",

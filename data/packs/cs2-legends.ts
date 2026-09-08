@@ -2,20 +2,20 @@ import type { PackConfig } from "../../engine/types";
 import { cs2LegendsI18n } from "./i18n/cs2-legends";
 
 /**
- * Bu paket Counter-Strike'ın *gerçek profesyonel oyuncularını* (gerçek kişiler,
- * kamusal e-spor kaydı) konu alır — Valve'ın oyun içi karakter modelleri, silah
- * kaplamaları veya harita görselleri KULLANILMADI. Telif riskini düşük tutan
- * tercih bu: turnuva organizatörleri (ESL/DreamHack/BLAST/PGL/VaKarM vb.)
- * oyuncu fotoğraflarını sıkça serbest lisansla yayımlıyor ve bunlar Wikimedia
- * Commons'a taşınıyor. Her entity.imageCredit alanı yazar+lisans bilgisini
- * taşır; görsel bulunamayan 3 oyuncuda (electronic, sh1ro, KSCERATO)
- * image/imageCredit kasıtlı olarak boş bırakıldı (bkz. boxing-legends.ts
- * deseni).
+ * This pack is about Counter-Strike's *real professional players* (real
+ * people, public esports record) - Valve's in-game character models, weapon
+ * skins and map art were NOT used. That choice keeps the copyright risk low:
+ * tournament organizers (ESL/DreamHack/BLAST/PGL/VaKarM and others) frequently
+ * publish player photos under free licenses, and those get moved to Wikimedia
+ * Commons. Every entity.imageCredit field carries the author + license; for
+ * the 3 players where no image was found (electronic, sh1ro, KSCERATO)
+ * image/imageCredit were deliberately left empty (see the boxing-legends.ts
+ * pattern).
  *
- * "team" alanı oyuncunun *en çok anıldığı* takımı ifade eder, güncel kadroyu
- * değil. "status" ve "majorTitles" alanları 2026-07 itibarıyla derlendi;
- * aktif oyuncular ve Major sonuçları sezondan sezona değişir, yayına almadan
- * önce doğrulanmalı.
+ * The "team" field is the team the player is *most associated with*, not the
+ * current roster. The "status" and "majorTitles" fields were compiled as of
+ * 2026-07; active players and Major results change from season to season, so
+ * verify before shipping.
  */
 const cs2Legends: PackConfig = {
   id: "cs2-legends",

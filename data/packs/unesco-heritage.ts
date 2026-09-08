@@ -2,13 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { unescoHeritageI18n } from "./i18n/unesco-heritage";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. #37 (Dünya
- * Doğal Harikaları) ile kasıtlı olarak sıfır örtüşme var — bu paket
- * SADECE kültürel/mimari UNESCO alanlarına odaklanıyor (doğal alanlar
- * hariç). Persepolis için kullanılabilir görsel bulunamadı, image/
- * imageCredit kasıtlı olarak boş bırakıldı. Siyasi olarak tartışmalı
- * statüdeki alanlar (ör. Kudüs) bilinçli olarak dışarıda bırakıldı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. Overlap with #37
+ * (Natural Wonders of the World) is deliberately zero - this pack focuses ONLY
+ * on cultural/architectural UNESCO sites (natural sites excluded). For
+ * Persepolis no usable image was found, so image/imageCredit were deliberately
+ * left empty. Sites with a politically disputed status (e.g. Jerusalem) were
+ * deliberately left out.
  */
 const unescoHeritage: PackConfig = {
   id: "unesco-heritage",

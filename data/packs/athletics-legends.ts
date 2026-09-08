@@ -2,12 +2,11 @@ import type { PackConfig } from "../../engine/types";
 import { athleticsLegendsI18n } from "./i18n/athletics-legends";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Bazı sporcular
- * için Wikipedia'da uygun lisanslı bir kapak görseli bulunamadı; bu
- * entity'lerde image/imageCredit bilinçli olarak boş bırakıldı.
- * Olimpiyat altın madalya sayıları 2024 Paris Olimpiyatları dahil güncel
- * verilerle doğrulanmıştır.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. For some athletes no
+ * suitably licensed lead image was found on Wikipedia; those entities have
+ * image/imageCredit deliberately left empty. Olympic gold medal counts were
+ * verified against current data including the 2024 Paris Olympics.
  */
 const athleticsLegends: PackConfig = {
   id: "athletics-legends",

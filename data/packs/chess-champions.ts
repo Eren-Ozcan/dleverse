@@ -2,16 +2,16 @@ import type { PackConfig } from "../../engine/types";
 import { chessChampionsI18n } from "./i18n/chess-champions";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. "titleType"
- * alanı üç ayrı unvanı ayırt eder: Klasik (1886'dan beri tartışmasız
- * dünya şampiyonluğu hattı), FIDE (1993-2006 bölünme döneminde ayrı
- * kurulan paralel unvan) ve Kadınlar Dünya Şampiyonluğu (1927'den beri
- * ayrı bir turnuva). "nationality" alanı şampiyonluğu kazandığı dönemdeki
- * temsil ettiği ülkeyi gösterir (bazı oyuncular kariyer boyunca vatandaşlık
- * değiştirmiştir). Susan Polgar için Wikipedia API'sinin döndürdüğü kapak
- * görseli yanlış eşleşmeydi (başka bir oyuncunun fotoğrafı) — bu yüzden
- * image/imageCredit kasıtlı olarak boş bırakıldı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. The "titleType" field
+ * distinguishes three separate titles: Classical (the undisputed world
+ * championship line since 1886), FIDE (the parallel title created during the
+ * 1993-2006 split) and the Women's World Championship (a separate tournament
+ * since 1927). The "nationality" field shows the country represented at the
+ * time the championship was won (some players changed citizenship during their
+ * career). For Susan Polgar the lead image returned by the Wikipedia API was a
+ * wrong match (a photo of another player), so image/imageCredit were
+ * deliberately left empty.
  */
 const chessChampions: PackConfig = {
   id: "chess-champions",

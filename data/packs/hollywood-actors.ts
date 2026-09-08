@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { hollywoodActorsI18n } from "./i18n/hollywood-actors";
 
 /**
- * ORTA RİSK (bkz. docs/ip-candidates.md #52): sadece oyuncunun kendi bio'su +
- * filmografi metadata'sı (film adı metin olarak). Film sahnesi, karakter
- * kostümü veya stüdyo görseli YOK — sadece Wikimedia Commons'taki oyuncunun
- * kendi röportaj/kırmızı halı fotoğrafları (image + imageCredit). Oscar
- * kazanma sayıları SADECE oyunculuk kategorileri (Best Actor/Actress,
- * Supporting) sayılır; yapımcılık/senaryo Oscar'ları dahil edilmedi.
- * WebSearch ile doğrulanan güncel veriler: Adrien Brody 2 (The Pianist 2003,
- * The Brutalist 2025), Emma Stone 2 (La La Land 2017, Poor Things 2024).
+ * MEDIUM RISK (see docs/ip-candidates.md #52): only the actor's own bio +
+ * filmography metadata (film titles as text). NO film stills, character
+ * costumes or studio artwork - only the actor's own interview/red-carpet
+ * photographs from Wikimedia Commons (image + imageCredit). Oscar win counts
+ * include ONLY acting categories (Best Actor/Actress, Supporting);
+ * producing/writing Oscars are not counted. Current data verified by web
+ * search: Adrien Brody 2 (The Pianist 2003, The Brutalist 2025), Emma Stone 2
+ * (La La Land 2017, Poor Things 2024).
  */
 const hollywoodActors: PackConfig = {
   id: "hollywood-actors",

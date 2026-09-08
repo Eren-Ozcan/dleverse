@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { worldLakesI18n } from "./i18n/world-lakes";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/uydu
- * görüntüleri — her entity.imageCredit alanı yazar+lisans bilgisini taşır.
- * Yüzölçümü (km²) değerleri yaygın kabul gören coğrafya kaynaklarına dayanır;
- * mevsimlik/uzun vadeli su seviyesi oynamaları nedeniyle bazı göllerde kaynaklar
- * arasında büyük farklar olabilir (Çad, Aral, Urmiye ve Büyük Tuz Gölü küçülüyor;
- * Eyre ve Tonle Sap mevsimlik olarak katlanıyor) — verilen değerler güncel
- * ortalamalardır. "Ülke" alanı kıyıdaş ülkeleri kısaltılmış biçimde listeler.
- * Kişi içermeyen saf coğrafya paketi.
+ * Images are real, freely licensed photographs/satellite imagery from
+ * Wikimedia Commons - every entity.imageCredit field carries the author +
+ * license. Area (km2) values follow widely accepted geography sources; because
+ * of seasonal and long-term water level swings, sources can differ greatly for
+ * some lakes (Chad, the Aral, Urmia and the Great Salt Lake are shrinking;
+ * Eyre and Tonle Sap multiply seasonally) - the values given are current
+ * averages. The "country" field lists the riparian countries in abbreviated
+ * form. A pure geography pack with no people in it.
  */
 const worldLakes: PackConfig = {
   id: "world-lakes",

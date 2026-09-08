@@ -2,15 +2,16 @@ import type { PackConfig } from "../../engine/types";
 import { worldDesertsI18n } from "./i18n/world-deserts";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/uydu
- * görüntüleri — her entity.imageCredit alanı yazar+lisans bilgisini taşır.
- * Wahiba Kumları için Commons'ta uygun kapak görseli bulunamadı, o entity
- * görselsiz kaldı. Yüzölçümü (km²) değerleri yaklaşık: çöl sınırları kesin
- * çizgilerle tanımlanmadığı için kaynaklar arasında ciddi farklar olabilir
- * (özellikle Sahra, Arabistan, kutup çölleri gibi devasa örneklerde).
- * Çöl türü (sıcak/soğuk) Köppen iklim sınıflandırmasına dayanır; Atacama ve
- * Namib gibi serin kıyı çöllerinde sınıflandırma kaynağa göre değişebilir.
- * Kişi içermeyen saf coğrafya paketi.
+ * Images are real, freely licensed photographs/satellite imagery from
+ * Wikimedia Commons - every entity.imageCredit field carries the author +
+ * license. For the Wahiba Sands no suitable lead image was found on Commons,
+ * so that entity has no image. Area (km2) values are approximate: because
+ * desert boundaries are not defined by sharp lines, sources can differ
+ * substantially (especially for vast cases such as the Sahara, Arabian and
+ * polar deserts). The desert type (hot/cold) follows the Koppen climate
+ * classification; for cool coastal deserts such as the Atacama and the Namib
+ * the classification can vary by source. A pure geography pack with no people
+ * in it.
  */
 const worldDeserts: PackConfig = {
   id: "world-deserts",

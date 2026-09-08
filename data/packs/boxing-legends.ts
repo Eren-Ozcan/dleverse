@@ -2,13 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { boxingLegendsI18n } from "./i18n/boxing-legends";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. İki boksör
- * (Pernell Whitaker, Ricardo López) için Wikimedia API'sinde kullanılabilir
- * kapak görseli bulunamadı; image/imageCredit kasıtlı olarak boş bırakıldı.
- * "status" alanı 2026-07 itibarıyla güncel — hâlâ aktif boksörler (Canelo,
- * Crawford, Joshua, Wilder) sezondan sezona değişebilir, yayına almadan
- * önce doğrulanmalı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. For two boxers
+ * (Pernell Whitaker, Ricardo Lopez) no usable lead image was found in the
+ * Wikimedia API; image/imageCredit were deliberately left empty. The "status"
+ * field is current as of 2026-07 - boxers who are still active (Canelo,
+ * Crawford, Joshua, Wilder) can change from season to season, so verify before
+ * shipping.
  */
 const boxingLegends: PackConfig = {
   id: "boxing-legends",

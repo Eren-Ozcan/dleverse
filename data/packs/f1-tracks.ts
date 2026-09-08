@@ -2,14 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { f1TracksI18n } from "./i18n/f1-tracks";
 
 /**
- * Formula 1 pistleri — kişi değil, coğrafya/spor tesisi trivia'sı (Para
- * Birimleri/İmparatorluklar paketleriyle aynı desen: emoji-clue, gerçek
- * fotoğraf yok). "firstGrandPrixYear" alanı pistin ilk kez DÜNYA
- * ŞAMPİYONASI'na sayılan bir Grand Prix'ye ev sahipliği yaptığı yıldır
- * (şampiyonluk dışı yarışlar sayılmaz — ör. Interlagos 1972'de şampiyonluk
- * dışı bir yarış düzenledi ama ilk şampiyonluk yarışı 1973'tür; Red Bull
- * Ring için 1964 Zeltweg Havaalanı pisti AYRI bir tesis olduğundan 1970
- * Österreichring esas alınmıştır).
+ * Formula 1 circuits - not people, this is geography/sports-venue trivia (same
+ * pattern as the Currencies/Empires packs: emoji clue, no real photos). The
+ * "firstGrandPrixYear" field is the year the circuit first hosted a Grand Prix
+ * that counted towards the WORLD CHAMPIONSHIP (non-championship races do not
+ * count - e.g. Interlagos held a non-championship race in 1972 but its first
+ * championship race was 1973; for the Red Bull Ring the 1964 Zeltweg Airfield
+ * circuit was a SEPARATE facility, so the 1970 Osterreichring is used).
  */
 const f1Tracks: PackConfig = {
   id: "f1-tracks",

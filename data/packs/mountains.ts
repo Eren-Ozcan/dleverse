@@ -2,11 +2,11 @@ import type { PackConfig } from "../../engine/types";
 import { mountainsI18n } from "./i18n/mountains";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Yükseklik (m)
- * değerleri yaygın kabul gören kaynaklara dayanır; bazı zirvelerde (özellikle
- * Everest, Denali gibi) kaynaklar arasında birkaç metrelik farklar olabilir,
- * bu doğaldır. Kişi içermeyen saf coğrafya paketi.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. Elevation (m) values
+ * follow widely accepted sources; for some peaks (Everest and Denali in
+ * particular) sources can differ by a few metres, which is normal. A pure
+ * geography pack with no people in it.
  */
 const mountains: PackConfig = {
   id: "mountains",

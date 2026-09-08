@@ -2,13 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { f1DriversI18n } from "./i18n/f1-drivers";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır (CC lisansları
- * atıf şartı koşar). Not: Commons lisansı telif hakkını kapsar ama yaşayan
- * kişilerin "personality rights"ini kapsamaz; ticari kullanımda bu ayrı bir
- * risk eksenidir. Hâlâ aktif pilotların (Verstappen, Hamilton vb.)
- * şampiyonluk sayıları yeni sezonlarla değişir — yayına almadan önce
- * güncel sayıyla doğrulanmalı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license (CC licenses require
+ * attribution). Note: a Commons license covers copyright but not the
+ * "personality rights" of living people; in commercial use that is a separate
+ * axis of risk. Championship counts for drivers who are still active
+ * (Verstappen, Hamilton and others) change with each new season - verify
+ * against the current count before shipping.
  */
 const f1Drivers: PackConfig = {
   id: "f1-drivers",

@@ -2,12 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { philosophersI18n } from "./i18n/philosophers";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/
- * tablolar/büstler — her entity.imageCredit alanı yazar+lisans bilgisini
- * taşır. Antik dönem philosophersı (Sokrates, Platon, Aristoteles vb.) için
- * fotoğraf yerine dönemin/sonraki dönemin büstü kullanıldı (fotoğraf
- * öncesi dönem). Laozi için tarihsel bir portre bulunamadığından ismi
- * Çince karakterlerle temsil edildi.
+ * Images are real, freely licensed photographs/paintings/busts from Wikimedia
+ * Commons - every entity.imageCredit field carries the author + license. For
+ * ancient philosophers (Socrates, Plato, Aristotle and others) a contemporary
+ * or later bust is used instead of a photograph (they predate photography).
+ * For Laozi no historical portrait was found, so his name is represented in
+ * Chinese characters.
  */
 const philosophers: PackConfig = {
   id: "philosophers",

@@ -2,16 +2,16 @@ import type { PackConfig } from "../../engine/types";
 import { premierLeagueI18n } from "./i18n/premier-league";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. "club" alanı
- * GÜNCEL kadro değil, oyuncunun Premier Lig kariyerinde en çok anıldığı
- * kulüptür (super-league.ts ile aynı yaklaşım) — bu sayede veri transfer
- * sezonundan sezona eskimez. "premierLeagueTitles" alanı oyuncunun o
- * kulüp(ler)deki kariyeri boyunca kazandığı Premier Lig şampiyonluğu
- * sayısıdır (WebSearch ile doğrulanmıştır, 2025-26 sezonu Arsenal
- * şampiyonluğu dahil). İki oyuncu (Tony Adams, Robert Pirès) için Wikimedia
- * API'sinde kullanılabilir kapak görseli bulunamadı; image/imageCredit
- * kasıtlı olarak boş bırakıldı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. The "club" field is
+ * NOT the current squad but the club the player is most associated with during
+ * their Premier League career (the same approach as super-league.ts) - this
+ * keeps the data from going stale with each transfer window. The
+ * "premierLeagueTitles" field is the number of Premier League titles the
+ * player won across their career at those clubs (verified by web search,
+ * including Arsenal's 2025-26 title). For two players (Tony Adams, Robert
+ * Pires) no usable lead image was found in the Wikimedia API; image/
+ * imageCredit were deliberately left empty.
  */
 const premierLeague: PackConfig = {
   id: "premier-league",

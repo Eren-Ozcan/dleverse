@@ -2,16 +2,16 @@ import type { PackConfig } from "../../engine/types";
 import { sculptorsI18n } from "./i18n/sculptors";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar/
- * tablolar — her entity.imageCredit alanı yazar+lisans bilgisini taşır.
- * Antik Yunan heykeltıraşları (Praxiteles, Phidias) için fotoğraf yerine
- * dönemin/sonraki dönemin onları betimleyen heykel/büst görseli kullanıldı
- * (fotoğraf öncesi dönem — mountains/explorers paketlerindeki yaklaşımla
- * tutarlı). Duane Hanson için kullanılabilir görsel bulunamadı, image/
- * imageCredit kasıtlı olarak boş bırakıldı. #7 (Ressamlar) ve #39
- * (Mimarlar) ile bazı isim örtüşmeleri olabilir (ör. Michelangelo,
- * Bernini) — bu kişiler hem ressam/mimar hem heykeltıraş olarak tarihe
- * geçmiştir, örtüşme kasıtlıdır.
+ * Images are real, freely licensed photographs/paintings from Wikimedia
+ * Commons - every entity.imageCredit field carries the author + license. For
+ * ancient Greek sculptors (Praxiteles, Phidias) a contemporary or later
+ * sculpture/bust depicting them is used instead of a photograph (they predate
+ * photography - consistent with the approach in the mountains/explorers
+ * packs). For Duane Hanson no usable image was found, so image/imageCredit
+ * were deliberately left empty. There may be some name overlap with #7
+ * (Painters) and #39 (Architects) - e.g. Michelangelo, Bernini - since those
+ * people are recorded in history as both painter/architect and sculptor; the
+ * overlap is intentional.
  */
 const sculptors: PackConfig = {
   id: "sculptors",

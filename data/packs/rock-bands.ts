@@ -2,12 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { rockBandsI18n } from "./i18n/rock-bands";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır (CC lisansları
- * atıf şartı koşar). "members" alanı grubun en tanınan/klasik kadrosundaki
- * (ör. imza albümü döneminde sahne alan) üye sayısını gösterir; zaman
- * içinde kadro değişiklikleri olmuş gruplarda bu sayı en ikonik döneme
- * göre seçilmiştir. Şarkı sözü kullanılmamıştır.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license (CC licenses require
+ * attribution). The "members" field is the size of the band's best-known
+ * classic line-up (the one on stage during their signature album era); for
+ * bands whose line-up changed over time, the count follows their most iconic
+ * period. No song lyrics are used.
  */
 const rockBands: PackConfig = {
   id: "rock-bands",

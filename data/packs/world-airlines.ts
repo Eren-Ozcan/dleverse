@@ -2,13 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { worldAirlinesI18n } from "./i18n/world-airlines";
 
 /**
- * Dünya havayolları — kişi değil, kurumsal/coğrafya trivia'sı (Para Birimleri
- * paketiyle aynı desen: emoji-clue, gerçek fotoğraf yok). "foundedYear"
- * şirketin kendi resmî kuruluş tarihidir (ör. Lufthansa için bugünkü şirketin
- * kurulduğu 1953; 1926'daki selefi ayrı bir tüzel kişilikti). "allianceOrType"
- * güncel küresel ittifak üyeliğini gösterir; ittifaka üye olmayan tarifeli
- * taşıyıcılar "Bağımsız", ittifak dışı düşük maliyetli taşıyıcılar ise
- * "Düşük Maliyetli" olarak işaretlendi.
+ * World airlines - not people, this is corporate/geography trivia (same
+ * pattern as the Currencies pack: emoji clue, no real photos). "foundedYear"
+ * is the company's own official founding date (e.g. 1953 for Lufthansa, when
+ * today's company was founded; its 1926 predecessor was a separate legal
+ * entity). "allianceOrType" shows current global alliance membership;
+ * scheduled carriers outside an alliance are marked "Independent", and
+ * non-aligned low-cost carriers "Low-cost".
  */
 const worldAirlines: PackConfig = {
   id: "world-airlines",

@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { journalistsI18n } from "./i18n/journalists";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Marie Colvin
- * için kullanılabilir görsel bulunamadı, image/imageCredit kasıtlı olarak
- * boş bırakıldı. "specialty" alanı gazetecinin en çok tanındığı çalışma
- * alanını gösterir (foto muhabirliği, savaş muhabirliği, TV sunuculuğu
- * vb.). Jamal Khashoggi ve Marie Colvin gibi görev başında hayatını
- * kaybeden isimler sırf kamusal/tarihi kayıt amacıyla, tarafsız biyografik
- * bilgiyle yer alıyor.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. For Marie Colvin no
+ * usable image was found, so image/imageCredit were deliberately left empty.
+ * The "specialty" field shows the field the journalist is best known for
+ * (photojournalism, war reporting, TV anchoring and so on). Names such as
+ * Jamal Khashoggi and Marie Colvin, who died in the line of duty, are included
+ * purely for the public/historical record, with neutral biographical
+ * information.
  */
 const journalists: PackConfig = {
   id: "journalists",

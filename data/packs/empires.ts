@@ -2,10 +2,10 @@ import type { PackConfig } from "../../engine/types";
 import { empiresI18n } from "./i18n/empires";
 
 /**
- * Tarihi empires/hanedanlıklar — kişi değil, coğrafya+tarih trivia'sı
- * (Dünya Ülkeleri paketiyle aynı desen: emoji-clue, gerçek fotoğraf yok).
- * "peakCentury" alanı imparatorluğun en geniş sınırlarına ulaştığı dönemi
- * gösterir; "religion" alanı o dönemde baskın olan din/inanç sistemidir.
+ * Historical empires/dynasties - not people, this is geography + history
+ * trivia (same pattern as the World Countries pack: emoji clue, no real
+ * photos). The "peakCentury" field shows when the empire reached its greatest
+ * extent; "religion" is the dominant religion/belief system of that period.
  */
 const empires: PackConfig = {
   id: "empires",

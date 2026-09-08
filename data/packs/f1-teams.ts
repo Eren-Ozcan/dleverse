@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { f1TeamsI18n } from "./i18n/f1-teams";
 
 /**
- * Kurumsal/takım verisi (pilot değil). "constructorsChampionships" SADECE
- * resmi Yapımcılar (Constructors') Şampiyonluğu sayılır — bu kupa ilk kez
- * 1958'de verildi, bu yüzden 1958 öncesi (Alfa Romeo, Maserati'nin erken
- * dönemi) şampiyonluklar 0 olarak işaretlendi (o dönemde sadece Pilotlar
- * Şampiyonası vardı). Sayılar WebSearch ile doğrulandı: McLaren 2024 VE 2025
- * Yapımcılar Şampiyonluğunu kazandı (toplam 10), Red Bull hâlâ 6'da duruyor.
- * Görseller SADECE gerçek araç/pist fotoğrafları — logo bulunan takımlar için
- * (çoğu) image alanı bilinçli olarak boş bırakıldı.
+ * Corporate/team data (not drivers). "constructorsChampionships" counts ONLY
+ * the official Constructors' Championship - that trophy was first awarded in
+ * 1958, so pre-1958 titles (Alfa Romeo, Maserati's early period) are marked as
+ * 0 (only the Drivers' Championship existed then). The numbers were verified
+ * by web search: McLaren won the Constructors' Championship in both 2024 AND
+ * 2025 (10 total), Red Bull is still on 6. Images are ONLY real car/circuit
+ * photographs - for teams where a logo was available (most of them) the image
+ * field was deliberately left empty.
  */
 const f1Teams: PackConfig = {
   id: "f1-teams",

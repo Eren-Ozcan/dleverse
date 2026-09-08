@@ -2,12 +2,13 @@ import type { PackConfig } from "../../engine/types";
 import { naturalWondersI18n } from "./i18n/natural-wonders";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Saf coğrafya
- * paketi: kişi/marka içermez, sadece doğal oluşumlar (kanyon, şelale,
- * mağara, resif, çöl, volkan, ada vb.). Bazı harikalar (Viktorya Şelalesi,
- * Everest sınırı vb.) birden fazla ülkeye yayılır — bu durumda ülke alanı
- * "Ülke A / Ülke B" formatında iki en yaygın kabul gören ülkeyi listeler.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. A pure geography
+ * pack: no people or brands, only natural formations (canyons, waterfalls,
+ * caves, reefs, deserts, volcanoes, islands and so on). Some wonders (Victoria
+ * Falls, the Everest border and others) span more than one country - in that
+ * case the country field lists the two most widely accepted countries in the
+ * form "Country A / Country B".
  */
 const naturalWonders: PackConfig = {
   id: "natural-wonders",

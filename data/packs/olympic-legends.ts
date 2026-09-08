@@ -2,9 +2,9 @@ import type { PackConfig } from "../../engine/types";
 import { olympicLegendsI18n } from "./i18n/olympic-legends";
 
 /**
- * Hâlâ aktif sporcuların (Biles, Ledecky, Dressel, Crouser vb.) altın
- * madalya sayıları yeni olimpiyatlarla değişebilir — yayına almadan önce
- * güncel toplamla doğrulanmalı.
+ * Gold medal counts for athletes who are still active (Biles, Ledecky,
+ * Dressel, Crouser and others) can change with each new Olympics - verify
+ * against the current total before shipping.
  */
 const olympicLegends: PackConfig = {
   id: "olympic-legends",

@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { renaissanceArtistsI18n } from "./i18n/renaissance-artists";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı özportre/tablo/
- * gravürler — her entity.imageCredit alanı yazar+lisans bilgisini taşır
- * (çoğu sanatçının kendi özportresi). #7 (Ünlü Ressamlar) paketiyle
- * kasıtlı olarak minimum örtüşme var: o pakette zaten yer alan 5 Rönesans
- * ismi (Leonardo da Vinci, Michelangelo, Rafael, Botticelli, Tiziano) bu
- * pakete dahil edilmedi. Heykeltıraşlar paketinde de yer alan Donatello/
- * Verrocchio gibi isimler de (öncelikle heykeltıraş oldukları için)
- * dışarıda bırakıldı.
+ * Images are real, freely licensed self-portraits/paintings/engravings from
+ * Wikimedia Commons - every entity.imageCredit field carries the author +
+ * license (most are the artist's own self-portrait). Overlap with #7 (Famous
+ * Painters) is deliberately kept minimal: the 5 Renaissance names already in
+ * that pack (Leonardo da Vinci, Michelangelo, Raphael, Botticelli, Titian) are
+ * not included here. Names that also appear in the Sculptors pack, such as
+ * Donatello and Verrocchio, are likewise left out (they are primarily
+ * sculptors).
  */
 const renaissanceArtists: PackConfig = {
   id: "renaissance-artists",

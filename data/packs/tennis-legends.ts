@@ -2,9 +2,9 @@ import type { PackConfig } from "../../engine/types";
 import { tennisLegendsI18n } from "./i18n/tennis-legends";
 
 /**
- * Hâlâ aktif oyuncuların (Djokovic, Świątek, Alcaraz, Medvedev vb.) Grand
- * Slam sayıları yeni turnuvalarla değişir — yayına almadan önce güncel
- * sayıyla doğrulanmalı.
+ * Grand Slam counts for players who are still active (Djokovic, Swiatek,
+ * Alcaraz, Medvedev and others) change with each new tournament - verify
+ * against the current count before shipping.
  */
 const tennisLegends: PackConfig = {
   id: "tennis-legends",

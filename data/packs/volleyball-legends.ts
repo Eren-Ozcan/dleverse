@@ -2,18 +2,18 @@ import type { PackConfig } from "../../engine/types";
 import { volleyballLegendsI18n } from "./i18n/volleyball-legends";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * her entity.imageCredit alanı yazar+lisans bilgisini taşır. Steve Timmons
- * için hiçbir dilde kullanılabilir kapak görseli bulunamadı;
- * image/imageCredit kasıtlı olarak boş bırakıldı. Giba, Gözde Kırdar,
- * Fofão, Ivan Zaytsev, Ekaterina Gamova ve Earvin Ngapeth görselleri
- * İngilizce Wikipedia'da bulunamadı; sırasıyla Portekizce, Türkçe/tekrar
- * deneme, Portekizce, İngilizce (alternatif başlık), Rusça ve Fransızca
- * sayfalardan alındı. "hittingHand" alanı voleybolda seyrek belgelenen bir
- * veri — sadece doğrulanabilen solaklar (Sheilla Castro, Logan Tom) sol
- * olarak işaretlendi. "status" alanı 2026-07 itibarıyla güncel; hâlâ aktif
- * oyuncular (Bošković, Zhu Ting, Kurek, Ngapeth vb.) sezondan sezona
- * değişebilir, yayına almadan önce doğrulanmalı.
+ * Images are real, freely licensed photographs from Wikimedia Commons - every
+ * entity.imageCredit field carries the author + license. For Steve Timmons no
+ * usable lead image was found in any language; image/imageCredit were
+ * deliberately left empty. Images for Giba, Gozde Kirdar, Fofao, Ivan Zaytsev,
+ * Ekaterina Gamova and Earvin Ngapeth were not found on English Wikipedia;
+ * they were taken from the Portuguese, Turkish (on a second attempt),
+ * Portuguese, English (alternative title), Russian and French pages
+ * respectively. The "hittingHand" field is rarely documented in volleyball -
+ * only verifiable left-handers (Sheilla Castro, Logan Tom) are marked as left.
+ * The "status" field is current as of 2026-07; players who are still active
+ * (Boskovic, Zhu Ting, Kurek, Ngapeth and others) can change from season to
+ * season, so verify before shipping.
  */
 const volleyballLegends: PackConfig = {
   id: "volleyball-legends",

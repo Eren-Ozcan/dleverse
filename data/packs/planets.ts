@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { planetsI18n } from "./i18n/planets";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraflar —
- * çoğu NASA/ESA kaynaklı, Public domain; her entity.imageCredit alanı
- * yazar+lisans bilgisini taşır. Çap değerleri ortalama/yaklaşık değerlerdir
- * (Haumea gibi düzensiz cisimlerde ortalama çap kullanıldı). Uydular için
- * "Güneşe Uzaklık" alanı, bağlı oldukları gezegenin Güneş'e ortalama
- * uzaklığıdır (basitleştirme); kuyruklu yıldızlarda ise günberi (perihel)
- * uzaklığı kullanıldı. Kuyruklu yıldızların "atmosferi" koma olarak
- * sayıldı. Kişi içermeyen saf astronomi paketi.
+ * Images are real, freely licensed photographs from Wikimedia Commons - mostly
+ * NASA/ESA sourced and public domain; every entity.imageCredit field carries
+ * the author + license. Diameter values are mean/approximate (for irregular
+ * bodies such as Haumea the mean diameter is used). For moons, the "distance
+ * from the Sun" field is the mean distance of their parent planet from the Sun
+ * (a simplification); for comets the perihelion distance is used. A comet's
+ * "atmosphere" is counted as its coma. A pure astronomy pack with no people in
+ * it.
  */
 const planets: PackConfig = {
   id: "planets",

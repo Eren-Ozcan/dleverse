@@ -2,15 +2,16 @@ import type { PackConfig } from "../../engine/types";
 import { worldIslandsI18n } from "./i18n/world-islands";
 
 /**
- * Görseller Wikimedia Commons'tan gerçek, serbest lisanslı fotoğraf/uydu
- * görüntüleri — her entity.imageCredit alanı yazar+lisans bilgisini taşır.
- * Yüzölçümü (km²) değerleri yaygın kabul gören coğrafya kaynaklarına dayanan
- * yaklaşık değerlerdir; kıyı ölçüm yöntemine göre kaynaklar arasında farklar
- * olabilir. Ada alanları 10 km² ile 2,1 milyon km² arasında değiştiği için
- * "yakın" toleransı (2000 km²) küçük adalarda geniş, dev adalarda dar kalır —
- * yön oku asıl ipucudur. Birden fazla ülkeye bölünmüş adalarda (Borneo, Yeni
- * Gine, İrlanda, Hispaniola, Ateş Toprakları) egemenlik alanı bölüşümü kısaca
- * verilmiştir. Kişi içermeyen saf coğrafya paketi.
+ * Images are real, freely licensed photographs/satellite imagery from
+ * Wikimedia Commons - every entity.imageCredit field carries the author +
+ * license. Area (km2) values are approximate and based on widely accepted
+ * geography sources; sources can differ depending on the coastline measurement
+ * method. Because island areas range from 10 km2 to 2.1 million km2, the
+ * "near" tolerance (2000 km2) is generous for small islands and tight for huge
+ * ones - the direction arrow is the real clue. For islands split between
+ * several countries (Borneo, New Guinea, Ireland, Hispaniola, Tierra del
+ * Fuego) the division of sovereignty is given briefly. A pure geography pack
+ * with no people in it.
  */
 const worldIslands: PackConfig = {
   id: "world-islands",

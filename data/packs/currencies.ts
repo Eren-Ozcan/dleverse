@@ -2,12 +2,12 @@ import type { PackConfig } from "../../engine/types";
 import { currenciesI18n } from "./i18n/currencies";
 
 /**
- * Dünya para birimleri — kişi değil, ekonomi/coğrafya trivia'sı (Dünya
- * Ülkeleri/İmparatorluklar paketleriyle aynı desen: emoji-clue, gerçek
- * fotoğraf yok). "century" alanı para biriminin GÜNCEL biçiminin kabul
- * edildiği/tanıtıldığı dönemi gösterir (bazı para birimleri çok daha eski
- * bir isme sahip olsa da modern biçimleri farklı bir tarihte kabul
- * edilmiştir — ör. Türk Lirası 2005'te yeniden değerlendi).
+ * World currencies - not people, this is economics/geography trivia (same
+ * pattern as the World Countries/Empires packs: emoji clue, no real photos).
+ * The "century" field shows the period in which the currency's CURRENT form
+ * was adopted/introduced (some currencies carry a much older name but their
+ * modern form was adopted at a different date - e.g. the Turkish lira was
+ * revalued in 2005).
  */
 const currencies: PackConfig = {
   id: "currencies",

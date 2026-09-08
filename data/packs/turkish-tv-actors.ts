@@ -2,14 +2,14 @@ import type { PackConfig } from "../../engine/types";
 import { turkishTvActorsI18n } from "./i18n/turkish-tv-actors";
 
 /**
- * ORTA RİSK (bkz. docs/ip-candidates.md #51): sadece oyuncunun kendi bio'su +
- * en bilindiği rol/dizi ADI metin olarak kullanılır. Dizi sahnesi, karakter
- * kostümü veya prodüksiyon görseli YOK — sadece Wikimedia Commons'taki
- * oyuncunun kendi portre/röportaj fotoğrafları (image + imageCredit).
- * Bazı oyuncuların Commons'ta uygun portresi bulunamadı; bu entity'ler
- * image alanı olmadan (sadece metin) bırakıldı — halüsinasyon riski almamak
- * için uydurma URL kullanılmadı. Doğum yılları kamuya açık kaynaklarla
- * (Wikipedia) tutarlı; yayına almadan önce periyodik doğrulama önerilir.
+ * MEDIUM RISK (see docs/ip-candidates.md #51): only the actor's own bio + the
+ * NAME of the role/series they are best known for, as text. NO series stills,
+ * character costumes or production artwork - only the actor's own
+ * portrait/interview photographs from Wikimedia Commons (image + imageCredit).
+ * For some actors no suitable portrait was found on Commons; those entities
+ * were left without an image field (text only) - no invented URL was used, to
+ * avoid any risk of hallucination. Birth years are consistent with public
+ * sources (Wikipedia); periodic verification before shipping is recommended.
  */
 const turkishTvActors: PackConfig = {
   id: "turkish-tv-actors",

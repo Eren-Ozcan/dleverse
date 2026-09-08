@@ -2,9 +2,10 @@ import type { PackConfig } from "../../engine/types";
 import { superLeagueI18n } from "./i18n/super-league";
 
 /**
- * "club" alanı GÜNCEL kadro değil, oyuncunun Süper Lig kariyerinde en çok
- * anıldığı kulüptür — bu sayede veri transfer sezonundan sezona eskimez.
- * Yine de yayına almadan önce isim/tarih doğrulaması önerilir.
+ * The "club" field is NOT the current squad but the club the player is most
+ * associated with during their Super Lig career - this keeps the data from
+ * going stale with each transfer window. Even so, verifying names/dates before
+ * shipping is recommended.
  */
 const superLeague: PackConfig = {
   id: "super-league",

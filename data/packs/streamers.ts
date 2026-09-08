@@ -1,10 +1,10 @@
 import type { PackConfig } from "../../engine/types";
 
 /**
- * Yayıncı sahnesi hızlı değişiyor (platform, işbirlikleri vb.) — bu yüzden
- * alanlar kasıtlı olarak kaba/kategorik tutuldu (kesin takipçi sayısı,
- * güncel platform gibi çabuk eskiyen veriler kullanılmadı). Yayına almadan
- * önce güncel bilgiyle doğrulanmalı.
+ * The streaming scene changes fast (platforms, partnerships and so on), so the
+ * fields are deliberately kept coarse/categorical (no exact follower counts or
+ * current platform - data that goes stale quickly). Verify against current
+ * information before shipping.
  */
 const streamers: PackConfig = {
   id: "streamers",
