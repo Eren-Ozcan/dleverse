@@ -63,3 +63,6 @@ data/packs/league-of-legends.ts
 data/packs/i18n/league-of-legends.ts
 data/packs/yuzuklerin-efendisi.ts
 data/packs/i18n/yuzuklerin-efendisi.ts
+
+# Local knowledge-graph output (graphify skill)
+graphify-out/
