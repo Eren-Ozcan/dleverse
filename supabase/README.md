@@ -1,28 +1,29 @@
-# Global istatistikler kurulumu (Supabase)
+# Global stats setup (Supabase)
 
-"Bugün X kişi bildi" sayacı ve liderlik tablosu, ayrı bir Supabase projesi
-gerektirir. Proje kurulana kadar bu bölümler uygulamada otomatik olarak
-gizli kalır — hiçbir yerde uydurma sayı gösterilmez.
+The "X people solved it today" counter and the leaderboard need a separate
+Supabase project. Until one is set up, those sections stay hidden in the app
+automatically — no invented numbers are shown anywhere.
 
-## Adımlar
+## Steps
 
-1. https://supabase.com üzerinde ücretsiz bir proje oluştur.
-2. Proje panelinde **SQL Editor** açıp `supabase/schema.sql` dosyasının
-   içeriğini çalıştır. Bu, `daily_completions` tablosunu ve anonim
-   erişim politikalarını kurar.
-3. Proje ayarlarından **Project URL** ve **anon public key**'i kopyala.
-4. Repo kökünde `.env.example`'ı `.env` olarak kopyala ve değerleri doldur:
+1. Create a free project at https://supabase.com.
+2. In the project dashboard open the **SQL Editor** and run the contents of
+   `supabase/schema.sql`. This creates the `daily_completions` table and the
+   anonymous access policies.
+3. From the project settings, copy the **Project URL** and the
+   **anon public key**.
+4. In the repo root, copy `.env.example` to `.env` and fill in the values:
    ```
    EXPO_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
    EXPO_PUBLIC_SUPABASE_ANON_KEY=eyJ...
    ```
-5. Dev sunucusunu yeniden başlat (`npm start`). `.env` zaten `.gitignore`'da,
-   commit'lenmez.
+5. Restart the dev server (`npm start`). `.env` is already in `.gitignore` and
+   is not committed.
 
-## Veri modeli
+## Data model
 
-`daily_completions` tablosu, her (paket, mod, gün, cihaz) için tek satır
-tutar — cihaz kimliği hesap gerektirmeden AsyncStorage'da üretilir ve asla
-UI'da gösterilmez, sadece sıralama/sayım için kullanılır. RLS politikaları
-anonim `insert`/`update`/`select` izni verir; okunan veri sadece agregasyon
-(sayaç, en iyi tahmin sayıları) için kullanılır.
+The `daily_completions` table keeps one row per (pack, mode, day, device) — the
+device id is generated in AsyncStorage without requiring an account, is never
+shown in the UI, and is only used for ranking/counting. The RLS policies grant
+anonymous `insert`/`update`/`select`; the data that is read back is used only
+for aggregation (the counter, best-guess counts).
