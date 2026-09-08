@@ -23,7 +23,7 @@ function formatValue(value: string | number | string[]): string {
   return String(value);
 }
 
-/** Yeni tahmin satırındaki hücreleri soldan sağa sırayla açar (Wordle flip hissi). */
+/** Flips the cells of a new guess row open left to right (the Wordle flip feel). */
 function RevealCell({ delay, children, style }: { delay: number; children: React.ReactNode; style: object }) {
   const progress = useRef(new Animated.Value(0)).current;
 
@@ -66,7 +66,7 @@ export function GuessGrid({ rows, pack }: { rows: GuessRow[]; pack: PackConfig }
   }
 
   const headers = rows[0].cells.map((cell) => localizeFieldLabel(pack, cell.key, cell.label, locale));
-  // En yeni tahmin en üstte — kaydırmadan son duruma bakılır (Loldle düzeni).
+  // Newest guess on top - you see the latest state without scrolling (Loldle layout).
   const displayRows = [...rows].reverse();
 
   return (

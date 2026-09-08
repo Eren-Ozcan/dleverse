@@ -8,7 +8,7 @@ export interface PackProgress {
   lastWinDateKey: string | null;
   playedCount: number;
   wonCount: number;
-  /** Kazanılan oyunlarda kaçıncı tahminde bilindiği: { "3": 5 } → 5 kez 3. tahminde. */
+  /** Which guess won, for games that were won: { "3": 5 } -> solved on guess 3 five times. */
   distribution: Record<string, number>;
 }
 
@@ -45,7 +45,7 @@ export async function loadProgress(packId: string, mode: GameMode = "classic"): 
   const raw = await AsyncStorage.getItem(progressKeyFor(packId, mode));
   if (!raw) return { ...emptyProgress };
   const parsed = JSON.parse(raw) as Partial<PackProgress>;
-  // Eski kayıtlarda maxStreak/distribution yok — varsayılanlarla birleştir.
+  // Older saves have no maxStreak/distribution - merge with the defaults.
   return {
     ...emptyProgress,
     ...parsed,
@@ -112,7 +112,7 @@ export async function saveColorblindMode(enabled: boolean): Promise<void> {
   await AsyncStorage.setItem(COLORBLIND_KEY, enabled ? "1" : "0");
 }
 
-/** Global istatistikler için kalıcı, anonim cihaz kimliği (hesap gerektirmez). */
+/** A persistent, anonymous device id for the global stats (no account needed). */
 export async function getDeviceId(): Promise<string> {
   const existing = await AsyncStorage.getItem(DEVICE_ID_KEY);
   if (existing) return existing;

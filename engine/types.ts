@@ -10,7 +10,7 @@ export interface FieldDef {
 
 export type FieldValue = string | number | string[];
 
-/** Desteklenen arayüz/içerik dilleri. tr = kanonik (paket dosyalarındaki varsayılan) dil. */
+/** Supported interface/content languages. tr = the canonical language (the default in the pack files). */
 export type Locale = "tr" | "en" | "de" | "fr" | "es" | "pt";
 
 export const LOCALES: Locale[] = ["tr", "en", "de", "fr", "es", "pt"];
@@ -40,16 +40,16 @@ export interface Entity {
   name: string;
   aliases?: string[];
   image?: string;
-  /** image doluysa zorunlu: "Yazar, Lisans, Kaynak" formatında kısa kredi metni (ör. "Jane Doe, CC BY-SA 4.0, Wikimedia Commons"). */
+  /** Required when image is set: a short credit in "Author, License, Source" form (e.g. "Jane Doe, CC BY-SA 4.0, Wikimedia Commons"). */
   imageCredit?: string;
   fields: Record<string, FieldValue>;
-  /** Emoji Modu'nda gösterilen, cevabı ima eden kısa emoji dizisi (ör. "🐍🍎🍊"). */
+  /** A short emoji sequence hinting at the answer, shown in Emoji mode (e.g. "🐍🍎🍊"). */
   emojiClue?: string;
-  /** Ses Modu'nda çalınan kısa ipucu klibinin URL'i (ör. bir enstrüman/parça kesiti, konuşma örneği). */
+  /** URL of the short clue clip played in Sound mode (e.g. an instrument/track excerpt, a speech sample). */
   audioClue?: string;
   /** audioClue doluysa zorunlu: kaynak+lisans kredisi. */
   audioCredit?: string;
-  /** Sadece isim diller arası anlamlı şekilde değiştiğinde dolu olur (ör. "Büyük İskender" → "Alexander the Great"). */
+  /** Set only when the name changes meaningfully across languages (e.g. "Büyük İskender" -> "Alexander the Great"). */
   nameByLocale?: Partial<Record<Locale, string>>;
 }
 
@@ -60,16 +60,17 @@ export interface PackTheme {
 }
 
 /**
- * Paket içeriğinin çeviri katmanı. Kanonik (Türkçe) değerler paketin kendi
- * alanlarında/entity'lerinde durur; burada sadece diğer 5 dile karşılık gelen
- * çeviriler tutulur. Eksik bir çeviri varsa kanonik Türkçe değere düşülür.
+ * The translation layer for pack content. The canonical (Turkish) values live
+ * in the pack's own fields/entities; only the translations for the other 5
+ * languages are kept here. A missing translation falls back to the canonical
+ * Turkish value.
  */
 export interface PackI18n {
   title?: Partial<Record<Locale, string>>;
   subtitle?: Partial<Record<Locale, string>>;
-  /** fieldKey -> locale -> etiket çevirisi */
+  /** fieldKey -> locale -> label translation */
   fieldLabels?: Record<string, Partial<Record<Locale, string>>>;
-  /** fieldKey -> kanonik (tr) değer -> locale -> çeviri. Sonlu/enum değerler için. */
+  /** fieldKey -> canonical (tr) value -> locale -> translation. For finite/enum values. */
   valueTranslations?: Record<string, Record<string, Partial<Record<Locale, string>>>>;
 }
 
@@ -87,7 +88,7 @@ export interface PackConfig {
 
 export type CellStatus = "correct" | "partial" | "wrong";
 
-/** Renk körü modunda renklere ek olarak gösterilen semboller. */
+/** Symbols shown alongside the colours in colour-blind mode. */
 export const CELL_STATUS_SYMBOL: Record<CellStatus, string> = {
   correct: "✓",
   partial: "≈",
@@ -124,11 +125,11 @@ export interface PackDailyState {
   guesses: GuessRow[];
   won: boolean;
   finished: boolean;
-  /** Emoji Modu'nda yanlış tahminler sonrası açığa çıkan alan anahtarları. */
+  /** Field keys revealed after wrong guesses in Emoji mode. */
   revealedFieldKeys?: string[];
 }
 
 export const MAX_GUESSES = 8;
 
-/** Emoji/Ses Modu'nda tahmin sayısı bu eşiklere ulaştığında bir alan daha açığa çıkar. */
+/** In Emoji/Sound mode, one more field is revealed when the guess count hits these thresholds. */
 export const CLUE_MODE_HINT_SCHEDULE = [2, 4, 6] as const;

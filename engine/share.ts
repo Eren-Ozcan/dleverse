@@ -8,7 +8,7 @@ const statusEmoji: Record<CellStatus, string> = {
   wrong: "⬛",
 };
 
-/** Loldle/Wordle tarzı, cevabı ele vermeyen emoji ızgarası üretir. */
+/** Produces a Loldle/Wordle-style emoji grid that does not give the answer away. */
 export function buildShareText(pack: PackConfig, state: PackDailyState): string {
   const score = state.won ? `${state.guesses.length}/${MAX_GUESSES}` : `X/${MAX_GUESSES}`;
   const header = `Dleverse ${pack.emoji} ${pack.title} #${dayNumber(state.dateKey)} — ${score}`;

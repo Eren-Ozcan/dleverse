@@ -9,7 +9,7 @@ export function normalize(text: string): string {
     .trim();
 }
 
-/** name + aliases + tüm dillerdeki nameByLocale çevirilerini tek listede toplar. */
+/** Collects name + aliases + the nameByLocale translations in every language into one list. */
 function searchableNames(entity: Entity): string[] {
   return [entity.name, ...(entity.aliases ?? []), ...Object.values(entity.nameByLocale ?? {})];
 }
@@ -37,7 +37,7 @@ function compareMulti(guessValue: string[], targetValue: string[]): CellStatus {
   return overlap ? "partial" : "wrong";
 }
 
-/** "Almanca / Fransızca" gibi çok değerli metinleri karşılaştırma için parçalara ayırır. */
+/** Splits multi-value text such as "Almanca / Fransızca" into parts for comparison. */
 function textTokens(value: string): string[] {
   return value
     .split(/[/,]/)
@@ -71,8 +71,9 @@ function compareField(field: FieldDef, guessValue: FieldValue, targetValue: Fiel
 }
 
 /**
- * Emoji/Ses Modu'nda kaç alanın açığa çıkması gerektiğini tahmin sayısına göre hesaplar.
- * En az bir alan her zaman gizli kalır ki asıl ipucu (emoji/ses) tek başına anlamını korusun.
+ * Works out how many fields should be revealed in Emoji/Sound mode, based on
+ * the guess count. At least one field always stays hidden so the actual clue
+ * (emoji/sound) keeps its meaning on its own.
  */
 export function fieldKeysToReveal(pack: PackConfig, guessCount: number): string[] {
   const unlocked = CLUE_MODE_HINT_SCHEDULE.filter((threshold) => guessCount >= threshold).length;
@@ -80,7 +81,7 @@ export function fieldKeysToReveal(pack: PackConfig, guessCount: number): string[
   return pack.fields.slice(0, Math.min(unlocked, maxReveals)).map((field) => field.key);
 }
 
-/** Ses Modu sekmesi yalnızca paketteki her entity'nin bir ses ipucu varsa gösterilir. */
+/** The Sound mode tab is shown only when every entity in the pack has an audio clue. */
 export function packSupportsSoundMode(pack: PackConfig): boolean {
   return pack.entities.length > 0 && pack.entities.every((entity) => Boolean(entity.audioClue));
 }

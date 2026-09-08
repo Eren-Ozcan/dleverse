@@ -15,7 +15,7 @@ interface Props {
   target: Entity;
   streak: number;
   yesterdayAnswer: Entity;
-  /** Supabase yapılandırılmışsa gerçek sayı; yoksa null → bölüm gizlenir (asla uydurma sayı gösterilmez). */
+  /** The real count when Supabase is configured; otherwise null -> the section is hidden (an invented number is never shown). */
   todaySolvedCount?: number | null;
   leaderboard?: LeaderboardEntry[] | null;
 }

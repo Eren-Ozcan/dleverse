@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabase";
 import type { GameMode } from "./types";
 
-/** Supabase yapılandırılmamışsa sessizce no-op; ekranlar bunu "veri yok" olarak yorumlar. */
+/** A silent no-op when Supabase is not configured; screens read that as "no data". */
 export async function submitCompletion(
   packId: string,
   mode: GameMode,
@@ -19,7 +19,7 @@ export async function submitCompletion(
     );
 }
 
-/** null = Supabase bağlı değil veya istek başarısız oldu → UI bölümü gizler. */
+/** null = Supabase is not connected or the request failed -> the UI hides the section. */
 export async function fetchTodaySolvedCount(packId: string, mode: GameMode, dateKey: string): Promise<number | null> {
   if (!supabase) return null;
   const { count, error } = await supabase
@@ -38,7 +38,7 @@ export interface LeaderboardEntry {
   guessCount: number;
 }
 
-/** Anonim performans sıralaması — cihaz kimliği asla dışa aktarılmaz. */
+/** Anonymous performance ranking - the device id is never exported. */
 export async function fetchLeaderboard(
   packId: string,
   mode: GameMode,

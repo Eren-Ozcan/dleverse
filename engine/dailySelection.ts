@@ -33,7 +33,7 @@ export function yesterdayKey(dateKey: string = todayKey()): string {
   return addDays(dateKey, -1);
 }
 
-/** Dleverse'ün 1. günü — paylaşım metnindeki "#N" numarası buradan sayılır. */
+/** Dleverse's day 1 - the "#N" number in the share text is counted from here. */
 const EPOCH_KEY = "2026-07-01";
 
 export function dayNumber(dateKey: string = todayKey()): number {
@@ -41,15 +41,16 @@ export function dayNumber(dateKey: string = todayKey()): number {
   return Math.round(diff / 86_400_000) + 1;
 }
 
-/** Yerel gece yarısına (yeni günlük bulmacaya) kalan süre. */
+/** Time left until local midnight (the next daily puzzle). */
 export function msUntilNextDaily(now: Date = new Date()): number {
   const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
   return next.getTime() - now.getTime();
 }
 
 /**
- * Mod, tuza dahil edilir: aynı gün Klasik ve Emoji modu genelde farklı
- * hedefler seçer, böylece bir modu çözmek diğerini ele vermez.
+ * The mode is part of the salt: on the same day Classic and Emoji mode
+ * usually pick different targets, so solving one does not give the other
+ * away.
  */
 export function pickDailyEntity(pack: PackConfig, dateKey: string = todayKey(), mode: GameMode = "classic"): Entity {
   const seed = `${dateKey}:${pack.id}:v${pack.dailySaltVersion}:${mode}`;

@@ -20,7 +20,7 @@ function localizeSingleValue(pack: PackConfig, fieldKey: string, value: string, 
   return pack.i18n?.valueTranslations?.[fieldKey]?.[value]?.[locale] ?? value;
 }
 
-/** Metin/multi alan değerlerini kanonik (tr) değerden hedef dile çevirir; sayısal/yıl değerler değişmeden döner. */
+/** Translates text/multi field values from the canonical (tr) value into the target language; number/year values are returned unchanged. */
 export function localizeFieldValue(pack: PackConfig, fieldKey: string, value: FieldValue, locale: Locale): FieldValue {
   if (locale === "tr") return value;
   if (Array.isArray(value)) return value.map((v) => localizeSingleValue(pack, fieldKey, v, locale));
